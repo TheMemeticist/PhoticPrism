@@ -1,0 +1,64 @@
+cat > .gitignore <<'EOF'
+# deps
+node_modules/
+
+# builds
+dist/
+build/
+.vite/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Vite / tooling caches
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+.rollup.cache/
+.turbo/
+.nx/
+.swc/
+.vitest/
+playwright-report/
+test-results/
+
+# Local env variants
+.env.local
+.env.*.local
+
+# Local HTTPS certs / keys (mkcert etc.)
+*.pem
+*.key
+*.crt
+
+# Python backend (if/when you add it)
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Editor swap / temp
+*.swp
+*.swo
+
+
+# misc
+coverage/
+*.tsbuildinfo
+EOF
