@@ -1,0 +1,117 @@
+/* ============================================
+   Emergency Stop Button Styles
+   ============================================ */
+
+.stop-button {
+  position: fixed;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-stop-button);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  
+  padding: var(--space-md) var(--space-xl);
+  
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  
+  border: 3px solid var(--danger);
+  border-radius: var(--radius-xl);
+  
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  
+  box-shadow: 
+    0 4px 15px rgba(239, 68, 68, 0.3),
+    inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.stop-button:hover {
+  background-color: var(--danger);
+  color: white;
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 
+    0 6px 25px rgba(239, 68, 68, 0.5),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.stop-button:active {
+  transform: translateX(-50%) scale(0.98);
+}
+
+/* Active state - flicker/audio running */
+.stop-button.active {
+  background-color: var(--danger);
+  color: white;
+  animation: stopPulse 1s infinite;
+}
+
+.stop-button.active:hover {
+  animation: none;
+}
+
+@keyframes stopPulse {
+  0%, 100% {
+    box-shadow: 
+      0 4px 15px rgba(239, 68, 68, 0.5),
+      inset 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 4px 30px rgba(239, 68, 68, 0.8),
+      inset 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.stop-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.stop-text {
+  display: inline;
+}
+
+.stop-hint {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.7;
+  padding: 2px 6px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-sm);
+  margin-left: var(--space-sm);
+}
+
+/* Mobile: larger touch target */
+@media (max-width: 768px) {
+  .stop-button {
+    bottom: var(--space-md);
+    padding: var(--space-lg) var(--space-2xl);
+    font-size: 1.5rem;
+    min-height: 64px;
+  }
+
+  .stop-icon {
+    font-size: 1.75rem;
+  }
+
+  .stop-hint {
+    display: none;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .stop-button.active {
+    animation: none;
+  }
+}

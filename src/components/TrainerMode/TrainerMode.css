@@ -1,0 +1,132 @@
+/* ============================================
+   Trainer Mode Styles
+   ============================================ */
+
+.trainer-mode {
+  position: fixed;
+  top: var(--space-md);
+  left: var(--space-md);
+  right: calc(var(--control-panel-width) + var(--space-md));
+  z-index: var(--z-dojo-window);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.trainer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.trainer-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.trainer-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+.trainer-progress {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.trainer-close {
+  padding: var(--space-xs) var(--space-md);
+  font-size: 0.9rem;
+}
+
+.trainer-content {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.trainer-activity h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.activity-description {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: var(--space-xs) 0;
+}
+
+.activity-color {
+  margin-top: var(--space-sm);
+}
+
+.color-swatch {
+  border: 1px solid var(--bg-elevated);
+  box-shadow: var(--shadow-sm);
+}
+
+.color-label {
+  font-size: 0.8rem;
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  color: var(--text-secondary);
+}
+
+.trainer-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.trainer-nav-btn {
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.9rem;
+  min-width: 100px;
+}
+
+.trainer-progress-bar {
+  flex: 1;
+  height: 8px;
+  background-color: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.trainer-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-hover));
+  transition: width 0.3s ease;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .trainer-mode {
+    top: var(--space-sm);
+    left: var(--space-sm);
+    right: var(--space-sm);
+  }
+
+  .trainer-header {
+    padding: var(--space-sm);
+  }
+
+  .trainer-content {
+    padding: var(--space-sm);
+  }
+
+  .trainer-nav-btn {
+    min-width: 80px;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.8rem;
+  }
+}

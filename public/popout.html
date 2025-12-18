@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photic Prism - Dojo Window</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #000;
+    }
+
+    .video-container {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+      background-color: #000;
+    }
+
+    .youtube {
+      flex: 2;
+      min-width: 0;
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+      background-color: #000;
+    }
+
+    .youtube iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      object-fit: cover;
+    }
+
+    .webcam {
+      flex: 1;
+      min-width: 0;
+      border-left: 2px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+    }
+
+    .webcam video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scaleX(-1); /* Mirror */
+    }
+    
+    .trainer-bar {
+      background-color: #1a1a1a;
+      padding: 12px 16px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      border-top: 1px solid #333;
+    }
+    
+    .trainer-info {
+      flex: 1;
+      color: white;
+      font-size: 14px;
+    }
+    
+    .trainer-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .trainer-meta {
+      font-size: 12px;
+      color: #999;
+    }
+    
+    .trainer-btn {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+    
+    .trainer-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="video-container">
+      <div class="youtube" id="youtube-container">
+        <!-- YouTube iframe will be inserted here -->
+      </div>
+      <div class="webcam" id="webcam-container" style="display: none;">
+        <!-- Webcam will be inserted here -->
+      </div>
+    </div>
+    <div class="trainer-bar" id="trainer-bar">
+      <div class="trainer-info" id="trainer-info">
+        <div class="trainer-title">Activity</div>
+        <div class="trainer-meta">Loading...</div>
+      </div>
+      <button class="trainer-btn" onclick="handlePrevious()">◀ Previous</button>
+      <button class="trainer-btn" onclick="handleNext()">Next ▶</button>
+    </div>
+  </div>
+
+  <script>
+    // Parse URL parameters
+    const params = new URLSearchParams(window.location.search)
+    const videoId = params.get('videoId')
+    const webcamEnabled = params.get('webcam') === 'true'
+    
+    // Trainer mode communication via localStorage
+    function checkTrainerMode() {
+      try {
+        const stored = localStorage.getItem('photic-prism-storage')
+        if (stored) {
+          const data = JSON.parse(stored)
+          const schedule = data?.state?.schedule
+          if (schedule?.trainerMode && schedule?.todayRoutine?.length > 0) {
+            updateTrainerDisplay(schedule)
+            document.getElementById('trainer-bar').style.display = 'flex'
+          }
+        }
+      } catch (e) {
+        console.error('Failed to read trainer state:', e)
+      }
+    }
+    
+    function updateTrainerDisplay(schedule) {
+      const current = schedule.todayRoutine[schedule.currentRoutineIndex]
+      if (current) {
+        document.querySelector('.trainer-title').textContent = current.title
+        document.querySelector('.trainer-meta').textContent = 
+          current.metadata?.brainwaveHz ? `${current.metadata.brainwaveHz} Hz` : ''
+      }
+    }
+    
+    function handleNext() {
+      window.opener?.postMessage({ type: 'trainer-next' }, '*')
+    }
+    
+    function handlePrevious() {
+      window.opener?.postMessage({ type: 'trainer-previous' }, '*')
+    }
+    
+    // Listen for updates from main window
+    window.addEventListener('storage', checkTrainerMode)
+    window.addEventListener('message', (e) => {
+      if (e.data.type === 'trainer-update') {
+        checkTrainerMode()
+      } else if (e.data.type === 'video-change') {
+        // Update video when navigation happens
+        loadVideo(e.data.videoId)
+      }
+    })
+    
+    // Initial check
+    setTimeout(checkTrainerMode, 100)
+    
+    // Periodic check for trainer updates
+    setInterval(checkTrainerMode, 1000)
+
+    // Load YouTube video function
+    function loadVideo(url) {
+      const extractedId = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/)?.[1] || url
+      
+      const container = document.getElementById('youtube-container')
+      container.innerHTML = '' // Clear existing
+      
+      const iframe = document.createElement('iframe')
+      iframe.src = `https://www.youtube.com/embed/${extractedId}?rel=0&modestbranding=1&autoplay=1&mute=0`
+      iframe.title = 'YouTube video'
+      iframe.frameBorder = '0'
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+      iframe.allowFullscreen = true
+      container.appendChild(iframe)
+      
+      console.log('🎬 Loaded video:', extractedId)
+    }
+
+    // Load initial video
+    if (videoId) {
+      loadVideo(videoId)
+    }
+
+    // Load webcam
+    if (webcamEnabled) {
+      document.getElementById('webcam-container').style.display = 'block'
+      
+      navigator.mediaDevices.getUserMedia({ 
+        video: { 
+          facingMode: 'user',
+          width: { ideal: 640 },
+          height: { ideal: 480 }
+        },
+        audio: false 
+      })
+      .then(stream => {
+        const video = document.createElement('video')
+        video.srcObject = stream
+        video.autoplay = true
+        video.playsInline = true
+        document.getElementById('webcam-container').appendChild(video)
+      })
+      .catch(err => {
+        console.error('Webcam access denied:', err)
+        document.getElementById('webcam-container').innerHTML = '<div class="placeholder">Webcam access denied</div>'
+      })
+    }
+  </script>
+</body>
+</html>

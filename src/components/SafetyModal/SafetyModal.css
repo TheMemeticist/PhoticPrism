@@ -1,0 +1,200 @@
+/* ============================================
+   Safety Modal Styles
+   ============================================ */
+
+.safety-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  z-index: var(--z-modal);
+  animation: fadeIn 0.3s ease;
+}
+
+.safety-modal {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--danger);
+  box-shadow: 0 0 40px rgba(239, 68, 68, 0.2);
+  animation: slideIn 0.4s ease;
+  overflow: hidden;
+}
+
+.safety-modal-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--bg-tertiary);
+  background-color: var(--danger-bg);
+}
+
+.safety-icon {
+  font-size: 2rem;
+}
+
+.safety-modal-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--danger);
+  margin: 0;
+}
+
+.safety-modal-content {
+  flex: 1;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  overflow-y: auto;
+}
+
+.safety-warning-box {
+  background: linear-gradient(135deg, var(--danger-bg), transparent);
+  border: 2px solid var(--danger);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.safety-warning-box h2 {
+  font-size: 1.25rem;
+  color: var(--danger);
+  margin-bottom: var(--space-sm);
+}
+
+.safety-warning-box p {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.safety-section {
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.safety-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.safety-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.safety-section li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-xs);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.safety-section li::before {
+  content: '•';
+  position: absolute;
+  left: var(--space-sm);
+  color: var(--warning);
+}
+
+.safety-section p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.safety-disclaimer {
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  border-left: 4px solid var(--text-muted);
+}
+
+.safety-disclaimer p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.safety-modal-footer {
+  padding: var(--space-lg);
+  border-top: 1px solid var(--bg-tertiary);
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.safety-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  cursor: pointer;
+  padding: var(--space-md);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.safety-checkbox-label:hover {
+  border-color: var(--accent-primary);
+}
+
+.safety-checkbox {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  margin-top: 2px;
+  accent-color: var(--accent-primary);
+  cursor: pointer;
+}
+
+.safety-checkbox-label span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.safety-continue-btn {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.safety-continue-btn:disabled {
+  background-color: var(--bg-tertiary);
+  color: var(--text-muted);
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .safety-modal {
+    max-height: 100vh;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .safety-modal-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .safety-warning-box h2 {
+    font-size: 1.1rem;
+  }
+}

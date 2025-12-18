@@ -1,0 +1,349 @@
+/* ============================================
+   Dojo Window Styles
+   ============================================ */
+
+.dojo-window {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-dojo-window) !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hide chrome: completely transparent background */
+.dojo-window.chrome-hidden {
+  border-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.dojo-window.chrome-hidden .dojo-window-content {
+  background-color: transparent;
+}
+
+.dojo-window-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--bg-tertiary);
+  cursor: grab;
+  user-select: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dojo-window-header.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.dojo-window-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.dojo-window-header:active {
+  cursor: grabbing;
+}
+
+.dojo-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dojo-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.dojo-presets {
+  display: flex;
+  gap: 2px;
+}
+
+.dojo-presets button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 0.7rem;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.dojo-presets button:hover {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.dojo-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.dojo-btn:hover {
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.dojo-btn.close:hover {
+  background-color: var(--danger);
+  color: white;
+}
+
+.dojo-window-content {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  position: relative;
+}
+
+.dojo-youtube {
+  flex: 1;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dojo-youtube.with-webcam {
+  flex: 2;
+}
+
+.dojo-youtube iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.dojo-placeholder {
+  text-align: center;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.dojo-placeholder span {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+.dojo-placeholder p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.dojo-placeholder .hint {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.dojo-webcam {
+  flex: 1;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--bg-tertiary);
+  overflow: hidden;
+}
+
+.dojo-webcam video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* React-rnd resize handles styling */
+.dojo-window .react-resizable-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+
+.dojo-window .react-resizable-handle-se {
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.dojo-window .react-resizable-handle-se::after {
+  content: '';
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+}
+
+/* ============================================
+   Trainer Bar Below Video
+   ============================================ */
+
+.dojo-trainer-bar {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--bg-tertiary);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dojo-window.chrome-hidden .dojo-trainer-bar {
+  display: none;
+}
+
+.trainer-info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trainer-activity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trainer-activity-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.trainer-activity-meta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.trainer-progress-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+  padding: 4px 12px;
+  border-radius: var(--radius-md);
+  font-variant-numeric: tabular-nums;
+}
+
+.trainer-controls-section {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.trainer-nav-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--bg-elevated);
+  border-radius: var(--radius-md);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trainer-nav-btn:hover {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.trainer-exit-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: rgba(220, 38, 38, 0.8);
+  color: white;
+  border: 1px solid rgba(220, 38, 38, 0.9);
+  border-radius: var(--radius-md);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trainer-exit-btn:hover {
+  background-color: rgba(220, 38, 38, 1);
+  transform: scale(1.05);
+}
+
+.trainer-progress-bar {
+  flex: 1;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.trainer-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-hover));
+  transition: width 0.3s ease;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dojo-presets {
+    display: none;
+  }
+
+  .dojo-window-content {
+    flex-direction: column;
+  }
+
+  .dojo-youtube,
+  .dojo-webcam {
+    border: none;
+    border-bottom: 1px solid var(--bg-tertiary);
+  }
+  
+  .dojo-trainer-overlay {
+    padding: var(--space-sm);
+  }
+  
+  .trainer-nav-btn,
+  .trainer-exit-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .trainer-activity-title {
+    font-size: 0.9rem;
+  }
+}
