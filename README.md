@@ -2,7 +2,7 @@
 
 **A lightweight, offline-friendly (PWA-capable) browser "dojo cockpit" for synchronized photic flicker + generated binaural beats + movable training video + webcam mirror + EEG biofeedback.**
 
-> ⚠️ **SAFETY / MEDICAL DISCLAIMER (READ FIRST):** Photic Prism is **not** a medical device and makes **no** diagnostic or treatment claims. It intentionally generates flicker and may include frequency ranges (roughly **3–60 Hz**, with many sources emphasizing **~10–25 Hz** as especially sensitive) that can trigger seizures in people with photosensitive epilepsy. If you have epilepsy, a seizure disorder, unexplained fainting/seizure history, or migraine with strong light sensitivity, **do not use**. Use in a well-lit room, start with low intensity, and keep a one-tap **STOP** control.
+> ⚠️ **SAFETY / MEDICAL DISCLAIMER (READ FIRST):** Photic Prism is experimental software and is not a medical device. It is not intended to diagnose, treat, cure, or prevent any disease, and it is not reviewed or cleared by any regulator. The app can generate flicker/flashing stimuli and audio stimulation that may trigger seizures or other adverse effects in susceptible individuals. If you have epilepsy, a seizure disorder, unexplained fainting/seizure history, or migraine with strong light sensitivity, **do not use**. Use in a well-lit room, start with low intensity, and keep a one-tap **STOP** control. Use at your own risk; stop immediately if symptoms occur.
 
 ---
 

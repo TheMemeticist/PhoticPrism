@@ -1,8 +1,9 @@
 // ============================================
-// Generative Pattern Rendering Utilities
+// Generative Pattern Rendering Utilities - OPTIMIZED
 // ============================================
 // Sacred geometry and meditation-focused patterns for deep states
 // Based on neuroscience research on fractals, mandalas, and sacred geometry
+// OPTIMIZATIONS: Cached allocations, pre-computed colors, reduced GC pressure
 
 import { GenerativePatternType, GenerativeConfig } from '../types'
 
@@ -23,7 +24,17 @@ export interface GenerativeRenderContext {
 }
 
 // ============================================
-// Helper Functions
+// Pre-allocated buffers and caches
+// ============================================
+// Reserved for future WebGL optimization
+// let cachedImageData: ImageData | null = null
+// let cachedWidth = 0
+// let cachedHeight = 0
+// const colorCache = new Map<string, { r: number; g: number; b: number }>()
+const paletteCache = new Map<string, string[]>()
+
+// ============================================
+// Helper Functions - OPTIMIZED
 // ============================================
 
 function hexToRgb(hex: string): { r: number; g: number; b: number } {
@@ -37,23 +48,47 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } {
     : { r: 255, g: 255, b: 255 }
 }
 
+// Cached version for future use (currently generative patterns use direct hexToRgb)
+// function hexToRgbCached(hex: string): { r: number; g: number; b: number } {
+//   let cached = colorCache.get(hex)
+//   if (!cached) {
+//     cached = hexToRgb(hex)
+//     colorCache.set(hex, cached)
+//   }
+//   return cached
+// }
+
 function getPaletteColors(palette: string): string[] {
+  // Use cache to avoid recreating arrays
+  let cached = paletteCache.get(palette)
+  if (cached) return cached
+  
+  let colors: string[]
   switch (palette) {
     case 'rainbow':
-      return ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#9400D3']
+      colors = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#9400D3']
+      break
     case 'chakra':
-      return ['#FF0000', '#FF6600', '#FFFF00', '#00FF00', '#00AAFF', '#0000FF', '#9933FF']
+      colors = ['#FF0000', '#FF6600', '#FFFF00', '#00FF00', '#00AAFF', '#0000FF', '#9933FF']
+      break
     case 'monochrome':
-      return ['#FFFFFF', '#CCCCCC', '#999999', '#666666', '#333333', '#000000']
+      colors = ['#FFFFFF', '#CCCCCC', '#999999', '#666666', '#333333', '#000000']
+      break
     case 'earth':
-      return ['#8B4513', '#A0522D', '#CD853F', '#DEB887', '#D2691E', '#F4A460']
+      colors = ['#8B4513', '#A0522D', '#CD853F', '#DEB887', '#D2691E', '#F4A460']
+      break
     case 'ocean':
-      return ['#000080', '#0000CD', '#1E90FF', '#00BFFF', '#87CEEB', '#B0E0E6']
+      colors = ['#000080', '#0000CD', '#1E90FF', '#00BFFF', '#87CEEB', '#B0E0E6']
+      break
     case 'fire':
-      return ['#8B0000', '#FF0000', '#FF4500', '#FF6347', '#FF8C00', '#FFA500']
+      colors = ['#8B0000', '#FF0000', '#FF4500', '#FF6347', '#FF8C00', '#FFA500']
+      break
     default:
-      return ['#FFFFFF', '#CCCCCC']
+      colors = ['#FFFFFF', '#CCCCCC']
   }
+  
+  paletteCache.set(palette, colors)
+  return colors
 }
 
 function applyNeurofeedbackModulation(

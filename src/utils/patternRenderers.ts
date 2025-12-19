@@ -1,8 +1,9 @@
 // ============================================
-// Pattern Rendering Utilities
+// Pattern Rendering Utilities - OPTIMIZED
 // ============================================
 // Science-based geometric patterns for photic stimulation
 // Based on research: SSVEP, pattern-reversal VEP, motion SSMVEP
+// OPTIMIZATIONS: Cached allocations, minimal per-frame work, pre-parsed colors
 
 import { PatternType, PatternConfig } from '../types'
 
@@ -16,6 +17,16 @@ export interface RenderContext {
   config: PatternConfig
   time: number // For motion patterns (milliseconds)
 }
+
+// ============================================
+// Pre-allocated buffers to avoid per-frame allocations
+// ============================================
+let cachedImageData: ImageData | null = null
+let cachedWidth = 0
+let cachedHeight = 0
+
+// Reusable color cache
+const colorCache = new Map<string, { r: number; g: number; b: number }>()
 
 // ============================================
 // 1) Full-field luminance flicker (baseline)
@@ -52,7 +63,7 @@ export function renderCheckerboard(context: RenderContext): void {
 }
 
 // ============================================
-// 3) Sine wave grating
+// 3) Sine wave grating - OPTIMIZED
 // ============================================
 export function renderGrating(context: RenderContext): void {
   const { ctx, width, height, isOn, onColor, offColor, config } = context
@@ -61,13 +72,17 @@ export function renderGrating(context: RenderContext): void {
   // Convert orientation to radians
   const angle = (orientation * Math.PI) / 180
   
-  // Create image data for pixel-level control
-  const imageData = ctx.createImageData(width, height)
-  const data = imageData.data
+  // Reuse ImageData buffer to avoid allocation
+  if (!cachedImageData || cachedWidth !== width || cachedHeight !== height) {
+    cachedImageData = ctx.createImageData(width, height)
+    cachedWidth = width
+    cachedHeight = height
+  }
+  const data = cachedImageData.data
   
-  // Parse colors
-  const onRgb = hexToRgb(onColor)
-  const offRgb = hexToRgb(offColor)
+  // Parse colors with cache
+  const onRgb = hexToRgbCached(onColor)
+  const offRgb = hexToRgbCached(offColor)
   
   // Phase shift for reversal
   const phaseShift = isOn ? Math.PI : 0
@@ -97,11 +112,11 @@ export function renderGrating(context: RenderContext): void {
     }
   }
   
-  ctx.putImageData(imageData, 0, 0)
+  ctx.putImageData(cachedImageData, 0, 0)
 }
 
 // ============================================
-// 4) Gabor patch (windowed grating)
+// 4) Gabor patch (windowed grating) - OPTIMIZED
 // ============================================
 export function renderGabor(context: RenderContext): void {
   const { ctx, width, height, isOn, onColor, offColor, config } = context
@@ -113,11 +128,16 @@ export function renderGabor(context: RenderContext): void {
   const angle = (orientation * Math.PI) / 180
   const phaseShift = isOn ? Math.PI : 0
   
-  const imageData = ctx.createImageData(width, height)
-  const data = imageData.data
+  // Reuse ImageData buffer
+  if (!cachedImageData || cachedWidth !== width || cachedHeight !== height) {
+    cachedImageData = ctx.createImageData(width, height)
+    cachedWidth = width
+    cachedHeight = height
+  }
+  const data = cachedImageData.data
   
-  const onRgb = hexToRgb(onColor)
-  const offRgb = hexToRgb(offColor)
+  const onRgb = hexToRgbCached(onColor)
+  const offRgb = hexToRgbCached(offColor)
   const midRgb = {
     r: (onRgb.r + offRgb.r) / 2,
     g: (onRgb.g + offRgb.g) / 2,
@@ -147,7 +167,6 @@ export function renderGabor(context: RenderContext): void {
       
       // Apply Gaussian window
       const modulatedWave = wave * gaussian
-      const t = (modulatedWave + 1) / 2
       
       const idx = (y * width + x) * 4
       // Interpolate between off and on, with mid as background
@@ -158,7 +177,7 @@ export function renderGabor(context: RenderContext): void {
     }
   }
   
-  ctx.putImageData(imageData, 0, 0)
+  ctx.putImageData(cachedImageData, 0, 0)
 }
 
 // ============================================
@@ -298,17 +317,22 @@ export function renderSparse(context: RenderContext): void {
 }
 
 // ============================================
-// 9) Fractal pattern (Perlin-ish noise)
+// 9) Fractal pattern (Perlin-ish noise) - OPTIMIZED
 // ============================================
 export function renderFractal(context: RenderContext): void {
   const { ctx, width, height, onColor, offColor, config } = context
   const { fractalDimension, fractalScale, fractalOctaves } = config
   
-  const imageData = ctx.createImageData(width, height)
-  const data = imageData.data
+  // Reuse ImageData buffer
+  if (!cachedImageData || cachedWidth !== width || cachedHeight !== height) {
+    cachedImageData = ctx.createImageData(width, height)
+    cachedWidth = width
+    cachedHeight = height
+  }
+  const data = cachedImageData.data
   
-  const onRgb = hexToRgb(onColor)
-  const offRgb = hexToRgb(offColor)
+  const onRgb = hexToRgbCached(onColor)
+  const offRgb = hexToRgbCached(offColor)
   
   for (let y = 0; y < height; y++) {
     for (let x = 0; x < width; x++) {
@@ -337,11 +361,11 @@ export function renderFractal(context: RenderContext): void {
     }
   }
   
-  ctx.putImageData(imageData, 0, 0)
+  ctx.putImageData(cachedImageData, 0, 0)
 }
 
 // ============================================
-// Utility Functions
+// Utility Functions - OPTIMIZED
 // ============================================
 
 function hexToRgb(hex: string): { r: number; g: number; b: number } {
@@ -353,6 +377,16 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } {
         b: parseInt(result[3], 16)
       }
     : { r: 255, g: 255, b: 255 }
+}
+
+// Cached version to avoid repeated parsing
+function hexToRgbCached(hex: string): { r: number; g: number; b: number } {
+  let cached = colorCache.get(hex)
+  if (!cached) {
+    cached = hexToRgb(hex)
+    colorCache.set(hex, cached)
+  }
+  return cached
 }
 
 function simpleNoise(x: number, y: number): number {
