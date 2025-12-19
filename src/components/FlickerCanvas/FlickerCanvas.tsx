@@ -10,11 +10,11 @@ import { useAppStore } from '../../store/appStore'
 import { calculateFrameTiming } from '../../utils/refreshRateUtils'
 import { renderPattern, RenderContext } from '../../utils/patternRenderers'
 import { renderGenerativePattern, GenerativeRenderContext } from '../../utils/generativePatternRenderers'
+import { NoiseOverlay } from './NoiseOverlay'
 import './FlickerCanvas.css'
 
 export function FlickerCanvas() {
   const patternCanvasRef = useRef<HTMLCanvasElement>(null)
-  const noiseCanvasRef = useRef<HTMLCanvasElement>(null)
   const animationRef = useRef<number | null>(null)
   const frameCountRef = useRef(0)
   const isOnRef = useRef(false)
@@ -222,70 +222,20 @@ export function FlickerCanvas() {
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange)
   }, [flickerEnabled, patternMode, safetyAcknowledged, animate, colors.offColor])
 
-  // Generate noise texture
-  useEffect(() => {
-    const canvas = noiseCanvasRef.current
-    if (!canvas) return
-    
-    // Set canvas to fill the screen
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-    
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
-    
-    // Create noise pattern
-    const imageData = ctx.createImageData(canvas.width, canvas.height)
-    const data = imageData.data
-    
-    for (let i = 0; i < data.length; i += 4) {
-      const value = Math.random() * 255
-      data[i] = value     // R
-      data[i + 1] = value // G
-      data[i + 2] = value // B
-      data[i + 3] = 255   // A
-    }
-    
-    ctx.putImageData(imageData, 0, 0)
-    
-    // Handle window resize
-    const handleResize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-      
-      const imageData = ctx.createImageData(canvas.width, canvas.height)
-      const data = imageData.data
-      
-      for (let i = 0; i < data.length; i += 4) {
-        const value = Math.random() * 255
-        data[i] = value
-        data[i + 1] = value
-        data[i + 2] = value
-        data[i + 3] = 255
-      }
-      
-      ctx.putImageData(imageData, 0, 0)
-    }
-    
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  // Update noise opacity based on visualNoise and neurofeedback
-  useEffect(() => {
-    const canvas = noiseCanvasRef.current
-    if (!canvas) return
-    
-    // Calculate final noise opacity
-    // Use neurofeedback modulation if enabled, otherwise use base visualNoise
-    const effectiveNoise = neurofeedbackEnabled ? noiseVolumeModulation : visualNoise
-    const opacity = effectiveNoise / 100 // Map 0-100 to 0-1
-    
-    canvas.style.opacity = opacity.toString()
-  }, [visualNoise, neurofeedbackEnabled, noiseVolumeModulation])
 
   // Compute class based on mode
   const modeClass = `flicker-canvas flicker-${flickerMode}`
+
+  // Calculate final noise opacity
+  const effectiveNoise = neurofeedbackEnabled ? noiseVolumeModulation : visualNoise
+  const noiseOpacity = effectiveNoise / 100
+
+  // Calculate pattern blur based on coherence (Neurofeedback)
+  // High coherence = 0 blur. Low coherence = High blur.
+  // Max blur ~20px when coherence is 0.
+  const blurAmount = neurofeedbackEnabled 
+    ? Math.max(0, (100 - coherenceScore) * 0.2) 
+    : 0
 
   return (
     <>
@@ -296,22 +246,14 @@ export function FlickerCanvas() {
         onClick={togglePause}
         aria-hidden="true"
         data-active={flickerEnabled}
-      />
-      {/* Visual noise overlay - always on top */}
-      <canvas
-        ref={noiseCanvasRef}
-        className="visual-noise-overlay"
         style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          pointerEvents: 'none',
-          zIndex: 5,
-          mixBlendMode: 'overlay'
+          filter: blurAmount > 0 ? `blur(${blurAmount}px)` : 'none',
+          transition: 'filter 0.5s ease' // Smooth blur transitions
         }}
       />
+      
+      {/* Visual noise overlay - dynamic WebGL noise */}
+      <NoiseOverlay opacity={noiseOpacity} />
     </>
   )
 }

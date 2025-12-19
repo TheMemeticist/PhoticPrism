@@ -62,3 +62,6 @@ __pycache__/
 coverage/
 *.tsbuildinfo
 EOF
+
+ghub
+ghub.pub

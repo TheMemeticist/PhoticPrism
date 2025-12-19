@@ -52,6 +52,7 @@
   
   /* Z-Index Layers */
   --z-flicker: 0;
+  --z-noise: 5;
   --z-content: 10;
   --z-dojo-window: 100;
   --z-controls: 200;
@@ -358,19 +359,29 @@ input, select {
 }
 
 /* Auto-Hide UI Container */
+/* Uses a fixed full-screen container to ensure proper stacking context above noise */
+/* Layout allows children (like ControlPanel) to maintain fixed positioning logic */
 .ui-container {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-controls); 
+  pointer-events: none; /* Allow clicks to pass through empty space */
   transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Ensure interactive children (ControlPanel, StopButton) receive events ONLY when visible */
+/* This prevents invisible UI elements from blocking the Hover Trigger (z=150) or background clicks */
+.ui-container.visible > * {
+  pointer-events: auto;
 }
 
 .ui-container.visible {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto;
 }
 
 .ui-container.hidden {
   opacity: 0;
-  pointer-events: none;
 }
 
 /* Keep stop button always accessible even when hidden */
