@@ -3,11 +3,12 @@
 // ============================================
 // Main control interface for flicker, audio, and app settings.
 
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import { useAppStore } from '../../store/appStore'
 import { getHzSensitivityWarning } from '../../utils/refreshRateUtils'
 import { COMMON_REFRESH_RATES, SAFE_HZ_PRESETS } from '../../types'
 import { RoutineViewer } from '../RoutineViewer/RoutineViewer'
+import { calculateAutoCarrier } from '../../utils/audioUtils'
 import './ControlPanel.css'
 
 export function ControlPanel() {
@@ -87,17 +88,6 @@ function FlickerControls() {
   const setColors = useAppStore((s) => s.setColors)
 
   const warning = getHzSensitivityWarning(flickerHz)
-
-  // Find current Hz index in valid frequencies
-  const currentIndex = validFrequencies.findIndex(f => Math.abs(f.hz - flickerHz) < 0.1)
-  const currentFreq = validFrequencies[currentIndex]
-
-  const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const index = parseInt(e.target.value, 10)
-    if (validFrequencies[index]) {
-      setFlickerHz(validFrequencies[index].hz)
-    }
-  }
 
   return (
     <div className="control-section">
@@ -295,11 +285,7 @@ function FlickerControls() {
 // ============================================
 function PatternControls() {
   const patternMode = useAppStore((s) => s.patternMode)
-  const patternType = useAppStore((s) => s.patternType)
-  const patternConfig = useAppStore((s) => s.patternConfig)
   const setPatternMode = useAppStore((s) => s.setPatternMode)
-  const setPatternType = useAppStore((s) => s.setPatternType)
-  const setPatternConfig = useAppStore((s) => s.setPatternConfig)
 
   return (
     <div className="control-section">
@@ -1142,11 +1128,38 @@ function AudioControls() {
         />
       </div>
 
+      {/* Carrier Mode Toggle */}
+      <div className="control-group">
+        <label className="form-label">Carrier Mode</label>
+        <div className="mode-buttons">
+          <button
+            className={`btn btn-secondary ${audio.carrierMode === 'manual' ? 'active' : ''}`}
+            onClick={() => setAudio({ carrierMode: 'manual' })}
+          >
+            Manual
+          </button>
+          <button
+            className={`btn btn-secondary ${audio.carrierMode === 'auto' ? 'active' : ''}`}
+            onClick={() => setAudio({ carrierMode: 'auto' })}
+          >
+            Auto
+          </button>
+        </div>
+        <p className="control-note">
+          Auto mode calculates optimal carrier frequency based on target Hz (research-aligned)
+        </p>
+      </div>
+
       {/* Carrier Frequency */}
       <div className="control-group">
         <div className="control-row">
           <label className="form-label">Carrier Frequency</label>
-          <span className="control-value">{audio.carrierFreq} Hz</span>
+          <span className="control-value">
+            {audio.carrierMode === 'auto' 
+              ? `${Math.round(calculateAutoCarrier(audio.lockedToFlicker ? flickerHz : audio.beatFreq))} Hz (Auto)`
+              : `${audio.carrierFreq} Hz`
+            }
+          </span>
         </div>
         <input
           type="range"
@@ -1156,7 +1169,13 @@ function AudioControls() {
           step={10}
           value={audio.carrierFreq}
           onChange={(e) => setAudio({ carrierFreq: parseInt(e.target.value, 10) })}
+          disabled={audio.carrierMode === 'auto'}
         />
+        {audio.carrierMode === 'auto' && (
+          <p className="control-note">
+            Carrier is automatically calculated. Switch to Manual to override.
+          </p>
+        )}
       </div>
 
       {/* Beat Frequency */}
@@ -1243,32 +1262,46 @@ function AudioControls() {
       {/* Visual Noise */}
       <div className="control-group">
         <div className="control-row">
-          <label className="form-label">Visual Noise</label>
-          <span className="control-value">
-            {audio.visualNoiseLockedToAudio ? `${audio.ambientVolume}% 🔒` : `${audio.visualNoise}%`}
-          </span>
+          <label className="form-label">Visual Noise (Performance)</label>
+          <button
+            className={`toggle ${audio.visualNoiseEnabled ? 'active' : ''}`}
+            onClick={() => setAudio({ visualNoiseEnabled: !audio.visualNoiseEnabled })}
+            aria-pressed={audio.visualNoiseEnabled}
+          >
+            <span className="sr-only">{audio.visualNoiseEnabled ? 'Disable' : 'Enable'} visual noise</span>
+          </button>
         </div>
-        <input
-          type="range"
-          className="slider"
-          min={0}
-          max={100}
-          value={audio.visualNoiseLockedToAudio ? audio.ambientVolume : audio.visualNoise}
-          onChange={(e) => setAudio({ 
-            visualNoise: parseInt(e.target.value, 10),
-            visualNoiseLockedToAudio: false 
-          })}
-          disabled={audio.visualNoiseLockedToAudio}
-        />
-        <button
-          className={`btn btn-secondary ${audio.visualNoiseLockedToAudio ? 'active' : ''}`}
-          onClick={() => setAudio({ visualNoiseLockedToAudio: !audio.visualNoiseLockedToAudio })}
-        >
-          {audio.visualNoiseLockedToAudio ? '🔒 Locked to Audio Noise' : '🔓 Unlock from Audio'}
-        </button>
-        <p className="control-note">
-          Adds a static overlay on both ON and OFF frames. Lock to audio noise to sync visual/audio noise levels.
-        </p>
+        {audio.visualNoiseEnabled && (
+          <>
+            <div className="control-row" style={{ marginTop: '8px' }}>
+              <label className="form-label">Noise Level</label>
+              <span className="control-value">
+                {audio.visualNoiseLockedToAudio ? `${audio.ambientVolume}% 🔒` : `${audio.visualNoise}%`}
+              </span>
+            </div>
+            <input
+              type="range"
+              className="slider"
+              min={0}
+              max={100}
+              value={audio.visualNoiseLockedToAudio ? audio.ambientVolume : audio.visualNoise}
+              onChange={(e) => setAudio({ 
+                visualNoise: parseInt(e.target.value, 10),
+                visualNoiseLockedToAudio: false 
+              })}
+              disabled={audio.visualNoiseLockedToAudio}
+            />
+            <button
+              className={`btn btn-secondary ${audio.visualNoiseLockedToAudio ? 'active' : ''}`}
+              onClick={() => setAudio({ visualNoiseLockedToAudio: !audio.visualNoiseLockedToAudio })}
+            >
+              {audio.visualNoiseLockedToAudio ? '🔒 Locked to Audio Noise' : '🔓 Unlock from Audio'}
+            </button>
+            <p className="control-note">
+              Adds a static overlay on both ON and OFF frames. Lock to audio noise to sync visual/audio noise levels.
+            </p>
+          </>
+        )}
       </div>
     </div>
   )

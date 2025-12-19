@@ -37,6 +37,7 @@ export function FlickerCanvas() {
   
   // Audio & Visual Noise
   const audioConfig = useAppStore((s) => s.audio)
+  const visualNoiseEnabled = audioConfig.visualNoiseEnabled
   const visualNoise = audioConfig.visualNoiseLockedToAudio ? audioConfig.ambientVolume : audioConfig.visualNoise
   
   // Neurofeedback
@@ -252,8 +253,8 @@ export function FlickerCanvas() {
         }}
       />
       
-      {/* Visual noise overlay - dynamic WebGL noise */}
-      <NoiseOverlay opacity={noiseOpacity} />
+      {/* Visual noise overlay - dynamic WebGL noise (performance debugging toggle) */}
+      {visualNoiseEnabled && <NoiseOverlay opacity={noiseOpacity} />}
     </>
   )
 }

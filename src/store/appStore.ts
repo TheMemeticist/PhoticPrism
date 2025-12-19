@@ -35,7 +35,7 @@ const DEFAULT_SAFETY: SafetyState = {
 }
 
 const DEFAULT_PAUSE: PauseState = {
-  isPaused: false
+  isPaused: true // Always start paused - user must explicitly hit play
 }
 
 const DEFAULT_COLORS: ColorConfig = {
@@ -47,7 +47,8 @@ const DEFAULT_COLORS: ColorConfig = {
 
 const DEFAULT_AUDIO: AudioConfig = {
   enabled: false,
-  carrierFreq: 400,
+  carrierMode: 'auto', // Default to auto carrier frequency
+  carrierFreq: 400, // Used when carrierMode = 'manual'
   beatFreq: 10,
   lockedToFlicker: true,
   volume: 30, // Conservative default
@@ -55,6 +56,7 @@ const DEFAULT_AUDIO: AudioConfig = {
   ambientEnabled: false,
   ambientType: 'none',
   ambientVolume: 20,
+  visualNoiseEnabled: true, // Visual noise enabled by default
   visualNoise: 20, // Default visual noise level
   visualNoiseLockedToAudio: true // Locked to audio noise by default
 }

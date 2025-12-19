@@ -129,10 +129,12 @@ export interface ColorConfig {
 
 // Audio Types
 export type WaveformType = 'sine' | 'triangle' | 'square' | 'sawtooth'
+export type CarrierMode = 'manual' | 'auto'
 
 export interface AudioConfig {
   enabled: boolean
-  carrierFreq: number // Hz, typically 200-600
+  carrierMode: CarrierMode // Manual or Auto carrier frequency selection
+  carrierFreq: number // Hz, typically 200-600 (used when carrierMode = 'manual')
   beatFreq: number // Hz, the binaural beat frequency
   lockedToFlicker: boolean
   volume: number // 0-100
@@ -140,6 +142,7 @@ export interface AudioConfig {
   ambientEnabled: boolean
   ambientType: 'pink' | 'white' | 'brown' | 'none'
   ambientVolume: number // 0-100
+  visualNoiseEnabled: boolean // Toggle visual noise on/off (performance debugging)
   visualNoise: number // 0-100 - visual noise overlay opacity
   visualNoiseLockedToAudio: boolean // Lock visual noise to audio noise
 }

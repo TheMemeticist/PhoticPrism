@@ -6,6 +6,7 @@
 import { useEffect, useRef, useCallback } from 'react'
 import * as Tone from 'tone'
 import { useAppStore } from '../store/appStore'
+import { calculateAutoCarrier } from '../utils/audioUtils'
 
 interface AudioNodes {
   leftOsc: Tone.Oscillator | null
@@ -35,6 +36,7 @@ export function useAudioEngine() {
   })
 
   const isInitializedRef = useRef(false)
+  const isPlayingRef = useRef(false) // Track actual audio playing state
 
   // State from store
   const audio = useAppStore((s) => s.audio)
@@ -94,13 +96,18 @@ export function useAudioEngine() {
     }
   }, [])
 
-  // Start audio
+  // Start audio - properly resume oscillators
   const startAudio = useCallback(async () => {
+    if (isPlayingRef.current) return // Guard: already playing
+    
     await initAudio()
     
     const nodes = nodesRef.current
-    if (!nodes.leftOsc || !nodes.rightOsc) return
+    if (!nodes.leftOsc || !nodes.rightOsc || !nodes.masterGain) return
 
+    // Cancel any pending ramps to prevent race conditions
+    nodes.masterGain.gain.cancelScheduledValues(Tone.now())
+    
     // Start oscillators if not already started
     if (nodes.leftOsc.state !== 'started') {
       nodes.leftOsc.start()
@@ -109,19 +116,39 @@ export function useAudioEngine() {
       nodes.rightOsc.start()
     }
 
-    // Fade in
-    nodes.masterGain?.gain.rampTo(audio.volume / 100, 0.5)
-
+    // Fade in to target volume
+    const targetVolume = neurofeedbackEnabled ? beatVolumeModulation : audio.volume
+    nodes.masterGain.gain.rampTo(targetVolume / 100, 0.3)
+    
+    isPlayingRef.current = true
     console.log('🔊 Audio started')
-  }, [initAudio, audio.volume])
+  }, [initAudio, audio.volume, neurofeedbackEnabled, beatVolumeModulation])
 
-  // Stop audio
+  // Stop audio - properly halt oscillators
   const stopAudio = useCallback(() => {
+    if (!isPlayingRef.current) return // Guard: already stopped
+    
     const nodes = nodesRef.current
+    if (!nodes.masterGain) return
     
-    // Fade out
-    nodes.masterGain?.gain.rampTo(0, 0.3)
+    // Cancel any pending ramps to prevent race conditions
+    nodes.masterGain.gain.cancelScheduledValues(Tone.now())
     
+    // Immediately set to 0 (no ramp - for instant pause response)
+    nodes.masterGain.gain.value = 0
+    
+    // Stop oscillators completely to save CPU and prevent drift
+    if (nodes.leftOsc && nodes.leftOsc.state === 'started') {
+      nodes.leftOsc.stop()
+    }
+    if (nodes.rightOsc && nodes.rightOsc.state === 'started') {
+      nodes.rightOsc.stop()
+    }
+    if (nodes.noiseSource && nodes.noiseSource.state === 'started') {
+      nodes.noiseSource.stop()
+    }
+    
+    isPlayingRef.current = false
     console.log('🔊 Audio stopped')
   }, [])
 
@@ -132,8 +159,14 @@ export function useAudioEngine() {
 
     // Calculate frequencies
     const beatFreq = audio.lockedToFlicker ? flickerHz : audio.beatFreq
-    const leftFreq = audio.carrierFreq
-    const rightFreq = audio.carrierFreq + beatFreq
+    
+    // Calculate carrier frequency: Auto mode uses formula-based mapping, Manual uses user setting
+    const carrierFreq = audio.carrierMode === 'auto' 
+      ? calculateAutoCarrier(beatFreq)
+      : audio.carrierFreq
+    
+    const leftFreq = carrierFreq
+    const rightFreq = carrierFreq + beatFreq
 
     // Update oscillator frequencies
     if (nodes.leftOsc) {
@@ -152,30 +185,36 @@ export function useAudioEngine() {
     }
 
     // Update ambient noise (use neurofeedback modulation if enabled)
+    // Note: Noise respects pause state - only sets parameters here, start/stop handled separately
     if (nodes.noiseSource && nodes.noiseGain) {
       if (audio.ambientEnabled && audio.ambientType !== 'none') {
         nodes.noiseSource.type = audio.ambientType as 'pink' | 'white' | 'brown'
         const noiseVolume = neurofeedbackEnabled ? noiseVolumeModulation : audio.ambientVolume
-        // Removed 0.3 multiplier - now uses full volume range
+        // Set volume but don't start yet - that's controlled by play/pause state
         nodes.noiseGain.gain.rampTo(noiseVolume / 100, 0.3)
-        
-        if (nodes.noiseSource.state !== 'started') {
-          nodes.noiseSource.start()
-        }
       } else {
         nodes.noiseGain.gain.rampTo(0, 0.3)
       }
     }
   }, [audio, flickerHz, neurofeedbackEnabled, beatVolumeModulation, noiseVolumeModulation])
 
-  // Handle audio enable/disable and pause state
+  // Handle audio enable/disable and pause state (including noise)
   useEffect(() => {
+    const nodes = nodesRef.current
+    
     if (audio.enabled && !isPaused) {
+      // Start main audio
       startAudio()
+      
+      // Start noise if ambient is enabled
+      if (audio.ambientEnabled && nodes.noiseSource && nodes.noiseSource.state !== 'started') {
+        nodes.noiseSource.start()
+      }
     } else {
+      // Stop all audio including noise
       stopAudio()
     }
-  }, [audio.enabled, isPaused, startAudio, stopAudio])
+  }, [audio.enabled, audio.ambientEnabled, isPaused, startAudio, stopAudio])
 
   // Cleanup on unmount
   useEffect(() => {
