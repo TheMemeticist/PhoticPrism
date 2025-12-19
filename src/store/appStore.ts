@@ -198,7 +198,7 @@ export const useAppStore = create<AppState>()(
       validFrequencies: calculateValidFrequencies(INITIAL_REFRESH_RATE),
       
       // Flicker - safe defaults
-      flickerEnabled: false,
+      flickerEnabled: true, // Default ON since we start paused (user just needs to unpause)
       flickerHz: 12, // Safe default in the middle of the spectrum
       flickerMode: 'fullscreen',
       snapToValid: true, // Default to snapping to perfect Hz
