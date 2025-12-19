@@ -546,13 +546,37 @@ export const useAppStore = create<AppState>()(
       setNeurofeedback: (config) => {
         const state = get()
         
-        // Auto-enable visual noise when neurofeedback is enabled
-        if (config.enabled === true && !state.audio.visualNoiseEnabled) {
+        // Auto-enable visual noise + ambient noise when neurofeedback is enabled
+        if (config.enabled === true) {
+          const updates: Partial<AudioConfig> = {}
+          
+          if (!state.audio.visualNoiseEnabled) {
+            updates.visualNoiseEnabled = true
+            console.log('🧠 Neurofeedback enabled - auto-enabled visual noise for modulation')
+          }
+          
+          if (!state.audio.ambientEnabled) {
+            updates.ambientEnabled = true
+            updates.ambientType = 'pink' // Default to pink noise
+            console.log('🧠 Neurofeedback enabled - auto-enabled ambient noise for modulation')
+          }
+          
+          if (Object.keys(updates).length > 0) {
+            set((state) => ({
+              neurofeedback: { ...state.neurofeedback, ...config },
+              audio: { ...state.audio, ...updates }
+            }))
+          } else {
+            set((state) => ({
+              neurofeedback: { ...state.neurofeedback, ...config }
+            }))
+          }
+        } else if (config.enabled === false) {
+          // Optionally disable visual/ambient when neurofeedback is disabled
+          // For now, just update neurofeedback config (user can manually control noise)
           set((state) => ({
-            neurofeedback: { ...state.neurofeedback, ...config },
-            audio: { ...state.audio, visualNoiseEnabled: true }
+            neurofeedback: { ...state.neurofeedback, ...config }
           }))
-          console.log('🧠 Neurofeedback enabled - auto-enabled visual noise for modulation')
         } else {
           set((state) => ({
             neurofeedback: { ...state.neurofeedback, ...config }

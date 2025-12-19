@@ -12,11 +12,11 @@ import { detectRefreshRate } from './utils/refreshRateUtils'
 
 // Components
 import { SafetyModal } from './components/SafetyModal/SafetyModal'
-import { StopButton } from './components/StopButton/StopButton'
 import { FlickerCanvas } from './components/FlickerCanvas/FlickerCanvas'
 import { ControlPanel } from './components/ControlPanel/ControlPanel'
 import { DojoWindow } from './components/DojoWindow/DojoWindow'
 import { PauseOverlay } from './components/PauseOverlay/PauseOverlay'
+import { PauseHint } from './components/PauseHint/PauseHint'
 import { EEGGraph } from './components/EEGGraph/EEGGraph'
 
 import './index.css'
@@ -145,12 +145,8 @@ function App() {
         <ControlPanel />
       </div>
 
-      {/* Emergency Stop Button with auto-hide */}
-      {safetyAcknowledged && (
-        <div className={`ui-container ${isUIVisible ? 'visible' : 'hidden'}`}>
-          <StopButton />
-        </div>
-      )}
+      {/* Pause Hint - appears after UI fades, then auto-fades */}
+      {safetyAcknowledged && !isUIVisible && <PauseHint />}
 
       {/* Main Content Area */}
       <main className="main-content">

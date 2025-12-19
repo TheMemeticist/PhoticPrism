@@ -1,0 +1,45 @@
+/* ============================================
+   Pause Hint Styles
+   ============================================ */
+
+.pause-hint {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 90; /* Below UI but above flicker */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  
+  padding: 32px 48px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 3px solid #fbbf24; /* Yellow warning color */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.pause-hint.visible {
+  opacity: 1;
+}
+
+.pause-hint-icon {
+  font-size: 64px;
+  line-height: 1;
+  filter: drop-shadow(0 4px 12px rgba(251, 191, 36, 0.5));
+}
+
+.pause-hint-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fbbf24;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.5px;
+}
