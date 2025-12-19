@@ -46,17 +46,17 @@ const DEFAULT_COLORS: ColorConfig = {
 }
 
 const DEFAULT_AUDIO: AudioConfig = {
-  enabled: false,
+  enabled: true, // Audio enabled by default (starts paused)
   carrierMode: 'auto', // Default to auto carrier frequency
   carrierFreq: 400, // Used when carrierMode = 'manual'
-  beatFreq: 10,
+  beatFreq: 5, // Safe default frequency
   lockedToFlicker: true,
   volume: 30, // Conservative default
   waveform: 'sine',
   ambientEnabled: false,
   ambientType: 'none',
   ambientVolume: 20,
-  visualNoiseEnabled: true, // Visual noise enabled by default
+  visualNoiseEnabled: false, // Visual noise disabled by default (auto-enable with neurofeedback)
   visualNoise: 20, // Default visual noise level
   visualNoiseLockedToAudio: true // Locked to audio noise by default
 }
@@ -199,7 +199,7 @@ export const useAppStore = create<AppState>()(
       
       // Flicker - safe defaults
       flickerEnabled: true, // Default ON since we start paused (user just needs to unpause)
-      flickerHz: 12, // Safe default in the middle of the spectrum
+      flickerHz: 5, // Safe default frequency (theta/alpha transition)
       flickerMode: 'fullscreen',
       snapToValid: true, // Default to snapping to perfect Hz
       
@@ -543,9 +543,22 @@ export const useAppStore = create<AppState>()(
       
       setEEGGraphTimeWindow: (seconds) => set({ eegGraphTimeWindow: seconds }),
       
-      setNeurofeedback: (config) => set((state) => ({
-        neurofeedback: { ...state.neurofeedback, ...config }
-      })),
+      setNeurofeedback: (config) => {
+        const state = get()
+        
+        // Auto-enable visual noise when neurofeedback is enabled
+        if (config.enabled === true && !state.audio.visualNoiseEnabled) {
+          set((state) => ({
+            neurofeedback: { ...state.neurofeedback, ...config },
+            audio: { ...state.audio, visualNoiseEnabled: true }
+          }))
+          console.log('🧠 Neurofeedback enabled - auto-enabled visual noise for modulation')
+        } else {
+          set((state) => ({
+            neurofeedback: { ...state.neurofeedback, ...config }
+          }))
+        }
+      },
       
       updateNeurofeedbackState: (nfState) => set((state) => ({
         neurofeedbackState: { ...state.neurofeedbackState, ...nfState }
