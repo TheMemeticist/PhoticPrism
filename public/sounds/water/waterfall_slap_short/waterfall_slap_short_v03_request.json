@@ -1,0 +1,8 @@
+{
+  "prompt": "Isolated waterfall “slap” burst: a short dramatic water surge and splash (not a long ambience loop), minimal reverb, minimal wind. Take 3: keep it isolated and event-like, avoid long ambience tails.",
+  "negative_prompt": "music, speech, constant waterfall ambience, birds, distortion",
+  "duration": 10,
+  "refinement": 40,
+  "creativity": 15,
+  "seed": 282663256
+}

@@ -1,0 +1,8 @@
+{
+  "prompt": "Isolated American robin chirp phrase: bright and close, single bird, natural tone. Subtle analog field-recording vibe (gentle tape hiss), but keep background nearly silent. No other birds. Take 1: keep it isolated and event-like, avoid long ambience tails.",
+  "negative_prompt": "music, speech, crowd, heavy wind, rain, loud ambience, reverb wash, distortion, clipping",
+  "duration": 6,
+  "refinement": 40,
+  "creativity": 16,
+  "seed": 59220900
+}

@@ -1,0 +1,8 @@
+{
+  "prompt": "Isolated Steller’s jay harsh screech: single call, crisp attack, close but natural, minimal background. Slight analog field recording character. Take 2: keep it isolated and event-like, avoid long ambience tails.",
+  "negative_prompt": "music, speech, other birds, long ambience, distortion, echo",
+  "duration": 5,
+  "refinement": 40,
+  "creativity": 18,
+  "seed": 450233472
+}

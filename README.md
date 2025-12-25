@@ -60,6 +60,14 @@ Built on **Tone.js**.
 - **Binaural Beats**: Created by detuning the right oscillator by the target beat frequency (e.g., Left 200Hz, Right 210Hz = 10Hz Alpha beat).
 - **Noise Layer**: Pink/White/Brown noise generator for masking, with optional neurofeedback volume modulation.
 
+### 4. Soundscape Engine (`src/hooks/useSoundscapeEngine.ts`)
+Built on **Web Audio API** (native).
+- **Stochastic Scheduling**: Poisson process for natural event timing (0.01-60 BPM density per class).
+- **193 Sound Variants**: 7 classes (birds, mammals, water, weather, insects, foley, ambience) with AI-generated stereo clips.
+- **Spatial Audio**: Pan LFO, distance mapping (gain + LPF + reverb), algorithmic reverb, and echo.
+- **Neurofeedback Integration**: On-target sounds get closer/crisper (positive reinforcement) or harsher (negative reinforcement).
+- **See**: `docs/SOUNDSCAPE_ENGINE.md` for complete documentation.
+
 ---
 
 ## 🔬 Visual Capabilities

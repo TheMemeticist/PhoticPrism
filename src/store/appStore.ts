@@ -20,7 +20,10 @@ import {
   PatternConfig,
   PatternMode,
   GenerativePatternType,
-  GenerativeConfig
+  GenerativeConfig,
+  SoundscapeConfig,
+  SoundClass,
+  SoundClassConfig
 } from '../types'
 import { calculateValidFrequencies } from '../utils/refreshRateUtils'
 import { parseSchedule, randomizeBlocks } from '../utils/scheduleParser'
@@ -88,7 +91,10 @@ const DEFAULT_EEG: import('../types').EEGState = {
   connected: false,
   calibrated: false,
   device: null,
-  streaming: false
+  streaming: false,
+  isCalibrating: false,
+  calibrationStartTime: undefined,
+  calibrationDuration: undefined
 }
 
 const DEFAULT_NEUROFEEDBACK: import('../types').NeurofeedbackConfig = {
@@ -184,6 +190,34 @@ const DEFAULT_GENERATIVE_CONFIG: GenerativeConfig = {
   coherenceResponse: 60 // Strong breathing sync with coherence
 }
 
+// Default soundscape configuration
+const DEFAULT_SOUNDSCAPE: SoundscapeConfig = {
+  enabled: false,
+  masterVolume: 50,
+  classes: {
+    ambience: { enabled: false, bpm: 0.5, minGap: 10, maxGap: 120, reinforcementMode: 'neutral' },
+    birds: { enabled: false, bpm: 2, minGap: 5, maxGap: 60, reinforcementMode: 'positive' },
+    foley: { enabled: false, bpm: 3, minGap: 2, maxGap: 30, reinforcementMode: 'neutral' },
+    insects: { enabled: false, bpm: 1, minGap: 5, maxGap: 60, reinforcementMode: 'neutral' },
+    mammals: { enabled: false, bpm: 0.3, minGap: 20, maxGap: 180, reinforcementMode: 'positive' },
+    water: { enabled: false, bpm: 1.5, minGap: 5, maxGap: 60, reinforcementMode: 'neutral' },
+    weather: { enabled: false, bpm: 1, minGap: 10, maxGap: 120, reinforcementMode: 'negative' }
+  },
+  neurofeedbackPolicy: {
+    enabled: false,
+    spatialBias: true,
+    distanceMapping: true,
+    positiveClasses: ['birds', 'mammals'],
+    negativeClasses: ['weather'],
+    lfoFrequency: 0.1,
+    lfoBias: 0.5
+  },
+  reverbEnabled: true,
+  echoEnabled: false,
+  echoTime: 0.3,
+  echoFeedback: 0.3
+}
+
 export const useAppStore = create<AppState>()(
   persist(
     (set, get) => ({
@@ -238,6 +272,9 @@ export const useAppStore = create<AppState>()(
       neurofeedback: DEFAULT_NEUROFEEDBACK,
       neurofeedbackState: DEFAULT_NEUROFEEDBACK_STATE,
       coherenceHistory: [],
+      
+      // Soundscape
+      soundscape: DEFAULT_SOUNDSCAPE,
       
       // Actions
       setSafety: (safety) => set((state) => ({
@@ -597,7 +634,21 @@ export const useAppStore = create<AppState>()(
             ? newHistory.slice(-maxReadings) 
             : newHistory
         }
-      })
+      }),
+      
+      setSoundscape: (config) => set((state) => ({
+        soundscape: { ...state.soundscape, ...config }
+      })),
+      
+      setSoundscapeClass: (soundClass, config) => set((state) => ({
+        soundscape: {
+          ...state.soundscape,
+          classes: {
+            ...state.soundscape.classes,
+            [soundClass]: { ...state.soundscape.classes[soundClass], ...config }
+          }
+        }
+      }))
     }),
     {
       name: 'photic-prism-storage',

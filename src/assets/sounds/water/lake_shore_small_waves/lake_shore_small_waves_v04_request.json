@@ -1,0 +1,8 @@
+{
+  "prompt": "Isolated small waves on rocky shore: short swell pattern, minimal wind, no birds, subtle analog field vibe. Take 4: keep it isolated and event-like, avoid long ambience tails.",
+  "negative_prompt": "music, speech, boats, birds, heavy wind, distortion",
+  "duration": 12,
+  "refinement": 40,
+  "creativity": 14,
+  "seed": 737613046
+}

@@ -1,0 +1,8 @@
+{
+  "prompt": "Isolated Canada jay (whiskey jack) soft calls: curious, close-mic, single bird. Slight analog recorder texture, very quiet forest bed only if needed. Take 2: keep it isolated and event-like, avoid long ambience tails.",
+  "negative_prompt": "music, speech, other birds, loud forest chorus, heavy wind, reverb, distortion",
+  "duration": 6,
+  "refinement": 40,
+  "creativity": 17,
+  "seed": 797751102
+}

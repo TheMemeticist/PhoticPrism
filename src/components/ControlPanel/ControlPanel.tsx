@@ -12,7 +12,7 @@ import { calculateAutoCarrier } from '../../utils/audioUtils'
 import './ControlPanel.css'
 
 export function ControlPanel() {
-  const [activeTab, setActiveTab] = useState<'flicker' | 'audio' | 'pattern' | 'display' | 'schedule' | 'eeg'>('flicker')
+  const [activeTab, setActiveTab] = useState<'flicker' | 'audio' | 'pattern' | 'display' | 'schedule' | 'eeg' | 'soundscape'>('flicker')
   
   return (
     <div className="control-panel">
@@ -36,6 +36,12 @@ export function ControlPanel() {
             onClick={() => setActiveTab('audio')}
           >
             Audio
+          </button>
+          <button 
+            className={`tab ${activeTab === 'soundscape' ? 'active' : ''}`}
+            onClick={() => setActiveTab('soundscape')}
+          >
+            🌲 Soundscape
           </button>
           <button 
             className={`tab ${activeTab === 'display' ? 'active' : ''}`}
@@ -62,6 +68,7 @@ export function ControlPanel() {
         {activeTab === 'flicker' && <FlickerControls />}
         {activeTab === 'pattern' && <PatternControls />}
         {activeTab === 'audio' && <AudioControls />}
+        {activeTab === 'soundscape' && <SoundscapeControls />}
         {activeTab === 'display' && <DisplayControls />}
         {activeTab === 'schedule' && <ScheduleControls />}
         {activeTab === 'eeg' && <EEGControls />}
@@ -1578,15 +1585,32 @@ function EEGControls() {
       
       console.log(`🧠 EEG Calibrating for ${calibrationDuration}s...`)
       
+      // Set calibration state in store for overlay
+      setEEG({ 
+        isCalibrating: true,
+        calibrationStartTime: Date.now(),
+        calibrationDuration: calibrationDuration
+      })
+      
       // Wait for calibration duration
       await new Promise(resolve => setTimeout(resolve, calibrationDuration * 1000))
       
-      setEEG({ calibrated: true })
+      setEEG({ 
+        calibrated: true,
+        isCalibrating: false,
+        calibrationStartTime: undefined,
+        calibrationDuration: undefined
+      })
       console.log(`🧠 EEG Calibrated`)
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Calibration failed'
       setError(message)
-      setEEG({ calibrated: false })
+      setEEG({ 
+        calibrated: false,
+        isCalibrating: false,
+        calibrationStartTime: undefined,
+        calibrationDuration: undefined
+      })
       console.error('EEG calibration error:', err)
     } finally {
       setIsCalibrating(false)
@@ -1932,6 +1956,355 @@ function EEGControls() {
             </div>
           </div>
         </>
+      )}
+    </div>
+  )
+}
+
+// ============================================
+// Soundscape Controls Sub-component
+// ============================================
+function SoundscapeControls() {
+  const soundscape = useAppStore((s) => s.soundscape)
+  const setSoundscape = useAppStore((s) => s.setSoundscape)
+  const setSoundscapeClass = useAppStore((s) => s.setSoundscapeClass)
+  const neurofeedbackEnabled = useAppStore((s) => s.neurofeedback.enabled)
+
+  const soundClasses: Array<{ 
+    key: typeof soundscape.classes extends Record<infer K, any> ? K : never
+    label: string
+    icon: string
+    description: string
+  }> = [
+    { key: 'birds' as const, label: 'Birds', icon: '🐦', description: 'Birdsong and calls' },
+    { key: 'mammals', label: 'Mammals', icon: '🦌', description: 'Animal sounds' },
+    { key: 'water', label: 'Water', icon: '💧', description: 'Streams, drips, waves' },
+    { key: 'weather', label: 'Weather', icon: '🌧️', description: 'Rain, wind, thunder' },
+    { key: 'insects', label: 'Insects', icon: '🦗', description: 'Cricket chirps, buzzing' },
+    { key: 'foley', label: 'Foley', icon: '🍃', description: 'Twigs, footsteps, rustling' },
+    { key: 'ambience', label: 'Ambience', icon: '🌲', description: 'Background atmospheres' }
+  ]
+
+  return (
+    <div className="control-section">
+      {/* Master Enable */}
+      <div className="control-group">
+        <div className="control-row">
+          <label className="form-label">🌲 Soundscape Engine</label>
+          <button
+            className={`toggle ${soundscape.enabled ? 'active' : ''}`}
+            onClick={() => setSoundscape({ enabled: !soundscape.enabled })}
+            aria-pressed={soundscape.enabled}
+          >
+            <span className="sr-only">{soundscape.enabled ? 'Disable' : 'Enable'} soundscape</span>
+          </button>
+        </div>
+        <p className="control-note">
+          Procedural environmental soundscapes with neurofeedback integration (193 variants)
+        </p>
+      </div>
+
+      {/* Master Volume */}
+      <div className="control-group">
+        <div className="control-row">
+          <label className="form-label">Master Volume</label>
+          <span className="control-value">{soundscape.masterVolume}%</span>
+        </div>
+        <input
+          type="range"
+          className="slider"
+          min={0}
+          max={100}
+          value={soundscape.masterVolume}
+          onChange={(e) => setSoundscape({ masterVolume: parseInt(e.target.value) })}
+        />
+      </div>
+
+      {/* FX Enables */}
+      <div className="control-group">
+        <label className="form-label">Effects</label>
+        <div className="control-row">
+          <label style={{ fontSize: '0.9rem' }}>Reverb</label>
+          <button
+            className={`toggle ${soundscape.reverbEnabled ? 'active' : ''}`}
+            onClick={() => setSoundscape({ reverbEnabled: !soundscape.reverbEnabled })}
+            aria-pressed={soundscape.reverbEnabled}
+          >
+            <span className="sr-only">{soundscape.reverbEnabled ? 'Disable' : 'Enable'} reverb</span>
+          </button>
+        </div>
+        <div className="control-row" style={{ marginTop: '8px' }}>
+          <label style={{ fontSize: '0.9rem' }}>Echo</label>
+          <button
+            className={`toggle ${soundscape.echoEnabled ? 'active' : ''}`}
+            onClick={() => setSoundscape({ echoEnabled: !soundscape.echoEnabled })}
+            aria-pressed={soundscape.echoEnabled}
+          >
+            <span className="sr-only">{soundscape.echoEnabled ? 'Disable' : 'Enable'} echo</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Echo Parameters */}
+      {soundscape.echoEnabled && (
+        <>
+          <div className="control-group">
+            <div className="control-row">
+              <label className="form-label">Echo Time</label>
+              <span className="control-value">{(soundscape.echoTime * 1000).toFixed(0)}ms</span>
+            </div>
+            <input
+              type="range"
+              className="slider"
+              min={0.05}
+              max={1.0}
+              step={0.05}
+              value={soundscape.echoTime}
+              onChange={(e) => setSoundscape({ echoTime: parseFloat(e.target.value) })}
+            />
+          </div>
+
+          <div className="control-group">
+            <div className="control-row">
+              <label className="form-label">Echo Feedback</label>
+              <span className="control-value">{Math.round(soundscape.echoFeedback * 100)}%</span>
+            </div>
+            <input
+              type="range"
+              className="slider"
+              min={0}
+              max={0.7}
+              step={0.05}
+              value={soundscape.echoFeedback}
+              onChange={(e) => setSoundscape({ echoFeedback: parseFloat(e.target.value) })}
+            />
+          </div>
+        </>
+      )}
+
+      {/* Sound Classes */}
+      <div className="control-group" style={{ borderTop: '1px solid var(--bg-elevated)', paddingTop: '16px', marginTop: '16px' }}>
+        <label className="form-label">Sound Classes</label>
+        <p className="control-note" style={{ marginBottom: '12px' }}>
+          Enable classes and adjust event density (BPM = events per minute)
+        </p>
+
+        {soundClasses.map(({ key, label, icon, description }) => {
+          const classConfig = soundscape.classes[key]
+          
+          return (
+            <div
+              key={key}
+              style={{
+                marginBottom: '20px',
+                padding: '12px',
+                backgroundColor: classConfig.enabled ? 'var(--bg-elevated)' : 'transparent',
+                borderRadius: 'var(--radius-md)',
+                border: classConfig.enabled ? '1px solid rgba(255,255,255,0.1)' : '1px solid transparent'
+              }}
+            >
+              {/* Class Header */}
+              <div className="control-row" style={{ marginBottom: '8px' }}>
+                <label style={{ fontWeight: 'bold', fontSize: '0.95rem' }}>
+                  {icon} {label}
+                </label>
+                <button
+                  className={`toggle ${classConfig.enabled ? 'active' : ''}`}
+                  onClick={() => setSoundscapeClass(key, { enabled: !classConfig.enabled })}
+                  aria-pressed={classConfig.enabled}
+                >
+                  <span className="sr-only">{classConfig.enabled ? 'Disable' : 'Enable'} {label}</span>
+                </button>
+              </div>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)', marginBottom: '8px' }}>
+                {description}
+              </p>
+
+              {classConfig.enabled && (
+                <>
+                  {/* BPM Slider */}
+                  <div style={{ marginTop: '8px' }}>
+                    <div className="control-row">
+                      <label style={{ fontSize: '0.85rem' }}>Event Rate (BPM)</label>
+                      <span className="control-value">{classConfig.bpm.toFixed(2)}</span>
+                    </div>
+                    <input
+                      type="range"
+                      className="slider"
+                      min={0.01}
+                      max={60}
+                      step={0.01}
+                      value={classConfig.bpm}
+                      onChange={(e) => setSoundscapeClass(key, { bpm: parseFloat(e.target.value) })}
+                    />
+                    <p style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', marginTop: '4px' }}>
+                      {classConfig.bpm < 1 
+                        ? `~${(60 / classConfig.bpm).toFixed(0)}s between events`
+                        : `~${classConfig.bpm.toFixed(1)} events/min`
+                      }
+                    </p>
+                  </div>
+
+                  {/* Reinforcement Mode */}
+                  <div style={{ marginTop: '8px' }}>
+                    <label style={{ fontSize: '0.85rem', display: 'block', marginBottom: '4px' }}>
+                      Reinforcement Mode
+                    </label>
+                    <select
+                      className="form-select"
+                      value={classConfig.reinforcementMode}
+                      onChange={(e) => setSoundscapeClass(key, { reinforcementMode: e.target.value as any })}
+                      style={{ fontSize: '0.85rem' }}
+                    >
+                      <option value="neutral">Neutral (no NF modulation)</option>
+                      <option value="positive">Positive (closer on-target)</option>
+                      <option value="negative">Negative (harsher on-target)</option>
+                    </select>
+                  </div>
+
+                  {/* Min/Max Gap */}
+                  <details style={{ marginTop: '8px', fontSize: '0.85rem' }}>
+                    <summary style={{ cursor: 'pointer', color: 'var(--text-secondary)' }}>
+                      Advanced Timing
+                    </summary>
+                    <div style={{ marginTop: '8px' }}>
+                      <div className="control-row">
+                        <label style={{ fontSize: '0.8rem' }}>Min Gap</label>
+                        <span className="control-value">{classConfig.minGap}s</span>
+                      </div>
+                      <input
+                        type="range"
+                        className="slider"
+                        min={0}
+                        max={60}
+                        step={1}
+                        value={classConfig.minGap}
+                        onChange={(e) => setSoundscapeClass(key, { minGap: parseInt(e.target.value) })}
+                      />
+                    </div>
+                    <div style={{ marginTop: '8px' }}>
+                      <div className="control-row">
+                        <label style={{ fontSize: '0.8rem' }}>Max Gap</label>
+                        <span className="control-value">{classConfig.maxGap}s</span>
+                      </div>
+                      <input
+                        type="range"
+                        className="slider"
+                        min={10}
+                        max={300}
+                        step={10}
+                        value={classConfig.maxGap}
+                        onChange={(e) => setSoundscapeClass(key, { maxGap: parseInt(e.target.value) })}
+                      />
+                    </div>
+                  </details>
+                </>
+              )}
+            </div>
+          )
+        })}
+      </div>
+
+      {/* Neurofeedback Policy */}
+      {neurofeedbackEnabled && (
+        <div className="control-group" style={{ borderTop: '1px solid var(--bg-elevated)', paddingTop: '16px', marginTop: '16px' }}>
+          <label className="form-label">🧠 Neurofeedback Spatial Modulation</label>
+          <div className="control-row" style={{ marginBottom: '12px' }}>
+            <button
+              className={`toggle ${soundscape.neurofeedbackPolicy.enabled ? 'active' : ''}`}
+              onClick={() => setSoundscape({
+                neurofeedbackPolicy: { ...soundscape.neurofeedbackPolicy, enabled: !soundscape.neurofeedbackPolicy.enabled }
+              })}
+              aria-pressed={soundscape.neurofeedbackPolicy.enabled}
+            >
+              <span className="sr-only">
+                {soundscape.neurofeedbackPolicy.enabled ? 'Disable' : 'Enable'} NF spatial modulation
+              </span>
+            </button>
+            <span>{soundscape.neurofeedbackPolicy.enabled ? 'Active' : 'Inactive'}</span>
+          </div>
+
+          {soundscape.neurofeedbackPolicy.enabled && (
+            <>
+              <div className="control-row" style={{ marginTop: '12px' }}>
+                <label style={{ fontSize: '0.9rem' }}>Spatial Bias (Pan)</label>
+                <button
+                  className={`toggle ${soundscape.neurofeedbackPolicy.spatialBias ? 'active' : ''}`}
+                  onClick={() => setSoundscape({
+                    neurofeedbackPolicy: { ...soundscape.neurofeedbackPolicy, spatialBias: !soundscape.neurofeedbackPolicy.spatialBias }
+                  })}
+                  aria-pressed={soundscape.neurofeedbackPolicy.spatialBias}
+                >
+                  <span className="sr-only">Toggle spatial bias</span>
+                </button>
+              </div>
+
+              <div className="control-row" style={{ marginTop: '8px' }}>
+                <label style={{ fontSize: '0.9rem' }}>Distance Mapping</label>
+                <button
+                  className={`toggle ${soundscape.neurofeedbackPolicy.distanceMapping ? 'active' : ''}`}
+                  onClick={() => setSoundscape({
+                    neurofeedbackPolicy: { ...soundscape.neurofeedbackPolicy, distanceMapping: !soundscape.neurofeedbackPolicy.distanceMapping }
+                  })}
+                  aria-pressed={soundscape.neurofeedbackPolicy.distanceMapping}
+                >
+                  <span className="sr-only">Toggle distance mapping</span>
+                </button>
+              </div>
+
+              {soundscape.neurofeedbackPolicy.spatialBias && (
+                <>
+                  <div style={{ marginTop: '12px' }}>
+                    <div className="control-row">
+                      <label style={{ fontSize: '0.85rem' }}>LFO Frequency</label>
+                      <span className="control-value">{soundscape.neurofeedbackPolicy.lfoFrequency.toFixed(2)} Hz</span>
+                    </div>
+                    <input
+                      type="range"
+                      className="slider"
+                      min={0.01}
+                      max={0.5}
+                      step={0.01}
+                      value={soundscape.neurofeedbackPolicy.lfoFrequency}
+                      onChange={(e) => setSoundscape({
+                        neurofeedbackPolicy: { ...soundscape.neurofeedbackPolicy, lfoFrequency: parseFloat(e.target.value) }
+                      })}
+                    />
+                    <p style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', marginTop: '4px' }}>
+                      Pan oscillation rate (slower = smoother)
+                    </p>
+                  </div>
+
+                  <div style={{ marginTop: '8px' }}>
+                    <div className="control-row">
+                      <label style={{ fontSize: '0.85rem' }}>LFO Bias</label>
+                      <span className="control-value">{Math.round(soundscape.neurofeedbackPolicy.lfoBias * 100)}%</span>
+                    </div>
+                    <input
+                      type="range"
+                      className="slider"
+                      min={0}
+                      max={1}
+                      step={0.05}
+                      value={soundscape.neurofeedbackPolicy.lfoBias}
+                      onChange={(e) => setSoundscape({
+                        neurofeedbackPolicy: { ...soundscape.neurofeedbackPolicy, lfoBias: parseFloat(e.target.value) }
+                      })}
+                    />
+                    <p style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', marginTop: '4px' }}>
+                      NF influence on pan center
+                    </p>
+                  </div>
+                </>
+              )}
+
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '12px', fontStyle: 'italic' }}>
+                💡 Tip: Set reinforcement modes above to "positive" for reward sounds (birds) 
+                or "negative" for aversive sounds (harsh weather)
+              </p>
+            </>
+          )}
+        </div>
       )}
     </div>
   )

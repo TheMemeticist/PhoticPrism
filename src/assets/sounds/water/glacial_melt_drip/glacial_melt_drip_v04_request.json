@@ -1,0 +1,8 @@
+{
+  "prompt": "Isolated glacial melt drips: close, crystalline droplets and tiny splashes, minimal background, subtle analog vibe. Take 4: keep it isolated and event-like, avoid long ambience tails.",
+  "negative_prompt": "music, speech, birds, loud stream, distortion",
+  "duration": 10,
+  "refinement": 40,
+  "creativity": 13,
+  "seed": 584021671
+}

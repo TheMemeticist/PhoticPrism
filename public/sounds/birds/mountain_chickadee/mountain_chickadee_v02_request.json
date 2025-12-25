@@ -1,0 +1,8 @@
+{
+  "prompt": "Isolated mountain chickadee calls: tiny bright notes, close-mic, single bird. Very minimal background. Take 2: keep it isolated and event-like, avoid long ambience tails.",
+  "negative_prompt": "music, speech, other birds, long forest ambience, wind roar, distortion",
+  "duration": 5,
+  "refinement": 40,
+  "creativity": 16,
+  "seed": 721854697
+}

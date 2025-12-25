@@ -5,6 +5,7 @@
 import { useEffect, useState } from 'react'
 import { useAppStore } from './store/appStore'
 import { useAudioEngine } from './hooks/useAudioEngine'
+import { useSoundscapeEngine } from './hooks/useSoundscapeEngine'
 import { useAutoHide } from './hooks/useAutoHide'
 import { useEEGPolling } from './hooks/useEEGPolling'
 import { useNeurofeedback } from './hooks/useNeurofeedback'
@@ -18,6 +19,7 @@ import { DojoWindow } from './components/DojoWindow/DojoWindow'
 import { PauseOverlay } from './components/PauseOverlay/PauseOverlay'
 import { PauseHint } from './components/PauseHint/PauseHint'
 import { EEGGraph } from './components/EEGGraph/EEGGraph'
+import { CalibrationOverlay } from './components/CalibrationOverlay/CalibrationOverlay'
 
 import './index.css'
 
@@ -38,6 +40,9 @@ function App() {
 
   // Initialize audio engine
   useAudioEngine()
+  
+  // Initialize soundscape engine
+  useSoundscapeEngine()
   
   // Initialize EEG polling (runs continuously in background)
   useEEGPolling()
@@ -107,6 +112,9 @@ function App() {
 
       {/* Pause Overlay - shows pause symbol when paused */}
       <PauseOverlay />
+
+      {/* Calibration Overlay - shows countdown timer during EEG calibration */}
+      <CalibrationOverlay />
 
       {/* Dojo Window - draggable video + webcam + integrated trainer */}
       <DojoWindow />

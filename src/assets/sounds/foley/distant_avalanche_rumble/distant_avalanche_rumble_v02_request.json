@@ -1,0 +1,8 @@
+{
+  "prompt": "Distant avalanche rumble: single event, low rolling rumble with a clear rise and decay, not a continuous ambience. Minimal wind, slight analog field recording vibe. Take 2: keep it isolated and event-like, avoid long ambience tails.",
+  "negative_prompt": "music, speech, explosions, artillery, distortion",
+  "duration": 12,
+  "refinement": 40,
+  "creativity": 17,
+  "seed": 365870197
+}

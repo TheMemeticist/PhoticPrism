@@ -236,6 +236,9 @@ export interface EEGState {
   calibrated: boolean
   device: string | null
   streaming: boolean
+  isCalibrating?: boolean
+  calibrationStartTime?: number
+  calibrationDuration?: number
 }
 
 // Neurofeedback Types
@@ -297,6 +300,9 @@ export const COMMON_REFRESH_RATES: RefreshRateOption[] = [
 // Default safe Hz presets
 export const SAFE_HZ_PRESETS = [10, 12, 15, 20, 30, 40] as const
 
+// Import soundscape types
+import type { SoundscapeConfig, SoundClass, SoundClassConfig } from './soundscape'
+
 // App State (complete Zustand store type)
 export interface AppState {
   // Safety
@@ -351,6 +357,9 @@ export interface AppState {
   neurofeedbackState: NeurofeedbackState
   coherenceHistory: CoherenceDataPoint[]
   
+  // Soundscape
+  soundscape: SoundscapeConfig
+  
   // Actions
   setSafety: (safety: Partial<SafetyState>) => void
   togglePause: () => void
@@ -384,4 +393,9 @@ export interface AppState {
   setNeurofeedback: (config: Partial<NeurofeedbackConfig>) => void
   updateNeurofeedbackState: (state: Partial<NeurofeedbackState>) => void
   addCoherenceReading: (reading: CoherenceDataPoint) => void
+  setSoundscape: (config: Partial<SoundscapeConfig>) => void
+  setSoundscapeClass: (soundClass: SoundClass, config: Partial<SoundClassConfig>) => void
 }
+
+// Re-export soundscape types for convenience
+export type { SoundscapeConfig, SoundClass, SoundClassConfig } from './soundscape'

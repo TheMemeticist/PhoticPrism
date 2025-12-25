@@ -1,0 +1,8 @@
+{
+  "prompt": "Isolated spruce branch rub/creak: a short creaky flex with subtle wood fibers, close mic, minimal background, slight analog vibe. Take 5: keep it isolated and event-like, avoid long ambience tails.",
+  "negative_prompt": "music, speech, wind roar, birds, distortion",
+  "duration": 6,
+  "refinement": 40,
+  "creativity": 15,
+  "seed": 266101576
+}
