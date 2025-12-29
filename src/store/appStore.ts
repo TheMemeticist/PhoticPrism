@@ -50,15 +50,16 @@ const DEFAULT_COLORS: ColorConfig = {
 
 const DEFAULT_AUDIO: AudioConfig = {
   enabled: true, // Audio enabled by default (starts paused)
+  masterVolume: 80, // Master volume control (0-100%)
   carrierMode: 'auto', // Default to auto carrier frequency
   carrierFreq: 400, // Used when carrierMode = 'manual'
   beatFreq: 5, // Safe default frequency
   lockedToFlicker: true,
-  volume: 30, // Conservative default
+  volume: 70, // Binaural beats volume (0-100%)
   waveform: 'sine',
   ambientEnabled: false,
   ambientType: 'none',
-  ambientVolume: 20,
+  ambientVolume: 50, // Noise volume (0-100%)
   visualNoiseEnabled: false, // Visual noise disabled by default (auto-enable with neurofeedback)
   visualNoise: 20, // Default visual noise level
   visualNoiseLockedToAudio: true // Locked to audio noise by default
@@ -196,6 +197,7 @@ const DEFAULT_SOUNDSCAPE: SoundscapeConfig = {
   masterVolume: 50,
   classes: {
     ambience: { enabled: false, bpm: 0.5, minGap: 10, maxGap: 120, reinforcementMode: 'neutral' },
+    amphibians: { enabled: false, bpm: 1.5, minGap: 8, maxGap: 90, reinforcementMode: 'positive' },
     birds: { enabled: false, bpm: 2, minGap: 5, maxGap: 60, reinforcementMode: 'positive' },
     foley: { enabled: false, bpm: 3, minGap: 2, maxGap: 30, reinforcementMode: 'neutral' },
     insects: { enabled: false, bpm: 1, minGap: 5, maxGap: 60, reinforcementMode: 'neutral' },
@@ -207,7 +209,7 @@ const DEFAULT_SOUNDSCAPE: SoundscapeConfig = {
     enabled: false,
     spatialBias: true,
     distanceMapping: true,
-    positiveClasses: ['birds', 'mammals'],
+    positiveClasses: ['amphibians', 'birds', 'mammals'],
     negativeClasses: ['weather'],
     lfoFrequency: 0.1,
     lfoBias: 0.5

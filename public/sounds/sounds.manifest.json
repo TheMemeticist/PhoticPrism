@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generatedAt": "2025-12-19T07:24:41.430Z",
+  "generatedAt": "2025-12-27T08:41:37.608Z",
   "sounds": [
     {
       "id": "distant_train_valley_hint_v01",
@@ -251,6 +251,306 @@
       "panPolicy": "random",
       "reverbSend": 0.3,
       "cooldown": 20
+    },
+    {
+      "id": "forest_cicadas_river_v01",
+      "class": "ambience",
+      "tags": [
+        "forest night thailand",
+        "ambience"
+      ],
+      "path": "/sounds/ambience/forest_night_thailand/forest_cicadas_river_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.4,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 20
+    },
+    {
+      "id": "forest_cicadas_river_v02",
+      "class": "ambience",
+      "tags": [
+        "forest night thailand",
+        "ambience"
+      ],
+      "path": "/sounds/ambience/forest_night_thailand/forest_cicadas_river_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.4,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 20
+    },
+    {
+      "id": "taiwan_frogs_village_v01",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v02",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v03",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v04",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v04.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v05",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v05.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v06",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v06.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v07",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v07.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v08",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v08.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v09",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v09.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v10",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v10.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v11",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v11.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v12",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v12.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v13",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v13.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
       "id": "canada_jay_calls_v01",
@@ -616,6 +916,86 @@
       ],
       "path": "/sounds/birds/common_raven_croak/common_raven_croak_v05.wav",
       "duration": 7,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.2,
+      "cooldown": 15
+    },
+    {
+      "id": "crow_taipei_park_v01",
+      "class": "birds",
+      "tags": [
+        "crow cawing taiwan",
+        "birds"
+      ],
+      "path": "/sounds/birds/crow_cawing_taiwan/crow_taipei_park_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.2,
+      "cooldown": 15
+    },
+    {
+      "id": "crow_taipei_park_v02",
+      "class": "birds",
+      "tags": [
+        "crow cawing taiwan",
+        "birds"
+      ],
+      "path": "/sounds/birds/crow_cawing_taiwan/crow_taipei_park_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.2,
+      "cooldown": 15
+    },
+    {
+      "id": "crow_taipei_park_v03",
+      "class": "birds",
+      "tags": [
+        "crow cawing taiwan",
+        "birds"
+      ],
+      "path": "/sounds/birds/crow_cawing_taiwan/crow_taipei_park_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.2,
+      "cooldown": 15
+    },
+    {
+      "id": "crow_taipei_wings_v01",
+      "class": "birds",
+      "tags": [
+        "crow cawing taiwan",
+        "birds"
+      ],
+      "path": "/sounds/birds/crow_cawing_taiwan/crow_taipei_wings_v01.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
       "gainJitter": 0.15,
@@ -3238,6 +3618,426 @@
       "cooldown": 30
     },
     {
+      "id": "squirrel_taipei_creek_v01",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v02",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v03",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v04",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v04.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v05",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v05.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v06",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v06.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v07",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v07.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v08",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v08.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v09",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v09.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v10",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v10.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v11",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v11.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v12",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v12.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v13",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v13.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v14",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v14.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v15",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v15.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v16",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v16.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v17",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v17.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v18",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v18.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v19",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v19.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
+      "id": "squirrel_taipei_creek_v20",
+      "class": "mammals",
+      "tags": [
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
+      ],
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v20.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.8,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.3,
+      "cooldown": 30
+    },
+    {
       "id": "wolf_howl_far_v01",
       "class": "mammals",
       "tags": [
@@ -3336,6 +4136,266 @@
       "panPolicy": "random",
       "reverbSend": 0.3,
       "cooldown": 30
+    },
+    {
+      "id": "creek_splash_rooster_v06",
+      "class": "water",
+      "tags": [
+        "splash creek taiwan",
+        "water"
+      ],
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_rooster_v06.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "creek_splash_rooster_v07",
+      "class": "water",
+      "tags": [
+        "splash creek taiwan",
+        "water"
+      ],
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_rooster_v07.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "creek_splash_rooster_v08",
+      "class": "water",
+      "tags": [
+        "splash creek taiwan",
+        "water"
+      ],
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_rooster_v08.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "creek_splash_rooster_v09",
+      "class": "water",
+      "tags": [
+        "splash creek taiwan",
+        "water"
+      ],
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_rooster_v09.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "creek_splash_texture_v01",
+      "class": "water",
+      "tags": [
+        "splash creek taiwan",
+        "water"
+      ],
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_texture_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "creek_splash_texture_v02",
+      "class": "water",
+      "tags": [
+        "splash creek taiwan",
+        "water"
+      ],
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_texture_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "creek_splash_texture_v03",
+      "class": "water",
+      "tags": [
+        "splash creek taiwan",
+        "water"
+      ],
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_texture_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "creek_splash_texture_v04",
+      "class": "water",
+      "tags": [
+        "splash creek taiwan",
+        "water"
+      ],
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_texture_v04.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "creek_splash_texture_v05",
+      "class": "water",
+      "tags": [
+        "splash creek taiwan",
+        "water"
+      ],
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_texture_v05.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "forest_river_birds_v01",
+      "class": "water",
+      "tags": [
+        "ambient birdsong thailand",
+        "water"
+      ],
+      "path": "/sounds/water/ambient_birdsong_thailand/forest_river_birds_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "forest_river_birds_v02",
+      "class": "water",
+      "tags": [
+        "ambient birdsong thailand",
+        "water"
+      ],
+      "path": "/sounds/water/ambient_birdsong_thailand/forest_river_birds_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "forest_river_birds_v03",
+      "class": "water",
+      "tags": [
+        "ambient birdsong thailand",
+        "water"
+      ],
+      "path": "/sounds/water/ambient_birdsong_thailand/forest_river_birds_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "forest_river_birds_v04",
+      "class": "water",
+      "tags": [
+        "ambient birdsong thailand",
+        "water"
+      ],
+      "path": "/sounds/water/ambient_birdsong_thailand/forest_river_birds_v04.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
     },
     {
       "id": "glacial_melt_drip_v01",
@@ -3713,6 +4773,193 @@
       "cooldown": 15
     },
     {
+      "id": "river_birds_daytime_v01",
+      "class": "water",
+      "tags": [
+        "thailand",
+        "water",
+        "river flow"
+      ],
+      "path": "/sounds/water/river_flow/thailand/river_birds_daytime_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "river_birds_rooster_v03",
+      "class": "water",
+      "tags": [
+        "thailand",
+        "water",
+        "river flow"
+      ],
+      "path": "/sounds/water/river_flow/thailand/river_birds_rooster_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "river_calm_taipei_v01",
+      "class": "water",
+      "tags": [
+        "taiwan",
+        "water",
+        "river flow"
+      ],
+      "path": "/sounds/water/river_flow/taiwan/river_calm_taipei_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "river_calm_taipei_v02",
+      "class": "water",
+      "tags": [
+        "taiwan",
+        "water",
+        "river flow"
+      ],
+      "path": "/sounds/water/river_flow/taiwan/river_calm_taipei_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "river_calm_taipei_v03",
+      "class": "water",
+      "tags": [
+        "taiwan",
+        "water",
+        "river flow"
+      ],
+      "path": "/sounds/water/river_flow/taiwan/river_calm_taipei_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "river_calm_taipei_v04",
+      "class": "water",
+      "tags": [
+        "taiwan",
+        "water",
+        "river flow"
+      ],
+      "path": "/sounds/water/river_flow/taiwan/river_calm_taipei_v04.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "river_cicadas_evening_v02",
+      "class": "water",
+      "tags": [
+        "thailand",
+        "water",
+        "river flow"
+      ],
+      "path": "/sounds/water/river_flow/thailand/river_cicadas_evening_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "waterfall_forest_frogs_v03",
+      "class": "water",
+      "tags": [
+        "waterfall thailand",
+        "water"
+      ],
+      "path": "/sounds/water/waterfall_thailand/waterfall_forest_frogs_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "waterfall_forest_frogs_v04",
+      "class": "water",
+      "tags": [
+        "waterfall thailand",
+        "water"
+      ],
+      "path": "/sounds/water/waterfall_thailand/waterfall_forest_frogs_v04.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
       "id": "waterfall_slap_short_v01",
       "class": "water",
       "tags": [
@@ -3826,6 +5073,46 @@
       ],
       "path": "/sounds/water/waterfall_slap_short/waterfall_slap_short_v05.wav",
       "duration": 10,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "waterfall_spray_birds_v01",
+      "class": "water",
+      "tags": [
+        "waterfall thailand",
+        "water"
+      ],
+      "path": "/sounds/water/waterfall_thailand/waterfall_spray_birds_v01.WAV",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "waterfall_strong_spray_v02",
+      "class": "water",
+      "tags": [
+        "waterfall thailand",
+        "water"
+      ],
+      "path": "/sounds/water/waterfall_thailand/waterfall_strong_spray_v02.WAV",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -4151,6 +5438,126 @@
       ],
       "path": "/sounds/weather/hail_hits_rock/hail_hits_rock_v05.wav",
       "duration": 7,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "rain_leaves_cicadas_v01",
+      "class": "weather",
+      "tags": [
+        "rain forest thailand",
+        "weather"
+      ],
+      "path": "/sounds/weather/rain_forest_thailand/rain_leaves_cicadas_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "rain_leaves_cicadas_v02",
+      "class": "weather",
+      "tags": [
+        "rain forest thailand",
+        "weather"
+      ],
+      "path": "/sounds/weather/rain_forest_thailand/rain_leaves_cicadas_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "rain_leaves_cicadas_v03",
+      "class": "weather",
+      "tags": [
+        "rain forest thailand",
+        "weather"
+      ],
+      "path": "/sounds/weather/rain_forest_thailand/rain_leaves_cicadas_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "rain_leaves_cicadas_v04",
+      "class": "weather",
+      "tags": [
+        "rain forest thailand",
+        "weather"
+      ],
+      "path": "/sounds/weather/rain_forest_thailand/rain_leaves_cicadas_v04.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "rain_leaves_cicadas_v05",
+      "class": "weather",
+      "tags": [
+        "rain forest thailand",
+        "weather"
+      ],
+      "path": "/sounds/weather/rain_forest_thailand/rain_leaves_cicadas_v05.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "rain_leaves_cicadas_v06",
+      "class": "weather",
+      "tags": [
+        "rain forest thailand",
+        "weather"
+      ],
+      "path": "/sounds/weather/rain_forest_thailand/rain_leaves_cicadas_v06.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.6,
       "gainJitter": 0.15,
@@ -4501,6 +5908,300 @@
       ],
       "path": "/sounds/weather/thunder_single_crack/thunder_single_crack_v05.wav",
       "duration": 10,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_grass_reed_taipei_v01",
+      "class": "weather",
+      "tags": [
+        "vegetation gentle taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_gentle_taiwan/wind_grass_reed_taipei_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_grass_reed_taipei_v02",
+      "class": "weather",
+      "tags": [
+        "vegetation gentle taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_gentle_taiwan/wind_grass_reed_taipei_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_grass_reed_taipei_v03",
+      "class": "weather",
+      "tags": [
+        "vegetation gentle taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_gentle_taiwan/wind_grass_reed_taipei_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_grass_reed_taipei_v04",
+      "class": "weather",
+      "tags": [
+        "vegetation gentle taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_gentle_taiwan/wind_grass_reed_taipei_v04.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_grass_reed_taipei_v05",
+      "class": "weather",
+      "tags": [
+        "vegetation gentle taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_gentle_taiwan/wind_grass_reed_taipei_v05.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_lakeside_park_taitung_v01",
+      "class": "weather",
+      "tags": [
+        "vegetation lakeside taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_lakeside_taiwan/wind_lakeside_park_taitung_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_lakeside_park_taitung_v02",
+      "class": "weather",
+      "tags": [
+        "vegetation lakeside taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_lakeside_taiwan/wind_lakeside_park_taitung_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_lakeside_park_taitung_v03",
+      "class": "weather",
+      "tags": [
+        "vegetation lakeside taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_lakeside_taiwan/wind_lakeside_park_taitung_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_lakeside_park_taitung_v04",
+      "class": "weather",
+      "tags": [
+        "vegetation lakeside taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_lakeside_taiwan/wind_lakeside_park_taitung_v04.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_lakeside_park_taitung_v05",
+      "class": "weather",
+      "tags": [
+        "vegetation lakeside taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_lakeside_taiwan/wind_lakeside_park_taitung_v05.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_waves_beach_taitung_v01",
+      "class": "weather",
+      "tags": [
+        "vegetation beach taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_beach_taiwan/wind_waves_beach_taitung_v01.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_waves_beach_taitung_v02",
+      "class": "weather",
+      "tags": [
+        "vegetation beach taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_beach_taiwan/wind_waves_beach_taitung_v02.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_waves_beach_taitung_v03",
+      "class": "weather",
+      "tags": [
+        "vegetation beach taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_beach_taiwan/wind_waves_beach_taitung_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.6,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.4,
+      "cooldown": 20
+    },
+    {
+      "id": "wind_waves_beach_taitung_v04",
+      "class": "weather",
+      "tags": [
+        "vegetation beach taiwan",
+        "weather",
+        "wind"
+      ],
+      "path": "/sounds/weather/wind/vegetation_beach_taiwan/wind_waves_beach_taitung_v04.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.6,
       "gainJitter": 0.15,

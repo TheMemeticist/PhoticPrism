@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated common raven deep croak and click: single raven, dry and close, minimal reflections, slight analog vibe. Take 3: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, other birds, heavy ambience, distortion, reverb wash",
-  "duration": 7,
-  "refinement": 40,
-  "creativity": 17,
-  "seed": 623108672
-}

@@ -67,6 +67,37 @@
   padding: var(--space-md);
 }
 
+/* Sub-tabs */
+.sub-tabs {
+  display: flex;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+  padding: var(--space-xs);
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.sub-tabs .btn {
+  flex: 1;
+  font-size: 0.85rem;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: none;
+}
+
+.sub-tabs .btn:hover {
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.sub-tabs .btn.active {
+  background-color: var(--bg-primary);
+  color: var(--accent-primary);
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
 .control-section {
   display: flex;
   flex-direction: column;

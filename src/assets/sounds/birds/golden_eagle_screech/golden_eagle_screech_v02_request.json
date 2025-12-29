@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated golden eagle screech: lone raptor call, airy and wild, but keep it isolated and dry. Slight analog field mic character. Take 2: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, crowd, other birds, long ambience, distortion",
-  "duration": 5,
-  "refinement": 40,
-  "creativity": 18,
-  "seed": 183375406
-}

@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated campfire crackle: short burst of dry wood pops and crackles, close mic, minimal background, subtle analog vibe. No voices. Take 1: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, crowd, wind roar, distortion",
-  "duration": 10,
-  "refinement": 40,
-  "creativity": 14,
-  "seed": 74753316
-}

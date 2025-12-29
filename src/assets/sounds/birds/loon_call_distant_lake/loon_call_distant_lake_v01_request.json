@@ -1,8 +1,0 @@
-{
-  "prompt": "Common loon call across a mountain lake: distant but still isolated as a single loon phrase, with very faint water/air. Subtle analog recording vibe. Take 1: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, other birds, boat motor, loud waves, distortion",
-  "duration": 8,
-  "refinement": 40,
-  "creativity": 16,
-  "seed": 692270254
-}

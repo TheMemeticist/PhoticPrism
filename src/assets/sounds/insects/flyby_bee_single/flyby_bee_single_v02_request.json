@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated bee flyby: single pass, close mic, no garden ambience, slight analog texture. Take 2: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, insect chorus, distortion",
-  "duration": 4,
-  "refinement": 40,
-  "creativity": 17,
-  "seed": 706282356
-}

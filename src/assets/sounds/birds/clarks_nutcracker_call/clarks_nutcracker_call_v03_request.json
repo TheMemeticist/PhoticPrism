@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated Clark’s nutcracker nasal call: single bird, clear midrange, close mic, minimal environment. Subtle tape hiss only. Take 3: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, other birds, wind roar, crowd, distortion",
-  "duration": 6,
-  "refinement": 40,
-  "creativity": 17,
-  "seed": 148856334
-}

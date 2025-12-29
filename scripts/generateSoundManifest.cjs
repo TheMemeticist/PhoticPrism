@@ -7,7 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SOUNDS_DIR = path.join(__dirname, '../src/assets/sounds');
+const SOUNDS_DIR = path.join(__dirname, '../public/sounds');
 const OUTPUT_FILE = path.join(SOUNDS_DIR, 'sounds.manifest.json');
 
 // Sound class defaults (tuned for natural soundscapes)
@@ -19,6 +19,14 @@ const CLASS_DEFAULTS = {
     panPolicy: 'random',
     reverbSend: 0.3,
     cooldown: 20
+  },
+  amphibians: {
+    baseGain: 0.7,
+    gainJitter: 0.15,
+    pitchJitter: [0.95, 1.05],
+    panPolicy: 'random',
+    reverbSend: 0.25,
+    cooldown: 18
   },
   birds: {
     baseGain: 0.7,
@@ -70,16 +78,29 @@ const CLASS_DEFAULTS = {
   }
 };
 
-function scanDirectory(dir, className) {
+/**
+ * Recursively scan a directory for sound files
+ * Handles hierarchical folder structures (e.g., mammals/rodents/squirrel_vocals)
+ */
+function scanDirectory(dir, className, relativePath = '') {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   const variants = [];
 
+  // Check if this directory contains .wav/.WAV files
+  const audioFiles = entries.filter(e => e.isFile() && (e.name.endsWith('.wav') || e.name.endsWith('.WAV')));
+  
+  if (audioFiles.length > 0) {
+    // This is a leaf directory with sound files
+    const leafVariants = processAudioFiles(dir, className, relativePath, audioFiles);
+    variants.push(...leafVariants);
+  }
+
+  // Recurse into subdirectories
   for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
-    
     if (entry.isDirectory()) {
-      // Recurse into subdirectory
-      const subVariants = scanVariantFolder(fullPath, className);
+      const fullPath = path.join(dir, entry.name);
+      const newRelativePath = relativePath ? `${relativePath}/${entry.name}` : entry.name;
+      const subVariants = scanDirectory(fullPath, className, newRelativePath);
       variants.push(...subVariants);
     }
   }
@@ -87,15 +108,15 @@ function scanDirectory(dir, className) {
   return variants;
 }
 
-function scanVariantFolder(folder, className) {
-  const entries = fs.readdirSync(folder);
+/**
+ * Process audio files in a leaf directory
+ */
+function processAudioFiles(folder, className, relativePath, audioFiles) {
   const variants = [];
-
-  // Find all .wav files
-  const wavFiles = entries.filter(f => f.endsWith('.wav'));
   
-  for (const wavFile of wavFiles) {
-    const baseName = wavFile.replace('.wav', '');
+  for (const audioFile of audioFiles) {
+    const fileName = audioFile.name;
+    const baseName = fileName.replace(/\.(wav|WAV)$/, '');
     const metaFile = path.join(folder, `${baseName}_meta.json`);
     
     let metadata = {};
@@ -108,12 +129,22 @@ function scanVariantFolder(folder, className) {
       }
     }
 
-    // Extract tags from folder name and metadata
+    // Extract tags from folder hierarchy and metadata
     const folderName = path.basename(folder);
     const tags = [
       folderName.replace(/_/g, ' '),
       className
     ];
+    
+    // Add parent folder names as context tags
+    if (relativePath) {
+      const pathParts = relativePath.split('/');
+      pathParts.forEach(part => {
+        if (part !== folderName) {
+          tags.push(part.replace(/_/g, ' '));
+        }
+      });
+    }
     
     // Add prompt-derived tags if available
     if (metadata.prompt) {
@@ -128,11 +159,16 @@ function scanVariantFolder(folder, className) {
 
     const defaults = CLASS_DEFAULTS[className] || CLASS_DEFAULTS.ambience;
 
+    // Build path with full hierarchy
+    const webPath = relativePath 
+      ? `/sounds/${className}/${relativePath}/${fileName}`
+      : `/sounds/${className}/${fileName}`;
+
     const variant = {
       id: baseName,
       class: className,
       tags: [...new Set(tags)], // Remove duplicates
-      path: `/sounds/${className}/${folderName}/${wavFile}`,
+      path: webPath,
       duration,
       weight: 1.0,
       ...defaults

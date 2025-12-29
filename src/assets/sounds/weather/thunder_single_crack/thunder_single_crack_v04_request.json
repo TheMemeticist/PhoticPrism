@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated thunder crack: one strong crack with short tail, minimal rain, minimal echo. Slight analog field recording vibe. Take 4: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, constant rainstorm, long rolling thunder bed, distortion",
-  "duration": 10,
-  "refinement": 40,
-  "creativity": 18,
-  "seed": 102807563
-}

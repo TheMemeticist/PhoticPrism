@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated soft snowfall hitting jacket/foliage: gentle patter and tiny impacts, close mic, very quiet background, slight analog hiss. Take 1: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, heavy wind, loud ambience, distortion",
-  "duration": 10,
-  "refinement": 40,
-  "creativity": 15,
-  "seed": 950294988
-}

@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated pine grosbeak soft chirps: gentle and rounded, single bird. Slight analog hiss, otherwise quiet. Take 1: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, other birds, heavy ambience, distortion",
-  "duration": 6,
-  "refinement": 40,
-  "creativity": 16,
-  "seed": 569926113
-}

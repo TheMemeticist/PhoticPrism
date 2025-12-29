@@ -1,8 +1,0 @@
-{
-  "prompt": "Distant train horn echoing faintly in a mountain valley: single horn note, far away, minimal ambience, subtle analog field recording vibe. Take 3: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, loud city ambience, distortion",
-  "duration": 8,
-  "refinement": 40,
-  "creativity": 14,
-  "seed": 158782959
-}

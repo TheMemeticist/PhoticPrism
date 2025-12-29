@@ -133,15 +133,16 @@ export type CarrierMode = 'manual' | 'auto'
 
 export interface AudioConfig {
   enabled: boolean
+  masterVolume: number // 0-100 - master volume control for all audio
   carrierMode: CarrierMode // Manual or Auto carrier frequency selection
   carrierFreq: number // Hz, typically 200-600 (used when carrierMode = 'manual')
   beatFreq: number // Hz, the binaural beat frequency
   lockedToFlicker: boolean
-  volume: number // 0-100
+  volume: number // 0-100 - binaural beats volume
   waveform: WaveformType
   ambientEnabled: boolean
   ambientType: 'pink' | 'white' | 'brown' | 'none'
-  ambientVolume: number // 0-100
+  ambientVolume: number // 0-100 - noise volume
   visualNoiseEnabled: boolean // Toggle visual noise on/off (performance debugging)
   visualNoise: number // 0-100 - visual noise overlay opacity
   visualNoiseLockedToAudio: boolean // Lock visual noise to audio noise

@@ -4,6 +4,7 @@
 
 export type SoundClass = 
   | 'ambience'
+  | 'amphibians'
   | 'birds'
   | 'foley'
   | 'insects'

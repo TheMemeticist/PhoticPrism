@@ -1,4 +1,3 @@
-cat > .gitignore <<'EOF'
 # deps
 node_modules/
 
@@ -57,11 +56,12 @@ __pycache__/
 *.swp
 *.swo
 
+# Sound assets (large WAV files - too big for git)
+public/sounds/**/*.wav
+public/sounds/**/*.WAV
+src/assets/sounds/**/*.wav
+src/assets/sounds/**/*.WAV
 
 # misc
 coverage/
 *.tsbuildinfo
-EOF
-
-ghub
-ghub.pub

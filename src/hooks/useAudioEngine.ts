@@ -178,20 +178,46 @@ export function useAudioEngine() {
       nodes.rightOsc.type = audio.waveform
     }
 
-    // Update master volume (use neurofeedback modulation if enabled)
-    if (nodes.masterGain && audio.enabled) {
-      const volume = neurofeedbackEnabled ? beatVolumeModulation : audio.volume
-      nodes.masterGain.gain.rampTo(volume / 100, 0.1)
+    // Volume Hierarchy: Master Volume * Individual Volume * NF Modulation
+    // Master volume acts as a multiplier for all audio sources
+    
+    // Update binaural beats volume (multiply master * individual * NF)
+    if (nodes.leftGain && nodes.rightGain && audio.enabled) {
+      // Individual binaural volume (0-100%)
+      const binauralVolume = audio.volume / 100
+      // Master volume (0-100%)
+      const masterVolume = audio.masterVolume / 100
+      // Neurofeedback modulation (if enabled, affects the final output)
+      const nfModulation = neurofeedbackEnabled ? beatVolumeModulation / 100 : 1.0
+      
+      // Final volume = master * individual * NF
+      const finalBinauralVolume = masterVolume * binauralVolume * nfModulation * 0.3
+      
+      nodes.leftGain.gain.rampTo(finalBinauralVolume, 0.1)
+      nodes.rightGain.gain.rampTo(finalBinauralVolume, 0.1)
+    }
+    
+    // Master gain just passes through (individual gains handle volume)
+    if (nodes.masterGain) {
+      nodes.masterGain.gain.value = 1.0
     }
 
-    // Update ambient noise (use neurofeedback modulation if enabled)
-    // Note: Noise respects pause state - only sets parameters here, start/stop handled separately
+    // Update ambient noise volume (multiply master * individual * NF)
     if (nodes.noiseSource && nodes.noiseGain) {
       if (audio.ambientEnabled && audio.ambientType !== 'none') {
         nodes.noiseSource.type = audio.ambientType as 'pink' | 'white' | 'brown'
-        const noiseVolume = neurofeedbackEnabled ? noiseVolumeModulation : audio.ambientVolume
-        // Set volume but don't start yet - that's controlled by play/pause state
-        nodes.noiseGain.gain.rampTo(noiseVolume / 100, 0.3)
+        
+        // Individual noise volume (0-100%)
+        const noiseVolume = audio.ambientVolume / 100
+        // Master volume (0-100%)
+        const masterVolume = audio.masterVolume / 100
+        // Neurofeedback modulation (if enabled, inverse for noise)
+        const nfModulation = neurofeedbackEnabled ? noiseVolumeModulation / 100 : 1.0
+        
+        // Final volume = master * individual * NF
+        const finalNoiseVolume = masterVolume * noiseVolume * nfModulation
+        
+        nodes.noiseGain.gain.rampTo(finalNoiseVolume, 0.3)
       } else {
         nodes.noiseGain.gain.rampTo(0, 0.3)
       }

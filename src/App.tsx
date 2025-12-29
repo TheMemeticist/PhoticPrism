@@ -20,6 +20,7 @@ import { PauseOverlay } from './components/PauseOverlay/PauseOverlay'
 import { PauseHint } from './components/PauseHint/PauseHint'
 import { EEGGraph } from './components/EEGGraph/EEGGraph'
 import { CalibrationOverlay } from './components/CalibrationOverlay/CalibrationOverlay'
+import { MasterVolumeControl } from './components/MasterVolumeControl/MasterVolumeControl'
 
 import './index.css'
 
@@ -152,6 +153,9 @@ function App() {
       >
         <ControlPanel />
       </div>
+
+      {/* Master Volume Control - floating speaker icon with volume slider */}
+      {safetyAcknowledged && <MasterVolumeControl />}
 
       {/* Pause Hint - appears after UI fades, then auto-fades */}
       {safetyAcknowledged && !isUIVisible && <PauseHint />}

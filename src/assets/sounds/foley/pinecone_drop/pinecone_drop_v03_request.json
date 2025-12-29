@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated pinecone drop onto forest floor: single thud and small debris rattle, close mic, minimal background. Take 3: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, footsteps, birds, distortion",
-  "duration": 4,
-  "refinement": 40,
-  "creativity": 17,
-  "seed": 38840533
-}

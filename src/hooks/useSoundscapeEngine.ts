@@ -24,6 +24,7 @@ export function useSoundscapeEngine() {
 
   // Store state
   const soundscapeConfig = useAppStore(s => s.soundscape)
+  const audioMasterVolume = useAppStore(s => s.audio.masterVolume)
   const neurofeedbackState = useAppStore(s => s.neurofeedbackState)
   const isPaused = useAppStore(s => s.pause.isPaused)
   
@@ -220,12 +221,14 @@ export function useSoundscapeEngine() {
     }
   }, [soundscapeConfig.enabled, isPaused])
 
-  // Update master volume
+  // Update master volume (multiply audio master volume * soundscape volume)
   useEffect(() => {
     if (fxProcessorRef.current) {
-      fxProcessorRef.current.setMasterVolume(soundscapeConfig.masterVolume)
+      // Volume hierarchy: Audio Master (0-100%) * Soundscape Volume (0-100%)
+      const effectiveVolume = (audioMasterVolume / 100) * (soundscapeConfig.masterVolume / 100) * 100
+      fxProcessorRef.current.setMasterVolume(effectiveVolume)
     }
-  }, [soundscapeConfig.masterVolume])
+  }, [soundscapeConfig.masterVolume, audioMasterVolume])
 
   // Update echo settings
   useEffect(() => {

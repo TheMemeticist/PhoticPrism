@@ -12,7 +12,9 @@ import { calculateAutoCarrier } from '../../utils/audioUtils'
 import './ControlPanel.css'
 
 export function ControlPanel() {
-  const [activeTab, setActiveTab] = useState<'flicker' | 'audio' | 'pattern' | 'display' | 'schedule' | 'eeg' | 'soundscape'>('flicker')
+  const [activeTab, setActiveTab] = useState<'visual' | 'audio' | 'display' | 'schedule' | 'eeg'>('visual')
+  const [visualSubtab, setVisualSubtab] = useState<'flicker' | 'pattern'>('flicker')
+  const [audioSubtab, setAudioSubtab] = useState<'binaural' | 'noise' | 'soundscape'>('binaural')
   
   return (
     <div className="control-panel">
@@ -20,28 +22,16 @@ export function ControlPanel() {
         <h2>Photic Prism</h2>
         <div className="control-tabs">
           <button 
-            className={`tab ${activeTab === 'flicker' ? 'active' : ''}`}
-            onClick={() => setActiveTab('flicker')}
+            className={`tab ${activeTab === 'visual' ? 'active' : ''}`}
+            onClick={() => setActiveTab('visual')}
           >
-            Flicker
-          </button>
-          <button 
-            className={`tab ${activeTab === 'pattern' ? 'active' : ''}`}
-            onClick={() => setActiveTab('pattern')}
-          >
-            🎨 Pattern
+            🎨 Visual
           </button>
           <button 
             className={`tab ${activeTab === 'audio' ? 'active' : ''}`}
             onClick={() => setActiveTab('audio')}
           >
             Audio
-          </button>
-          <button 
-            className={`tab ${activeTab === 'soundscape' ? 'active' : ''}`}
-            onClick={() => setActiveTab('soundscape')}
-          >
-            🌲 Soundscape
           </button>
           <button 
             className={`tab ${activeTab === 'display' ? 'active' : ''}`}
@@ -65,10 +55,53 @@ export function ControlPanel() {
       </div>
 
       <div className="control-panel-content">
-        {activeTab === 'flicker' && <FlickerControls />}
-        {activeTab === 'pattern' && <PatternControls />}
-        {activeTab === 'audio' && <AudioControls />}
-        {activeTab === 'soundscape' && <SoundscapeControls />}
+        {activeTab === 'visual' && (
+          <>
+            <div className="sub-tabs">
+              <button 
+                className={`btn btn-secondary ${visualSubtab === 'flicker' ? 'active' : ''}`}
+                onClick={() => setVisualSubtab('flicker')}
+              >
+                Flicker
+              </button>
+              <button 
+                className={`btn btn-secondary ${visualSubtab === 'pattern' ? 'active' : ''}`}
+                onClick={() => setVisualSubtab('pattern')}
+              >
+                Pattern
+              </button>
+            </div>
+            {visualSubtab === 'flicker' && <FlickerControls />}
+            {visualSubtab === 'pattern' && <PatternControls />}
+          </>
+        )}
+        {activeTab === 'audio' && (
+          <>
+            <div className="sub-tabs">
+              <button 
+                className={`btn btn-secondary ${audioSubtab === 'binaural' ? 'active' : ''}`}
+                onClick={() => setAudioSubtab('binaural')}
+              >
+                🎵 Binaural
+              </button>
+              <button 
+                className={`btn btn-secondary ${audioSubtab === 'noise' ? 'active' : ''}`}
+                onClick={() => setAudioSubtab('noise')}
+              >
+                🔊 Noise
+              </button>
+              <button 
+                className={`btn btn-secondary ${audioSubtab === 'soundscape' ? 'active' : ''}`}
+                onClick={() => setAudioSubtab('soundscape')}
+              >
+                🌲 Soundscape
+              </button>
+            </div>
+            {audioSubtab === 'binaural' && <BinauralBeatsControls />}
+            {audioSubtab === 'noise' && <NoiseControls />}
+            {audioSubtab === 'soundscape' && <SoundscapeControls />}
+          </>
+        )}
         {activeTab === 'display' && <DisplayControls />}
         {activeTab === 'schedule' && <ScheduleControls />}
         {activeTab === 'eeg' && <EEGControls />}
@@ -293,6 +326,8 @@ function FlickerControls() {
 function PatternControls() {
   const patternMode = useAppStore((s) => s.patternMode)
   const setPatternMode = useAppStore((s) => s.setPatternMode)
+  const audio = useAppStore((s) => s.audio)
+  const setAudio = useAppStore((s) => s.setAudio)
 
   return (
     <div className="control-section">
@@ -323,6 +358,51 @@ function PatternControls() {
 
       {/* Render appropriate controls based on mode */}
       {patternMode === 'clinical' ? <ClinicalPatternControls /> : <GenerativePatternControls />}
+
+      {/* Visual Noise - Moved from Audio tab */}
+      <div className="control-group" style={{ borderTop: '1px solid var(--bg-elevated)', paddingTop: '16px', marginTop: '16px' }}>
+        <div className="control-row">
+          <label className="form-label">Visual Noise (Performance)</label>
+          <button
+            className={`toggle ${audio.visualNoiseEnabled ? 'active' : ''}`}
+            onClick={() => setAudio({ visualNoiseEnabled: !audio.visualNoiseEnabled })}
+            aria-pressed={audio.visualNoiseEnabled}
+          >
+            <span className="sr-only">{audio.visualNoiseEnabled ? 'Disable' : 'Enable'} visual noise</span>
+          </button>
+        </div>
+        {audio.visualNoiseEnabled && (
+          <>
+            <div className="control-row" style={{ marginTop: '8px' }}>
+              <label className="form-label">Noise Level</label>
+              <span className="control-value">
+                {audio.visualNoiseLockedToAudio ? `${audio.ambientVolume}% 🔒` : `${audio.visualNoise}%`}
+              </span>
+            </div>
+            <input
+              type="range"
+              className="slider"
+              min={0}
+              max={100}
+              value={audio.visualNoiseLockedToAudio ? audio.ambientVolume : audio.visualNoise}
+              onChange={(e) => setAudio({ 
+                visualNoise: parseInt(e.target.value, 10),
+                visualNoiseLockedToAudio: false 
+              })}
+              disabled={audio.visualNoiseLockedToAudio}
+            />
+            <button
+              className={`btn btn-secondary ${audio.visualNoiseLockedToAudio ? 'active' : ''}`}
+              onClick={() => setAudio({ visualNoiseLockedToAudio: !audio.visualNoiseLockedToAudio })}
+            >
+              {audio.visualNoiseLockedToAudio ? '🔒 Locked to Audio Noise' : '🔓 Unlock from Audio'}
+            </button>
+            <p className="control-note">
+              Adds a static overlay on both ON and OFF frames. Lock to audio noise to sync visual/audio noise levels.
+            </p>
+          </>
+        )}
+      </div>
     </div>
   )
 }
@@ -1083,9 +1163,9 @@ function GenerativePatternControls() {
 }
 
 // ============================================
-// Audio Controls Sub-component
+// Binaural Beats Controls Sub-component
 // ============================================
-function AudioControls() {
+function BinauralBeatsControls() {
   const audio = useAppStore((s) => s.audio)
   const flickerHz = useAppStore((s) => s.flickerHz)
   const setAudio = useAppStore((s) => s.setAudio)
@@ -1104,10 +1184,10 @@ function AudioControls() {
 
   return (
     <div className="control-section">
-      {/* Master Enable */}
+      {/* Master Audio Enable */}
       <div className="control-group">
         <div className="control-row">
-          <label className="form-label">Audio</label>
+          <label className="form-label">🎵 Binaural Beats</label>
           <button
             className={`toggle ${audio.enabled ? 'active' : ''}`}
             onClick={() => setAudio({ enabled: !audio.enabled })}
@@ -1119,10 +1199,10 @@ function AudioControls() {
         <p className="control-note">Click to start audio (browser autoplay policy)</p>
       </div>
 
-      {/* Volume */}
+      {/* Binaural Beats Volume */}
       <div className="control-group">
         <div className="control-row">
-          <label className="form-label">Volume</label>
+          <label className="form-label">Binaural Volume</label>
           <span className="control-value">{audio.volume}%</span>
         </div>
         <input
@@ -1133,6 +1213,34 @@ function AudioControls() {
           value={audio.volume}
           onChange={(e) => setAudio({ volume: parseInt(e.target.value, 10) })}
         />
+        <p className="control-note">Individual volume for binaural beats</p>
+      </div>
+
+      {/* Beat Frequency */}
+      <div className="control-group">
+        <div className="control-row">
+          <label className="form-label">Beat Frequency</label>
+          <span className="control-value">
+            {audio.beatFreq} Hz
+            {audio.lockedToFlicker && ' 🔒'}
+          </span>
+        </div>
+        <input
+          type="range"
+          className="slider"
+          min={1}
+          max={60}
+          step={0.5}
+          value={audio.beatFreq}
+          onChange={(e) => handleBeatFreqChange(parseFloat(e.target.value))}
+          disabled={audio.lockedToFlicker}
+        />
+        <button
+          className={`btn btn-secondary ${audio.lockedToFlicker ? 'active' : ''}`}
+          onClick={handleLockToggle}
+        >
+          {audio.lockedToFlicker ? '🔒 Locked to Flicker' : '🔓 Lock to Flicker Hz'}
+        </button>
       </div>
 
       {/* Carrier Mode Toggle */}
@@ -1185,33 +1293,6 @@ function AudioControls() {
         )}
       </div>
 
-      {/* Beat Frequency */}
-      <div className="control-group">
-        <div className="control-row">
-          <label className="form-label">Beat Frequency</label>
-          <span className="control-value">
-            {audio.beatFreq} Hz
-            {audio.lockedToFlicker && ' 🔒'}
-          </span>
-        </div>
-        <input
-          type="range"
-          className="slider"
-          min={1}
-          max={60}
-          step={0.5}
-          value={audio.beatFreq}
-          onChange={(e) => handleBeatFreqChange(parseFloat(e.target.value))}
-          disabled={audio.lockedToFlicker}
-        />
-        <button
-          className={`btn btn-secondary ${audio.lockedToFlicker ? 'active' : ''}`}
-          onClick={handleLockToggle}
-        >
-          {audio.lockedToFlicker ? '🔒 Locked to Flicker' : '🔓 Lock to Flicker Hz'}
-        </button>
-      </div>
-
       {/* Waveform */}
       <div className="control-group">
         <label className="form-label">Waveform</label>
@@ -1226,11 +1307,23 @@ function AudioControls() {
           <option value="sawtooth">Sawtooth (buzzy)</option>
         </select>
       </div>
+    </div>
+  )
+}
 
-      {/* Ambient */}
+// ============================================
+// Noise Controls Sub-component
+// ============================================
+function NoiseControls() {
+  const audio = useAppStore((s) => s.audio)
+  const setAudio = useAppStore((s) => s.setAudio)
+
+  return (
+    <div className="control-section">
+      {/* Noise Enable */}
       <div className="control-group">
         <div className="control-row">
-          <label className="form-label">Ambient Noise</label>
+          <label className="form-label">🔊 Ambient Noise</label>
           <button
             className={`toggle ${audio.ambientEnabled ? 'active' : ''}`}
             onClick={() => setAudio({ ambientEnabled: !audio.ambientEnabled })}
@@ -1239,76 +1332,41 @@ function AudioControls() {
             <span className="sr-only">{audio.ambientEnabled ? 'Disable' : 'Enable'} ambient</span>
           </button>
         </div>
-        {audio.ambientEnabled && (
-          <>
-            <select
-              className="form-select"
-              value={audio.ambientType}
-              onChange={(e) => setAudio({ ambientType: e.target.value as any })}
-            >
-              <option value="pink">Pink Noise</option>
-              <option value="white">White Noise</option>
-              <option value="brown">Brown Noise</option>
-            </select>
-            <div className="control-row" style={{ marginTop: '8px' }}>
-              <label className="form-label">Ambient Volume</label>
-              <span className="control-value">{audio.ambientVolume}%</span>
-            </div>
-            <input
-              type="range"
-              className="slider"
-              min={0}
-              max={100}
-              value={audio.ambientVolume}
-              onChange={(e) => setAudio({ ambientVolume: parseInt(e.target.value, 10) })}
-            />
-          </>
-        )}
+        <p className="control-note">Pink, white, or brown noise for masking</p>
       </div>
 
-      {/* Visual Noise */}
+      {/* Noise Volume */}
       <div className="control-group">
         <div className="control-row">
-          <label className="form-label">Visual Noise (Performance)</label>
-          <button
-            className={`toggle ${audio.visualNoiseEnabled ? 'active' : ''}`}
-            onClick={() => setAudio({ visualNoiseEnabled: !audio.visualNoiseEnabled })}
-            aria-pressed={audio.visualNoiseEnabled}
-          >
-            <span className="sr-only">{audio.visualNoiseEnabled ? 'Disable' : 'Enable'} visual noise</span>
-          </button>
+          <label className="form-label">Noise Volume</label>
+          <span className="control-value">{audio.ambientVolume}%</span>
         </div>
-        {audio.visualNoiseEnabled && (
-          <>
-            <div className="control-row" style={{ marginTop: '8px' }}>
-              <label className="form-label">Noise Level</label>
-              <span className="control-value">
-                {audio.visualNoiseLockedToAudio ? `${audio.ambientVolume}% 🔒` : `${audio.visualNoise}%`}
-              </span>
-            </div>
-            <input
-              type="range"
-              className="slider"
-              min={0}
-              max={100}
-              value={audio.visualNoiseLockedToAudio ? audio.ambientVolume : audio.visualNoise}
-              onChange={(e) => setAudio({ 
-                visualNoise: parseInt(e.target.value, 10),
-                visualNoiseLockedToAudio: false 
-              })}
-              disabled={audio.visualNoiseLockedToAudio}
-            />
-            <button
-              className={`btn btn-secondary ${audio.visualNoiseLockedToAudio ? 'active' : ''}`}
-              onClick={() => setAudio({ visualNoiseLockedToAudio: !audio.visualNoiseLockedToAudio })}
-            >
-              {audio.visualNoiseLockedToAudio ? '🔒 Locked to Audio Noise' : '🔓 Unlock from Audio'}
-            </button>
-            <p className="control-note">
-              Adds a static overlay on both ON and OFF frames. Lock to audio noise to sync visual/audio noise levels.
-            </p>
-          </>
-        )}
+        <input
+          type="range"
+          className="slider"
+          min={0}
+          max={100}
+          value={audio.ambientVolume}
+          onChange={(e) => setAudio({ ambientVolume: parseInt(e.target.value, 10) })}
+        />
+        <p className="control-note">Individual volume for ambient noise</p>
+      </div>
+
+      {/* Noise Type */}
+      <div className="control-group">
+        <label className="form-label">Noise Type</label>
+        <select
+          className="form-select"
+          value={audio.ambientType}
+          onChange={(e) => setAudio({ ambientType: e.target.value as any })}
+        >
+          <option value="pink">Pink Noise (balanced)</option>
+          <option value="white">White Noise (crisp)</option>
+          <option value="brown">Brown Noise (deep)</option>
+        </select>
+        <p className="control-note">
+          Pink = balanced across frequencies, White = equal energy all freqs, Brown = deeper bass emphasis
+        </p>
       </div>
     </div>
   )
@@ -1976,6 +2034,7 @@ function SoundscapeControls() {
     icon: string
     description: string
   }> = [
+    { key: 'amphibians' as const, label: 'Amphibians', icon: '🐸', description: 'Frog croaks and calls' },
     { key: 'birds' as const, label: 'Birds', icon: '🐦', description: 'Birdsong and calls' },
     { key: 'mammals', label: 'Mammals', icon: '🦌', description: 'Animal sounds' },
     { key: 'water', label: 'Water', icon: '💧', description: 'Streams, drips, waves' },

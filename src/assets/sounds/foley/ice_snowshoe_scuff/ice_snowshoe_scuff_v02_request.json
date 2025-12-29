@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated boot/snowshoe scuff on icy snow: one scuff scrape, close mic, minimal background. Take 2: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, long walking loop, distortion",
-  "duration": 4,
-  "refinement": 40,
-  "creativity": 16,
-  "seed": 743967125
-}

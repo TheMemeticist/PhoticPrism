@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated mosquito near-mic whine: close buzzing pass, short, minimal background, subtle analog recorder vibe. Take 3: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, heavy insect chorus, distortion",
-  "duration": 5,
-  "refinement": 40,
-  "creativity": 18,
-  "seed": 617970456
-}

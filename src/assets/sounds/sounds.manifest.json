@@ -1,21 +1,16 @@
 {
   "version": "1.0",
-  "generatedAt": "2025-12-19T07:24:41.430Z",
+  "generatedAt": "2025-12-27T08:40:45.401Z",
   "sounds": [
     {
-      "id": "distant_train_valley_hint_v01",
+      "id": "forest_cicadas_river_v01",
       "class": "ambience",
       "tags": [
-        "distant train valley hint",
-        "ambience",
-        "distant",
-        "train",
-        "horn",
-        "echoing",
-        "faintly"
+        "forest night thailand",
+        "ambience"
       ],
-      "path": "/sounds/ambience/distant_train_valley_hint/distant_train_valley_hint_v01.wav",
-      "duration": 8,
+      "path": "/sounds/ambience/forest_night_thailand/forest_cicadas_river_v01.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.4,
       "gainJitter": 0.1,
@@ -28,19 +23,14 @@
       "cooldown": 20
     },
     {
-      "id": "distant_train_valley_hint_v02",
+      "id": "forest_cicadas_river_v02",
       "class": "ambience",
       "tags": [
-        "distant train valley hint",
-        "ambience",
-        "distant",
-        "train",
-        "horn",
-        "echoing",
-        "faintly"
+        "forest night thailand",
+        "ambience"
       ],
-      "path": "/sounds/ambience/distant_train_valley_hint/distant_train_valley_hint_v02.wav",
-      "duration": 8,
+      "path": "/sounds/ambience/forest_night_thailand/forest_cicadas_river_v02.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.4,
       "gainJitter": 0.1,
@@ -53,593 +43,13 @@
       "cooldown": 20
     },
     {
-      "id": "distant_train_valley_hint_v03",
-      "class": "ambience",
+      "id": "taiwan_frogs_village_v01",
+      "class": "amphibians",
       "tags": [
-        "distant train valley hint",
-        "ambience",
-        "distant",
-        "train",
-        "horn",
-        "echoing",
-        "faintly"
+        "frogs croaking taiwan",
+        "amphibians"
       ],
-      "path": "/sounds/ambience/distant_train_valley_hint/distant_train_valley_hint_v03.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.4,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 20
-    },
-    {
-      "id": "distant_train_valley_hint_v04",
-      "class": "ambience",
-      "tags": [
-        "distant train valley hint",
-        "ambience",
-        "distant",
-        "train",
-        "horn",
-        "echoing",
-        "faintly"
-      ],
-      "path": "/sounds/ambience/distant_train_valley_hint/distant_train_valley_hint_v04.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.4,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 20
-    },
-    {
-      "id": "distant_train_valley_hint_v05",
-      "class": "ambience",
-      "tags": [
-        "distant train valley hint",
-        "ambience",
-        "distant",
-        "train",
-        "horn",
-        "echoing",
-        "faintly"
-      ],
-      "path": "/sounds/ambience/distant_train_valley_hint/distant_train_valley_hint_v05.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.4,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 20
-    },
-    {
-      "id": "firewood_crackle_short_v01",
-      "class": "ambience",
-      "tags": [
-        "firewood crackle short",
-        "ambience",
-        "isolated",
-        "campfire",
-        "crackle",
-        "short",
-        "burst"
-      ],
-      "path": "/sounds/ambience/firewood_crackle_short/firewood_crackle_short_v01.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.4,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 20
-    },
-    {
-      "id": "firewood_crackle_short_v02",
-      "class": "ambience",
-      "tags": [
-        "firewood crackle short",
-        "ambience",
-        "isolated",
-        "campfire",
-        "crackle",
-        "short",
-        "burst"
-      ],
-      "path": "/sounds/ambience/firewood_crackle_short/firewood_crackle_short_v02.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.4,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 20
-    },
-    {
-      "id": "firewood_crackle_short_v03",
-      "class": "ambience",
-      "tags": [
-        "firewood crackle short",
-        "ambience",
-        "isolated",
-        "campfire",
-        "crackle",
-        "short",
-        "burst"
-      ],
-      "path": "/sounds/ambience/firewood_crackle_short/firewood_crackle_short_v03.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.4,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 20
-    },
-    {
-      "id": "firewood_crackle_short_v04",
-      "class": "ambience",
-      "tags": [
-        "firewood crackle short",
-        "ambience",
-        "isolated",
-        "campfire",
-        "crackle",
-        "short",
-        "burst"
-      ],
-      "path": "/sounds/ambience/firewood_crackle_short/firewood_crackle_short_v04.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.4,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 20
-    },
-    {
-      "id": "firewood_crackle_short_v05",
-      "class": "ambience",
-      "tags": [
-        "firewood crackle short",
-        "ambience",
-        "isolated",
-        "campfire",
-        "crackle",
-        "short",
-        "burst"
-      ],
-      "path": "/sounds/ambience/firewood_crackle_short/firewood_crackle_short_v05.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.4,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 20
-    },
-    {
-      "id": "canada_jay_calls_v01",
-      "class": "birds",
-      "tags": [
-        "canada jay calls",
-        "birds",
-        "isolated",
-        "canada",
-        "jay",
-        "whiskey",
-        "jack"
-      ],
-      "path": "/sounds/birds/canada_jay_calls/canada_jay_calls_v01.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "canada_jay_calls_v02",
-      "class": "birds",
-      "tags": [
-        "canada jay calls",
-        "birds",
-        "isolated",
-        "canada",
-        "jay",
-        "whiskey",
-        "jack"
-      ],
-      "path": "/sounds/birds/canada_jay_calls/canada_jay_calls_v02.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "canada_jay_calls_v03",
-      "class": "birds",
-      "tags": [
-        "canada jay calls",
-        "birds",
-        "isolated",
-        "canada",
-        "jay",
-        "whiskey",
-        "jack"
-      ],
-      "path": "/sounds/birds/canada_jay_calls/canada_jay_calls_v03.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "canada_jay_calls_v04",
-      "class": "birds",
-      "tags": [
-        "canada jay calls",
-        "birds",
-        "isolated",
-        "canada",
-        "jay",
-        "whiskey",
-        "jack"
-      ],
-      "path": "/sounds/birds/canada_jay_calls/canada_jay_calls_v04.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "canada_jay_calls_v05",
-      "class": "birds",
-      "tags": [
-        "canada jay calls",
-        "birds",
-        "isolated",
-        "canada",
-        "jay",
-        "whiskey",
-        "jack"
-      ],
-      "path": "/sounds/birds/canada_jay_calls/canada_jay_calls_v05.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "clarks_nutcracker_call_v01",
-      "class": "birds",
-      "tags": [
-        "clarks nutcracker call",
-        "birds",
-        "isolated",
-        "clark",
-        "s",
-        "nutcracker",
-        "nasal"
-      ],
-      "path": "/sounds/birds/clarks_nutcracker_call/clarks_nutcracker_call_v01.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "clarks_nutcracker_call_v02",
-      "class": "birds",
-      "tags": [
-        "clarks nutcracker call",
-        "birds",
-        "isolated",
-        "clark",
-        "s",
-        "nutcracker",
-        "nasal"
-      ],
-      "path": "/sounds/birds/clarks_nutcracker_call/clarks_nutcracker_call_v02.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "clarks_nutcracker_call_v03",
-      "class": "birds",
-      "tags": [
-        "clarks nutcracker call",
-        "birds",
-        "isolated",
-        "clark",
-        "s",
-        "nutcracker",
-        "nasal"
-      ],
-      "path": "/sounds/birds/clarks_nutcracker_call/clarks_nutcracker_call_v03.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "clarks_nutcracker_call_v04",
-      "class": "birds",
-      "tags": [
-        "clarks nutcracker call",
-        "birds",
-        "isolated",
-        "clark",
-        "s",
-        "nutcracker",
-        "nasal"
-      ],
-      "path": "/sounds/birds/clarks_nutcracker_call/clarks_nutcracker_call_v04.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "clarks_nutcracker_call_v05",
-      "class": "birds",
-      "tags": [
-        "clarks nutcracker call",
-        "birds",
-        "isolated",
-        "clark",
-        "s",
-        "nutcracker",
-        "nasal"
-      ],
-      "path": "/sounds/birds/clarks_nutcracker_call/clarks_nutcracker_call_v05.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "common_raven_croak_v01",
-      "class": "birds",
-      "tags": [
-        "common raven croak",
-        "birds",
-        "isolated",
-        "common",
-        "raven",
-        "deep",
-        "croak"
-      ],
-      "path": "/sounds/birds/common_raven_croak/common_raven_croak_v01.wav",
-      "duration": 7,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "common_raven_croak_v02",
-      "class": "birds",
-      "tags": [
-        "common raven croak",
-        "birds",
-        "isolated",
-        "common",
-        "raven",
-        "deep",
-        "croak"
-      ],
-      "path": "/sounds/birds/common_raven_croak/common_raven_croak_v02.wav",
-      "duration": 7,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "common_raven_croak_v03",
-      "class": "birds",
-      "tags": [
-        "common raven croak",
-        "birds",
-        "isolated",
-        "common",
-        "raven",
-        "deep",
-        "croak"
-      ],
-      "path": "/sounds/birds/common_raven_croak/common_raven_croak_v03.wav",
-      "duration": 7,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "common_raven_croak_v04",
-      "class": "birds",
-      "tags": [
-        "common raven croak",
-        "birds",
-        "isolated",
-        "common",
-        "raven",
-        "deep",
-        "croak"
-      ],
-      "path": "/sounds/birds/common_raven_croak/common_raven_croak_v04.wav",
-      "duration": 7,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "common_raven_croak_v05",
-      "class": "birds",
-      "tags": [
-        "common raven croak",
-        "birds",
-        "isolated",
-        "common",
-        "raven",
-        "deep",
-        "croak"
-      ],
-      "path": "/sounds/birds/common_raven_croak/common_raven_croak_v05.wav",
-      "duration": 7,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "golden_eagle_screech_v01",
-      "class": "birds",
-      "tags": [
-        "golden eagle screech",
-        "birds",
-        "isolated",
-        "golden",
-        "eagle",
-        "screech",
-        "lone"
-      ],
-      "path": "/sounds/birds/golden_eagle_screech/golden_eagle_screech_v01.wav",
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v01.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -649,22 +59,17 @@
         1.05
       ],
       "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
-      "id": "golden_eagle_screech_v02",
-      "class": "birds",
+      "id": "taiwan_frogs_village_v02",
+      "class": "amphibians",
       "tags": [
-        "golden eagle screech",
-        "birds",
-        "isolated",
-        "golden",
-        "eagle",
-        "screech",
-        "lone"
+        "frogs croaking taiwan",
+        "amphibians"
       ],
-      "path": "/sounds/birds/golden_eagle_screech/golden_eagle_screech_v02.wav",
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v02.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -674,22 +79,17 @@
         1.05
       ],
       "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
-      "id": "golden_eagle_screech_v03",
-      "class": "birds",
+      "id": "taiwan_frogs_village_v03",
+      "class": "amphibians",
       "tags": [
-        "golden eagle screech",
-        "birds",
-        "isolated",
-        "golden",
-        "eagle",
-        "screech",
-        "lone"
+        "frogs croaking taiwan",
+        "amphibians"
       ],
-      "path": "/sounds/birds/golden_eagle_screech/golden_eagle_screech_v03.wav",
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v03.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -699,22 +99,17 @@
         1.05
       ],
       "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
-      "id": "golden_eagle_screech_v04",
-      "class": "birds",
+      "id": "taiwan_frogs_village_v04",
+      "class": "amphibians",
       "tags": [
-        "golden eagle screech",
-        "birds",
-        "isolated",
-        "golden",
-        "eagle",
-        "screech",
-        "lone"
+        "frogs croaking taiwan",
+        "amphibians"
       ],
-      "path": "/sounds/birds/golden_eagle_screech/golden_eagle_screech_v04.wav",
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v04.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -724,22 +119,17 @@
         1.05
       ],
       "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
-      "id": "golden_eagle_screech_v05",
-      "class": "birds",
+      "id": "taiwan_frogs_village_v05",
+      "class": "amphibians",
       "tags": [
-        "golden eagle screech",
-        "birds",
-        "isolated",
-        "golden",
-        "eagle",
-        "screech",
-        "lone"
+        "frogs croaking taiwan",
+        "amphibians"
       ],
-      "path": "/sounds/birds/golden_eagle_screech/golden_eagle_screech_v05.wav",
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v05.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -749,147 +139,17 @@
         1.05
       ],
       "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
-      "id": "loon_call_distant_lake_v01",
-      "class": "birds",
+      "id": "taiwan_frogs_village_v06",
+      "class": "amphibians",
       "tags": [
-        "loon call distant lake",
-        "birds",
-        "common",
-        "loon",
-        "call",
-        "across",
-        "a"
+        "frogs croaking taiwan",
+        "amphibians"
       ],
-      "path": "/sounds/birds/loon_call_distant_lake/loon_call_distant_lake_v01.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "loon_call_distant_lake_v02",
-      "class": "birds",
-      "tags": [
-        "loon call distant lake",
-        "birds",
-        "common",
-        "loon",
-        "call",
-        "across",
-        "a"
-      ],
-      "path": "/sounds/birds/loon_call_distant_lake/loon_call_distant_lake_v02.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "loon_call_distant_lake_v03",
-      "class": "birds",
-      "tags": [
-        "loon call distant lake",
-        "birds",
-        "common",
-        "loon",
-        "call",
-        "across",
-        "a"
-      ],
-      "path": "/sounds/birds/loon_call_distant_lake/loon_call_distant_lake_v03.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "loon_call_distant_lake_v04",
-      "class": "birds",
-      "tags": [
-        "loon call distant lake",
-        "birds",
-        "common",
-        "loon",
-        "call",
-        "across",
-        "a"
-      ],
-      "path": "/sounds/birds/loon_call_distant_lake/loon_call_distant_lake_v04.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "loon_call_distant_lake_v05",
-      "class": "birds",
-      "tags": [
-        "loon call distant lake",
-        "birds",
-        "common",
-        "loon",
-        "call",
-        "across",
-        "a"
-      ],
-      "path": "/sounds/birds/loon_call_distant_lake/loon_call_distant_lake_v05.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "mountain_chickadee_v01",
-      "class": "birds",
-      "tags": [
-        "mountain chickadee",
-        "birds",
-        "isolated",
-        "mountain",
-        "chickadee",
-        "calls",
-        "tiny"
-      ],
-      "path": "/sounds/birds/mountain_chickadee/mountain_chickadee_v01.wav",
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v06.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -899,22 +159,17 @@
         1.05
       ],
       "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
-      "id": "mountain_chickadee_v02",
-      "class": "birds",
+      "id": "taiwan_frogs_village_v07",
+      "class": "amphibians",
       "tags": [
-        "mountain chickadee",
-        "birds",
-        "isolated",
-        "mountain",
-        "chickadee",
-        "calls",
-        "tiny"
+        "frogs croaking taiwan",
+        "amphibians"
       ],
-      "path": "/sounds/birds/mountain_chickadee/mountain_chickadee_v02.wav",
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v07.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -924,22 +179,17 @@
         1.05
       ],
       "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
-      "id": "mountain_chickadee_v03",
-      "class": "birds",
+      "id": "taiwan_frogs_village_v08",
+      "class": "amphibians",
       "tags": [
-        "mountain chickadee",
-        "birds",
-        "isolated",
-        "mountain",
-        "chickadee",
-        "calls",
-        "tiny"
+        "frogs croaking taiwan",
+        "amphibians"
       ],
-      "path": "/sounds/birds/mountain_chickadee/mountain_chickadee_v03.wav",
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v08.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -949,22 +199,17 @@
         1.05
       ],
       "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
-      "id": "mountain_chickadee_v04",
-      "class": "birds",
+      "id": "taiwan_frogs_village_v09",
+      "class": "amphibians",
       "tags": [
-        "mountain chickadee",
-        "birds",
-        "isolated",
-        "mountain",
-        "chickadee",
-        "calls",
-        "tiny"
+        "frogs croaking taiwan",
+        "amphibians"
       ],
-      "path": "/sounds/birds/mountain_chickadee/mountain_chickadee_v04.wav",
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v09.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -974,22 +219,17 @@
         1.05
       ],
       "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
-      "id": "mountain_chickadee_v05",
-      "class": "birds",
+      "id": "taiwan_frogs_village_v10",
+      "class": "amphibians",
       "tags": [
-        "mountain chickadee",
-        "birds",
-        "isolated",
-        "mountain",
-        "chickadee",
-        "calls",
-        "tiny"
+        "frogs croaking taiwan",
+        "amphibians"
       ],
-      "path": "/sounds/birds/mountain_chickadee/mountain_chickadee_v05.wav",
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v10.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -999,17 +239,77 @@
         1.05
       ],
       "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
+      "reverbSend": 0.25,
+      "cooldown": 18
     },
     {
-      "id": "owl_call_great_horned_v02",
+      "id": "taiwan_frogs_village_v11",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v11.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v12",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v12.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "taiwan_frogs_village_v13",
+      "class": "amphibians",
+      "tags": [
+        "frogs croaking taiwan",
+        "amphibians"
+      ],
+      "path": "/sounds/amphibians/frogs_croaking_taiwan/taiwan_frogs_village_v13.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.7,
+      "gainJitter": 0.15,
+      "pitchJitter": [
+        0.95,
+        1.05
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.25,
+      "cooldown": 18
+    },
+    {
+      "id": "crow_taipei_park_v01",
       "class": "birds",
       "tags": [
-        "owl call great horned",
+        "crow cawing taiwan",
         "birds"
       ],
-      "path": "/sounds/birds/owl_call_great_horned/owl_call_great_horned_v02.wav",
+      "path": "/sounds/birds/crow_cawing_taiwan/crow_taipei_park_v01.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -1023,13 +323,13 @@
       "cooldown": 15
     },
     {
-      "id": "owl_call_great_horned_v03",
+      "id": "crow_taipei_park_v02",
       "class": "birds",
       "tags": [
-        "owl call great horned",
+        "crow cawing taiwan",
         "birds"
       ],
-      "path": "/sounds/birds/owl_call_great_horned/owl_call_great_horned_v03.wav",
+      "path": "/sounds/birds/crow_cawing_taiwan/crow_taipei_park_v02.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -1043,13 +343,13 @@
       "cooldown": 15
     },
     {
-      "id": "owl_call_great_horned_v04",
+      "id": "crow_taipei_park_v03",
       "class": "birds",
       "tags": [
-        "owl call great horned",
+        "crow cawing taiwan",
         "birds"
       ],
-      "path": "/sounds/birds/owl_call_great_horned/owl_call_great_horned_v04.wav",
+      "path": "/sounds/birds/crow_cawing_taiwan/crow_taipei_park_v03.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -1063,13 +363,13 @@
       "cooldown": 15
     },
     {
-      "id": "owl_call_great_horned_v05",
+      "id": "crow_taipei_wings_v01",
       "class": "birds",
       "tags": [
-        "owl call great horned",
+        "crow cawing taiwan",
         "birds"
       ],
-      "path": "/sounds/birds/owl_call_great_horned/owl_call_great_horned_v05.wav",
+      "path": "/sounds/birds/crow_cawing_taiwan/crow_taipei_wings_v01.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.7,
@@ -1083,1468 +383,14 @@
       "cooldown": 15
     },
     {
-      "id": "pine_grosbeak_soft_chirp_v01",
-      "class": "birds",
-      "tags": [
-        "pine grosbeak soft chirp",
-        "birds",
-        "isolated",
-        "pine",
-        "grosbeak",
-        "soft",
-        "chirps"
-      ],
-      "path": "/sounds/birds/pine_grosbeak_soft_chirp/pine_grosbeak_soft_chirp_v01.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "pine_grosbeak_soft_chirp_v02",
-      "class": "birds",
-      "tags": [
-        "pine grosbeak soft chirp",
-        "birds",
-        "isolated",
-        "pine",
-        "grosbeak",
-        "soft",
-        "chirps"
-      ],
-      "path": "/sounds/birds/pine_grosbeak_soft_chirp/pine_grosbeak_soft_chirp_v02.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "pine_grosbeak_soft_chirp_v03",
-      "class": "birds",
-      "tags": [
-        "pine grosbeak soft chirp",
-        "birds",
-        "isolated",
-        "pine",
-        "grosbeak",
-        "soft",
-        "chirps"
-      ],
-      "path": "/sounds/birds/pine_grosbeak_soft_chirp/pine_grosbeak_soft_chirp_v03.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "pine_grosbeak_soft_chirp_v04",
-      "class": "birds",
-      "tags": [
-        "pine grosbeak soft chirp",
-        "birds",
-        "isolated",
-        "pine",
-        "grosbeak",
-        "soft",
-        "chirps"
-      ],
-      "path": "/sounds/birds/pine_grosbeak_soft_chirp/pine_grosbeak_soft_chirp_v04.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "pine_grosbeak_soft_chirp_v05",
-      "class": "birds",
-      "tags": [
-        "pine grosbeak soft chirp",
-        "birds",
-        "isolated",
-        "pine",
-        "grosbeak",
-        "soft",
-        "chirps"
-      ],
-      "path": "/sounds/birds/pine_grosbeak_soft_chirp/pine_grosbeak_soft_chirp_v05.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "robin_chirp_v01",
-      "class": "birds",
-      "tags": [
-        "robin chirp",
-        "birds",
-        "isolated",
-        "american",
-        "robin",
-        "chirp",
-        "phrase"
-      ],
-      "path": "/sounds/birds/robin_chirp/robin_chirp_v01.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "robin_chirp_v02",
-      "class": "birds",
-      "tags": [
-        "robin chirp",
-        "birds",
-        "isolated",
-        "american",
-        "robin",
-        "chirp",
-        "phrase"
-      ],
-      "path": "/sounds/birds/robin_chirp/robin_chirp_v02.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "robin_chirp_v03",
-      "class": "birds",
-      "tags": [
-        "robin chirp",
-        "birds",
-        "isolated",
-        "american",
-        "robin",
-        "chirp",
-        "phrase"
-      ],
-      "path": "/sounds/birds/robin_chirp/robin_chirp_v03.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "robin_chirp_v04",
-      "class": "birds",
-      "tags": [
-        "robin chirp",
-        "birds",
-        "isolated",
-        "american",
-        "robin",
-        "chirp",
-        "phrase"
-      ],
-      "path": "/sounds/birds/robin_chirp/robin_chirp_v04.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "robin_chirp_v05",
-      "class": "birds",
-      "tags": [
-        "robin chirp",
-        "birds",
-        "isolated",
-        "american",
-        "robin",
-        "chirp",
-        "phrase"
-      ],
-      "path": "/sounds/birds/robin_chirp/robin_chirp_v05.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "steller_jay_screech_v01",
-      "class": "birds",
-      "tags": [
-        "steller jay screech",
-        "birds",
-        "isolated",
-        "steller",
-        "s",
-        "jay",
-        "harsh"
-      ],
-      "path": "/sounds/birds/steller_jay_screech/steller_jay_screech_v01.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "steller_jay_screech_v02",
-      "class": "birds",
-      "tags": [
-        "steller jay screech",
-        "birds",
-        "isolated",
-        "steller",
-        "s",
-        "jay",
-        "harsh"
-      ],
-      "path": "/sounds/birds/steller_jay_screech/steller_jay_screech_v02.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "steller_jay_screech_v03",
-      "class": "birds",
-      "tags": [
-        "steller jay screech",
-        "birds",
-        "isolated",
-        "steller",
-        "s",
-        "jay",
-        "harsh"
-      ],
-      "path": "/sounds/birds/steller_jay_screech/steller_jay_screech_v03.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "steller_jay_screech_v04",
-      "class": "birds",
-      "tags": [
-        "steller jay screech",
-        "birds",
-        "isolated",
-        "steller",
-        "s",
-        "jay",
-        "harsh"
-      ],
-      "path": "/sounds/birds/steller_jay_screech/steller_jay_screech_v04.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "steller_jay_screech_v05",
-      "class": "birds",
-      "tags": [
-        "steller jay screech",
-        "birds",
-        "isolated",
-        "steller",
-        "s",
-        "jay",
-        "harsh"
-      ],
-      "path": "/sounds/birds/steller_jay_screech/steller_jay_screech_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.7,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.2,
-      "cooldown": 15
-    },
-    {
-      "id": "branch_rub_creak_v01",
-      "class": "foley",
-      "tags": [
-        "branch rub creak",
-        "foley",
-        "isolated",
-        "spruce",
-        "branch",
-        "rub",
-        "creak"
-      ],
-      "path": "/sounds/foley/branch_rub_creak/branch_rub_creak_v01.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "branch_rub_creak_v02",
-      "class": "foley",
-      "tags": [
-        "branch rub creak",
-        "foley",
-        "isolated",
-        "spruce",
-        "branch",
-        "rub",
-        "creak"
-      ],
-      "path": "/sounds/foley/branch_rub_creak/branch_rub_creak_v02.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "branch_rub_creak_v03",
-      "class": "foley",
-      "tags": [
-        "branch rub creak",
-        "foley",
-        "isolated",
-        "spruce",
-        "branch",
-        "rub",
-        "creak"
-      ],
-      "path": "/sounds/foley/branch_rub_creak/branch_rub_creak_v03.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "branch_rub_creak_v04",
-      "class": "foley",
-      "tags": [
-        "branch rub creak",
-        "foley",
-        "isolated",
-        "spruce",
-        "branch",
-        "rub",
-        "creak"
-      ],
-      "path": "/sounds/foley/branch_rub_creak/branch_rub_creak_v04.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "branch_rub_creak_v05",
-      "class": "foley",
-      "tags": [
-        "branch rub creak",
-        "foley",
-        "isolated",
-        "spruce",
-        "branch",
-        "rub",
-        "creak"
-      ],
-      "path": "/sounds/foley/branch_rub_creak/branch_rub_creak_v05.wav",
-      "duration": 6,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "distant_avalanche_rumble_v01",
-      "class": "foley",
-      "tags": [
-        "distant avalanche rumble",
-        "foley",
-        "distant",
-        "avalanche",
-        "rumble",
-        "single",
-        "event"
-      ],
-      "path": "/sounds/foley/distant_avalanche_rumble/distant_avalanche_rumble_v01.wav",
-      "duration": 12,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "distant_avalanche_rumble_v02",
-      "class": "foley",
-      "tags": [
-        "distant avalanche rumble",
-        "foley",
-        "distant",
-        "avalanche",
-        "rumble",
-        "single",
-        "event"
-      ],
-      "path": "/sounds/foley/distant_avalanche_rumble/distant_avalanche_rumble_v02.wav",
-      "duration": 12,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "distant_avalanche_rumble_v03",
-      "class": "foley",
-      "tags": [
-        "distant avalanche rumble",
-        "foley",
-        "distant",
-        "avalanche",
-        "rumble",
-        "single",
-        "event"
-      ],
-      "path": "/sounds/foley/distant_avalanche_rumble/distant_avalanche_rumble_v03.wav",
-      "duration": 12,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "distant_avalanche_rumble_v04",
-      "class": "foley",
-      "tags": [
-        "distant avalanche rumble",
-        "foley",
-        "distant",
-        "avalanche",
-        "rumble",
-        "single",
-        "event"
-      ],
-      "path": "/sounds/foley/distant_avalanche_rumble/distant_avalanche_rumble_v04.wav",
-      "duration": 12,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "distant_avalanche_rumble_v05",
-      "class": "foley",
-      "tags": [
-        "distant avalanche rumble",
-        "foley",
-        "distant",
-        "avalanche",
-        "rumble",
-        "single",
-        "event"
-      ],
-      "path": "/sounds/foley/distant_avalanche_rumble/distant_avalanche_rumble_v05.wav",
-      "duration": 12,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "ice_snowshoe_scuff_v01",
-      "class": "foley",
-      "tags": [
-        "ice snowshoe scuff",
-        "foley",
-        "isolated",
-        "boot",
-        "snowshoe",
-        "scuff",
-        "on"
-      ],
-      "path": "/sounds/foley/ice_snowshoe_scuff/ice_snowshoe_scuff_v01.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "ice_snowshoe_scuff_v02",
-      "class": "foley",
-      "tags": [
-        "ice snowshoe scuff",
-        "foley",
-        "isolated",
-        "boot",
-        "snowshoe",
-        "scuff",
-        "on"
-      ],
-      "path": "/sounds/foley/ice_snowshoe_scuff/ice_snowshoe_scuff_v02.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "ice_snowshoe_scuff_v03",
-      "class": "foley",
-      "tags": [
-        "ice snowshoe scuff",
-        "foley",
-        "isolated",
-        "boot",
-        "snowshoe",
-        "scuff",
-        "on"
-      ],
-      "path": "/sounds/foley/ice_snowshoe_scuff/ice_snowshoe_scuff_v03.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "ice_snowshoe_scuff_v04",
-      "class": "foley",
-      "tags": [
-        "ice snowshoe scuff",
-        "foley",
-        "isolated",
-        "boot",
-        "snowshoe",
-        "scuff",
-        "on"
-      ],
-      "path": "/sounds/foley/ice_snowshoe_scuff/ice_snowshoe_scuff_v04.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "ice_snowshoe_scuff_v05",
-      "class": "foley",
-      "tags": [
-        "ice snowshoe scuff",
-        "foley",
-        "isolated",
-        "boot",
-        "snowshoe",
-        "scuff",
-        "on"
-      ],
-      "path": "/sounds/foley/ice_snowshoe_scuff/ice_snowshoe_scuff_v05.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "pinecone_drop_v01",
-      "class": "foley",
-      "tags": [
-        "pinecone drop",
-        "foley",
-        "isolated",
-        "pinecone",
-        "drop",
-        "onto",
-        "forest"
-      ],
-      "path": "/sounds/foley/pinecone_drop/pinecone_drop_v01.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "pinecone_drop_v02",
-      "class": "foley",
-      "tags": [
-        "pinecone drop",
-        "foley",
-        "isolated",
-        "pinecone",
-        "drop",
-        "onto",
-        "forest"
-      ],
-      "path": "/sounds/foley/pinecone_drop/pinecone_drop_v02.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "pinecone_drop_v03",
-      "class": "foley",
-      "tags": [
-        "pinecone drop",
-        "foley",
-        "isolated",
-        "pinecone",
-        "drop",
-        "onto",
-        "forest"
-      ],
-      "path": "/sounds/foley/pinecone_drop/pinecone_drop_v03.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "pinecone_drop_v04",
-      "class": "foley",
-      "tags": [
-        "pinecone drop",
-        "foley",
-        "isolated",
-        "pinecone",
-        "drop",
-        "onto",
-        "forest"
-      ],
-      "path": "/sounds/foley/pinecone_drop/pinecone_drop_v04.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "pinecone_drop_v05",
-      "class": "foley",
-      "tags": [
-        "pinecone drop",
-        "foley",
-        "isolated",
-        "pinecone",
-        "drop",
-        "onto",
-        "forest"
-      ],
-      "path": "/sounds/foley/pinecone_drop/pinecone_drop_v05.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "rockfall_pebbles_short_v01",
-      "class": "foley",
-      "tags": [
-        "rockfall pebbles short",
-        "foley",
-        "isolated",
-        "small",
-        "rockfall",
-        "pebbles",
-        "skittering"
-      ],
-      "path": "/sounds/foley/rockfall_pebbles_short/rockfall_pebbles_short_v01.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "rockfall_pebbles_short_v02",
-      "class": "foley",
-      "tags": [
-        "rockfall pebbles short",
-        "foley",
-        "isolated",
-        "small",
-        "rockfall",
-        "pebbles",
-        "skittering"
-      ],
-      "path": "/sounds/foley/rockfall_pebbles_short/rockfall_pebbles_short_v02.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "rockfall_pebbles_short_v03",
-      "class": "foley",
-      "tags": [
-        "rockfall pebbles short",
-        "foley",
-        "isolated",
-        "small",
-        "rockfall",
-        "pebbles",
-        "skittering"
-      ],
-      "path": "/sounds/foley/rockfall_pebbles_short/rockfall_pebbles_short_v03.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "rockfall_pebbles_short_v04",
-      "class": "foley",
-      "tags": [
-        "rockfall pebbles short",
-        "foley",
-        "isolated",
-        "small",
-        "rockfall",
-        "pebbles",
-        "skittering"
-      ],
-      "path": "/sounds/foley/rockfall_pebbles_short/rockfall_pebbles_short_v04.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "rockfall_pebbles_short_v05",
-      "class": "foley",
-      "tags": [
-        "rockfall pebbles short",
-        "foley",
-        "isolated",
-        "small",
-        "rockfall",
-        "pebbles",
-        "skittering"
-      ],
-      "path": "/sounds/foley/rockfall_pebbles_short/rockfall_pebbles_short_v05.wav",
-      "duration": 8,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "snow_crunch_step_single_v01",
-      "class": "foley",
-      "tags": [
-        "snow crunch step single",
-        "foley",
-        "isolated",
-        "snow",
-        "crunch",
-        "footsteps",
-        "single"
-      ],
-      "path": "/sounds/foley/snow_crunch_step_single/snow_crunch_step_single_v01.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "snow_crunch_step_single_v02",
-      "class": "foley",
-      "tags": [
-        "snow crunch step single",
-        "foley",
-        "isolated",
-        "snow",
-        "crunch",
-        "footsteps",
-        "single"
-      ],
-      "path": "/sounds/foley/snow_crunch_step_single/snow_crunch_step_single_v02.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "snow_crunch_step_single_v03",
-      "class": "foley",
-      "tags": [
-        "snow crunch step single",
-        "foley",
-        "isolated",
-        "snow",
-        "crunch",
-        "footsteps",
-        "single"
-      ],
-      "path": "/sounds/foley/snow_crunch_step_single/snow_crunch_step_single_v03.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "snow_crunch_step_single_v04",
-      "class": "foley",
-      "tags": [
-        "snow crunch step single",
-        "foley",
-        "isolated",
-        "snow",
-        "crunch",
-        "footsteps",
-        "single"
-      ],
-      "path": "/sounds/foley/snow_crunch_step_single/snow_crunch_step_single_v04.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "snow_crunch_step_single_v05",
-      "class": "foley",
-      "tags": [
-        "snow crunch step single",
-        "foley",
-        "isolated",
-        "snow",
-        "crunch",
-        "footsteps",
-        "single"
-      ],
-      "path": "/sounds/foley/snow_crunch_step_single/snow_crunch_step_single_v05.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "twig_snap_dry_v01",
-      "class": "foley",
-      "tags": [
-        "twig snap dry",
-        "foley"
-      ],
-      "path": "/sounds/foley/twig_snap_dry/twig_snap_dry_v01.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "twig_snap_dry_v03",
-      "class": "foley",
-      "tags": [
-        "twig snap dry",
-        "foley"
-      ],
-      "path": "/sounds/foley/twig_snap_dry/twig_snap_dry_v03.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "twig_snap_dry_v04",
-      "class": "foley",
-      "tags": [
-        "twig snap dry",
-        "foley"
-      ],
-      "path": "/sounds/foley/twig_snap_dry/twig_snap_dry_v04.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "twig_snap_dry_v05",
-      "class": "foley",
-      "tags": [
-        "twig snap dry",
-        "foley"
-      ],
-      "path": "/sounds/foley/twig_snap_dry/twig_snap_dry_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.2,
-      "pitchJitter": [
-        0.9,
-        1.1
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.25,
-      "cooldown": 5
-    },
-    {
-      "id": "flyby_bee_single_v01",
-      "class": "insects",
-      "tags": [
-        "flyby bee single",
-        "insects",
-        "isolated",
-        "bee",
-        "flyby",
-        "single",
-        "pass"
-      ],
-      "path": "/sounds/insects/flyby_bee_single/flyby_bee_single_v01.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.5,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.15,
-      "cooldown": 10
-    },
-    {
-      "id": "flyby_bee_single_v02",
-      "class": "insects",
-      "tags": [
-        "flyby bee single",
-        "insects",
-        "isolated",
-        "bee",
-        "flyby",
-        "single",
-        "pass"
-      ],
-      "path": "/sounds/insects/flyby_bee_single/flyby_bee_single_v02.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.5,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.15,
-      "cooldown": 10
-    },
-    {
-      "id": "flyby_bee_single_v03",
-      "class": "insects",
-      "tags": [
-        "flyby bee single",
-        "insects",
-        "isolated",
-        "bee",
-        "flyby",
-        "single",
-        "pass"
-      ],
-      "path": "/sounds/insects/flyby_bee_single/flyby_bee_single_v03.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.5,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.15,
-      "cooldown": 10
-    },
-    {
-      "id": "flyby_bee_single_v04",
-      "class": "insects",
-      "tags": [
-        "flyby bee single",
-        "insects",
-        "isolated",
-        "bee",
-        "flyby",
-        "single",
-        "pass"
-      ],
-      "path": "/sounds/insects/flyby_bee_single/flyby_bee_single_v04.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.5,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.15,
-      "cooldown": 10
-    },
-    {
-      "id": "flyby_bee_single_v05",
-      "class": "insects",
-      "tags": [
-        "flyby bee single",
-        "insects",
-        "isolated",
-        "bee",
-        "flyby",
-        "single",
-        "pass"
-      ],
-      "path": "/sounds/insects/flyby_bee_single/flyby_bee_single_v05.wav",
-      "duration": 4,
-      "weight": 1,
-      "baseGain": 0.5,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.15,
-      "cooldown": 10
-    },
-    {
-      "id": "mosquito_whine_close_v01",
-      "class": "insects",
-      "tags": [
-        "mosquito whine close",
-        "insects",
-        "isolated",
-        "mosquito",
-        "near",
-        "mic",
-        "whine"
-      ],
-      "path": "/sounds/insects/mosquito_whine_close/mosquito_whine_close_v01.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.5,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.15,
-      "cooldown": 10
-    },
-    {
-      "id": "mosquito_whine_close_v02",
-      "class": "insects",
-      "tags": [
-        "mosquito whine close",
-        "insects",
-        "isolated",
-        "mosquito",
-        "near",
-        "mic",
-        "whine"
-      ],
-      "path": "/sounds/insects/mosquito_whine_close/mosquito_whine_close_v02.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.5,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.15,
-      "cooldown": 10
-    },
-    {
-      "id": "mosquito_whine_close_v03",
-      "class": "insects",
-      "tags": [
-        "mosquito whine close",
-        "insects",
-        "isolated",
-        "mosquito",
-        "near",
-        "mic",
-        "whine"
-      ],
-      "path": "/sounds/insects/mosquito_whine_close/mosquito_whine_close_v03.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.5,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.15,
-      "cooldown": 10
-    },
-    {
-      "id": "mosquito_whine_close_v04",
-      "class": "insects",
-      "tags": [
-        "mosquito whine close",
-        "insects",
-        "isolated",
-        "mosquito",
-        "near",
-        "mic",
-        "whine"
-      ],
-      "path": "/sounds/insects/mosquito_whine_close/mosquito_whine_close_v04.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.5,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.15,
-      "cooldown": 10
-    },
-    {
-      "id": "mosquito_whine_close_v05",
-      "class": "insects",
-      "tags": [
-        "mosquito whine close",
-        "insects",
-        "isolated",
-        "mosquito",
-        "near",
-        "mic",
-        "whine"
-      ],
-      "path": "/sounds/insects/mosquito_whine_close/mosquito_whine_close_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.5,
-      "gainJitter": 0.1,
-      "pitchJitter": [
-        0.98,
-        1.02
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.15,
-      "cooldown": 10
-    },
-    {
-      "id": "bighorn_sheep_bleat_v01",
+      "id": "squirrel_taipei_creek_v01",
       "class": "mammals",
       "tags": [
-        "bighorn sheep bleat",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/bighorn_sheep_bleat/bighorn_sheep_bleat_v01.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v01.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2558,13 +404,14 @@
       "cooldown": 30
     },
     {
-      "id": "bighorn_sheep_bleat_v02",
+      "id": "squirrel_taipei_creek_v02",
       "class": "mammals",
       "tags": [
-        "bighorn sheep bleat",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/bighorn_sheep_bleat/bighorn_sheep_bleat_v02.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v02.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2578,13 +425,14 @@
       "cooldown": 30
     },
     {
-      "id": "bighorn_sheep_bleat_v03",
+      "id": "squirrel_taipei_creek_v03",
       "class": "mammals",
       "tags": [
-        "bighorn sheep bleat",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/bighorn_sheep_bleat/bighorn_sheep_bleat_v03.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v03.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2598,13 +446,14 @@
       "cooldown": 30
     },
     {
-      "id": "bighorn_sheep_bleat_v04",
+      "id": "squirrel_taipei_creek_v04",
       "class": "mammals",
       "tags": [
-        "bighorn sheep bleat",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/bighorn_sheep_bleat/bighorn_sheep_bleat_v04.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v04.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2618,13 +467,14 @@
       "cooldown": 30
     },
     {
-      "id": "bighorn_sheep_bleat_v05",
+      "id": "squirrel_taipei_creek_v05",
       "class": "mammals",
       "tags": [
-        "bighorn sheep bleat",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/bighorn_sheep_bleat/bighorn_sheep_bleat_v05.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v05.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2638,13 +488,14 @@
       "cooldown": 30
     },
     {
-      "id": "black_bear_huff_v01",
+      "id": "squirrel_taipei_creek_v06",
       "class": "mammals",
       "tags": [
-        "black bear huff",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/black_bear_huff/black_bear_huff_v01.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v06.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2658,13 +509,14 @@
       "cooldown": 30
     },
     {
-      "id": "black_bear_huff_v02",
+      "id": "squirrel_taipei_creek_v07",
       "class": "mammals",
       "tags": [
-        "black bear huff",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/black_bear_huff/black_bear_huff_v02.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v07.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2678,13 +530,14 @@
       "cooldown": 30
     },
     {
-      "id": "black_bear_huff_v03",
+      "id": "squirrel_taipei_creek_v08",
       "class": "mammals",
       "tags": [
-        "black bear huff",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/black_bear_huff/black_bear_huff_v03.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v08.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2698,13 +551,14 @@
       "cooldown": 30
     },
     {
-      "id": "black_bear_huff_v04",
+      "id": "squirrel_taipei_creek_v09",
       "class": "mammals",
       "tags": [
-        "black bear huff",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/black_bear_huff/black_bear_huff_v04.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v09.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2718,13 +572,14 @@
       "cooldown": 30
     },
     {
-      "id": "coyote_howl_distant_v01",
+      "id": "squirrel_taipei_creek_v10",
       "class": "mammals",
       "tags": [
-        "coyote howl distant",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/coyote_howl_distant/coyote_howl_distant_v01.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v10.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2738,13 +593,14 @@
       "cooldown": 30
     },
     {
-      "id": "coyote_howl_distant_v02",
+      "id": "squirrel_taipei_creek_v11",
       "class": "mammals",
       "tags": [
-        "coyote howl distant",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/coyote_howl_distant/coyote_howl_distant_v02.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v11.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2758,13 +614,14 @@
       "cooldown": 30
     },
     {
-      "id": "coyote_howl_distant_v03",
+      "id": "squirrel_taipei_creek_v12",
       "class": "mammals",
       "tags": [
-        "coyote howl distant",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/coyote_howl_distant/coyote_howl_distant_v03.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v12.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2778,13 +635,14 @@
       "cooldown": 30
     },
     {
-      "id": "coyote_howl_distant_v04",
+      "id": "squirrel_taipei_creek_v13",
       "class": "mammals",
       "tags": [
-        "coyote howl distant",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/coyote_howl_distant/coyote_howl_distant_v04.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v13.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2798,13 +656,14 @@
       "cooldown": 30
     },
     {
-      "id": "coyote_howl_distant_v05",
+      "id": "squirrel_taipei_creek_v14",
       "class": "mammals",
       "tags": [
-        "coyote howl distant",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/coyote_howl_distant/coyote_howl_distant_v05.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v14.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2818,13 +677,14 @@
       "cooldown": 30
     },
     {
-      "id": "elk_bugle_short_v03",
+      "id": "squirrel_taipei_creek_v15",
       "class": "mammals",
       "tags": [
-        "elk bugle short",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/elk_bugle_short/elk_bugle_short_v03.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v15.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2838,13 +698,14 @@
       "cooldown": 30
     },
     {
-      "id": "elk_bugle_short_v04",
+      "id": "squirrel_taipei_creek_v16",
       "class": "mammals",
       "tags": [
-        "elk bugle short",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/elk_bugle_short/elk_bugle_short_v04.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v16.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2858,13 +719,14 @@
       "cooldown": 30
     },
     {
-      "id": "lynx_growl_low_v01",
+      "id": "squirrel_taipei_creek_v17",
       "class": "mammals",
       "tags": [
-        "lynx growl low",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/lynx_growl_low/lynx_growl_low_v01.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v17.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2878,13 +740,14 @@
       "cooldown": 30
     },
     {
-      "id": "lynx_growl_low_v02",
+      "id": "squirrel_taipei_creek_v18",
       "class": "mammals",
       "tags": [
-        "lynx growl low",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/lynx_growl_low/lynx_growl_low_v02.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v18.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2898,13 +761,14 @@
       "cooldown": 30
     },
     {
-      "id": "lynx_growl_low_v03",
+      "id": "squirrel_taipei_creek_v19",
       "class": "mammals",
       "tags": [
-        "lynx growl low",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/lynx_growl_low/lynx_growl_low_v03.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v19.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2918,13 +782,14 @@
       "cooldown": 30
     },
     {
-      "id": "lynx_growl_low_v04",
+      "id": "squirrel_taipei_creek_v20",
       "class": "mammals",
       "tags": [
-        "lynx growl low",
-        "mammals"
+        "squirrel vocals taiwan",
+        "mammals",
+        "rodents"
       ],
-      "path": "/sounds/mammals/lynx_growl_low/lynx_growl_low_v04.wav",
+      "path": "/sounds/mammals/rodents/squirrel_vocals_taiwan/squirrel_taipei_creek_v20.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.8,
@@ -2938,419 +803,14 @@
       "cooldown": 30
     },
     {
-      "id": "lynx_growl_low_v05",
-      "class": "mammals",
-      "tags": [
-        "lynx growl low",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/lynx_growl_low/lynx_growl_low_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "marmot_whistle_v01",
-      "class": "mammals",
-      "tags": [
-        "marmot whistle",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/marmot_whistle/marmot_whistle_v01.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "marmot_whistle_v02",
-      "class": "mammals",
-      "tags": [
-        "marmot whistle",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/marmot_whistle/marmot_whistle_v02.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "marmot_whistle_v03",
-      "class": "mammals",
-      "tags": [
-        "marmot whistle",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/marmot_whistle/marmot_whistle_v03.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "marmot_whistle_v04",
-      "class": "mammals",
-      "tags": [
-        "marmot whistle",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/marmot_whistle/marmot_whistle_v04.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "marmot_whistle_v05",
-      "class": "mammals",
-      "tags": [
-        "marmot whistle",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/marmot_whistle/marmot_whistle_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "moose_grunt_v02",
-      "class": "mammals",
-      "tags": [
-        "moose grunt",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/moose_grunt/moose_grunt_v02.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "moose_grunt_v03",
-      "class": "mammals",
-      "tags": [
-        "moose grunt",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/moose_grunt/moose_grunt_v03.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "moose_grunt_v04",
-      "class": "mammals",
-      "tags": [
-        "moose grunt",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/moose_grunt/moose_grunt_v04.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "moose_grunt_v05",
-      "class": "mammals",
-      "tags": [
-        "moose grunt",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/moose_grunt/moose_grunt_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "pika_squeak_v01",
-      "class": "mammals",
-      "tags": [
-        "pika squeak",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/pika_squeak/pika_squeak_v01.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "pika_squeak_v02",
-      "class": "mammals",
-      "tags": [
-        "pika squeak",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/pika_squeak/pika_squeak_v02.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "pika_squeak_v03",
-      "class": "mammals",
-      "tags": [
-        "pika squeak",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/pika_squeak/pika_squeak_v03.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "pika_squeak_v04",
-      "class": "mammals",
-      "tags": [
-        "pika squeak",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/pika_squeak/pika_squeak_v04.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "pika_squeak_v05",
-      "class": "mammals",
-      "tags": [
-        "pika squeak",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/pika_squeak/pika_squeak_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "wolf_howl_far_v01",
-      "class": "mammals",
-      "tags": [
-        "wolf howl far",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/wolf_howl_far/wolf_howl_far_v01.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "wolf_howl_far_v02",
-      "class": "mammals",
-      "tags": [
-        "wolf howl far",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/wolf_howl_far/wolf_howl_far_v02.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "wolf_howl_far_v03",
-      "class": "mammals",
-      "tags": [
-        "wolf howl far",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/wolf_howl_far/wolf_howl_far_v03.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "wolf_howl_far_v04",
-      "class": "mammals",
-      "tags": [
-        "wolf howl far",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/wolf_howl_far/wolf_howl_far_v04.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "wolf_howl_far_v05",
-      "class": "mammals",
-      "tags": [
-        "wolf howl far",
-        "mammals"
-      ],
-      "path": "/sounds/mammals/wolf_howl_far/wolf_howl_far_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.8,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.3,
-      "cooldown": 30
-    },
-    {
-      "id": "glacial_melt_drip_v01",
+      "id": "creek_splash_rooster_v06",
       "class": "water",
       "tags": [
-        "glacial melt drip",
-        "water",
-        "isolated",
-        "glacial",
-        "melt",
-        "drips",
-        "close"
+        "splash creek taiwan",
+        "water"
       ],
-      "path": "/sounds/water/glacial_melt_drip/glacial_melt_drip_v01.wav",
-      "duration": 10,
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_rooster_v06.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3363,19 +823,14 @@
       "cooldown": 15
     },
     {
-      "id": "glacial_melt_drip_v02",
+      "id": "creek_splash_rooster_v07",
       "class": "water",
       "tags": [
-        "glacial melt drip",
-        "water",
-        "isolated",
-        "glacial",
-        "melt",
-        "drips",
-        "close"
+        "splash creek taiwan",
+        "water"
       ],
-      "path": "/sounds/water/glacial_melt_drip/glacial_melt_drip_v02.wav",
-      "duration": 10,
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_rooster_v07.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3388,19 +843,14 @@
       "cooldown": 15
     },
     {
-      "id": "glacial_melt_drip_v03",
+      "id": "creek_splash_rooster_v08",
       "class": "water",
       "tags": [
-        "glacial melt drip",
-        "water",
-        "isolated",
-        "glacial",
-        "melt",
-        "drips",
-        "close"
+        "splash creek taiwan",
+        "water"
       ],
-      "path": "/sounds/water/glacial_melt_drip/glacial_melt_drip_v03.wav",
-      "duration": 10,
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_rooster_v08.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3413,19 +863,14 @@
       "cooldown": 15
     },
     {
-      "id": "glacial_melt_drip_v04",
+      "id": "creek_splash_rooster_v09",
       "class": "water",
       "tags": [
-        "glacial melt drip",
-        "water",
-        "isolated",
-        "glacial",
-        "melt",
-        "drips",
-        "close"
+        "splash creek taiwan",
+        "water"
       ],
-      "path": "/sounds/water/glacial_melt_drip/glacial_melt_drip_v04.wav",
-      "duration": 10,
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_rooster_v09.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3438,19 +883,14 @@
       "cooldown": 15
     },
     {
-      "id": "glacial_melt_drip_v05",
+      "id": "creek_splash_texture_v01",
       "class": "water",
       "tags": [
-        "glacial melt drip",
-        "water",
-        "isolated",
-        "glacial",
-        "melt",
-        "drips",
-        "close"
+        "splash creek taiwan",
+        "water"
       ],
-      "path": "/sounds/water/glacial_melt_drip/glacial_melt_drip_v05.wav",
-      "duration": 10,
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_texture_v01.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3463,19 +903,14 @@
       "cooldown": 15
     },
     {
-      "id": "ice_crack_lake_v01",
+      "id": "creek_splash_texture_v02",
       "class": "water",
       "tags": [
-        "ice crack lake",
-        "water",
-        "isolated",
-        "lake",
-        "ice",
-        "crack",
-        "one"
+        "splash creek taiwan",
+        "water"
       ],
-      "path": "/sounds/water/ice_crack_lake/ice_crack_lake_v01.wav",
-      "duration": 8,
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_texture_v02.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3488,19 +923,14 @@
       "cooldown": 15
     },
     {
-      "id": "ice_crack_lake_v02",
+      "id": "creek_splash_texture_v03",
       "class": "water",
       "tags": [
-        "ice crack lake",
-        "water",
-        "isolated",
-        "lake",
-        "ice",
-        "crack",
-        "one"
+        "splash creek taiwan",
+        "water"
       ],
-      "path": "/sounds/water/ice_crack_lake/ice_crack_lake_v02.wav",
-      "duration": 8,
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_texture_v03.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3513,19 +943,14 @@
       "cooldown": 15
     },
     {
-      "id": "ice_crack_lake_v03",
+      "id": "creek_splash_texture_v04",
       "class": "water",
       "tags": [
-        "ice crack lake",
-        "water",
-        "isolated",
-        "lake",
-        "ice",
-        "crack",
-        "one"
+        "splash creek taiwan",
+        "water"
       ],
-      "path": "/sounds/water/ice_crack_lake/ice_crack_lake_v03.wav",
-      "duration": 8,
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_texture_v04.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3538,19 +963,14 @@
       "cooldown": 15
     },
     {
-      "id": "ice_crack_lake_v04",
+      "id": "creek_splash_texture_v05",
       "class": "water",
       "tags": [
-        "ice crack lake",
-        "water",
-        "isolated",
-        "lake",
-        "ice",
-        "crack",
-        "one"
+        "splash creek taiwan",
+        "water"
       ],
-      "path": "/sounds/water/ice_crack_lake/ice_crack_lake_v04.wav",
-      "duration": 8,
+      "path": "/sounds/water/splash_creek_taiwan/creek_splash_texture_v05.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3563,19 +983,14 @@
       "cooldown": 15
     },
     {
-      "id": "ice_crack_lake_v05",
+      "id": "forest_river_birds_v01",
       "class": "water",
       "tags": [
-        "ice crack lake",
-        "water",
-        "isolated",
-        "lake",
-        "ice",
-        "crack",
-        "one"
+        "ambient birdsong thailand",
+        "water"
       ],
-      "path": "/sounds/water/ice_crack_lake/ice_crack_lake_v05.wav",
-      "duration": 8,
+      "path": "/sounds/water/ambient_birdsong_thailand/forest_river_birds_v01.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3588,19 +1003,14 @@
       "cooldown": 15
     },
     {
-      "id": "lake_shore_small_waves_v01",
+      "id": "forest_river_birds_v02",
       "class": "water",
       "tags": [
-        "lake shore small waves",
-        "water",
-        "isolated",
-        "small",
-        "waves",
-        "on",
-        "rocky"
+        "ambient birdsong thailand",
+        "water"
       ],
-      "path": "/sounds/water/lake_shore_small_waves/lake_shore_small_waves_v01.wav",
-      "duration": 12,
+      "path": "/sounds/water/ambient_birdsong_thailand/forest_river_birds_v02.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3613,19 +1023,14 @@
       "cooldown": 15
     },
     {
-      "id": "lake_shore_small_waves_v02",
+      "id": "forest_river_birds_v03",
       "class": "water",
       "tags": [
-        "lake shore small waves",
-        "water",
-        "isolated",
-        "small",
-        "waves",
-        "on",
-        "rocky"
+        "ambient birdsong thailand",
+        "water"
       ],
-      "path": "/sounds/water/lake_shore_small_waves/lake_shore_small_waves_v02.wav",
-      "duration": 12,
+      "path": "/sounds/water/ambient_birdsong_thailand/forest_river_birds_v03.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3638,19 +1043,14 @@
       "cooldown": 15
     },
     {
-      "id": "lake_shore_small_waves_v03",
+      "id": "forest_river_birds_v04",
       "class": "water",
       "tags": [
-        "lake shore small waves",
-        "water",
-        "isolated",
-        "small",
-        "waves",
-        "on",
-        "rocky"
+        "ambient birdsong thailand",
+        "water"
       ],
-      "path": "/sounds/water/lake_shore_small_waves/lake_shore_small_waves_v03.wav",
-      "duration": 12,
+      "path": "/sounds/water/ambient_birdsong_thailand/forest_river_birds_v04.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3663,19 +1063,15 @@
       "cooldown": 15
     },
     {
-      "id": "lake_shore_small_waves_v04",
+      "id": "river_birds_daytime_v01",
       "class": "water",
       "tags": [
-        "lake shore small waves",
+        "thailand",
         "water",
-        "isolated",
-        "small",
-        "waves",
-        "on",
-        "rocky"
+        "river flow"
       ],
-      "path": "/sounds/water/lake_shore_small_waves/lake_shore_small_waves_v04.wav",
-      "duration": 12,
+      "path": "/sounds/water/river_flow/thailand/river_birds_daytime_v01.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3688,19 +1084,15 @@
       "cooldown": 15
     },
     {
-      "id": "lake_shore_small_waves_v05",
+      "id": "river_birds_rooster_v03",
       "class": "water",
       "tags": [
-        "lake shore small waves",
+        "thailand",
         "water",
-        "isolated",
-        "small",
-        "waves",
-        "on",
-        "rocky"
+        "river flow"
       ],
-      "path": "/sounds/water/lake_shore_small_waves/lake_shore_small_waves_v05.wav",
-      "duration": 12,
+      "path": "/sounds/water/river_flow/thailand/river_birds_rooster_v03.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3713,19 +1105,15 @@
       "cooldown": 15
     },
     {
-      "id": "waterfall_slap_short_v01",
+      "id": "river_calm_taipei_v01",
       "class": "water",
       "tags": [
-        "waterfall slap short",
+        "taiwan",
         "water",
-        "isolated",
-        "waterfall",
-        "slap",
-        "burst",
-        "a"
+        "river flow"
       ],
-      "path": "/sounds/water/waterfall_slap_short/waterfall_slap_short_v01.wav",
-      "duration": 10,
+      "path": "/sounds/water/river_flow/taiwan/river_calm_taipei_v01.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3738,19 +1126,15 @@
       "cooldown": 15
     },
     {
-      "id": "waterfall_slap_short_v02",
+      "id": "river_calm_taipei_v02",
       "class": "water",
       "tags": [
-        "waterfall slap short",
+        "taiwan",
         "water",
-        "isolated",
-        "waterfall",
-        "slap",
-        "burst",
-        "a"
+        "river flow"
       ],
-      "path": "/sounds/water/waterfall_slap_short/waterfall_slap_short_v02.wav",
-      "duration": 10,
+      "path": "/sounds/water/river_flow/taiwan/river_calm_taipei_v02.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3763,19 +1147,15 @@
       "cooldown": 15
     },
     {
-      "id": "waterfall_slap_short_v03",
+      "id": "river_calm_taipei_v03",
       "class": "water",
       "tags": [
-        "waterfall slap short",
+        "taiwan",
         "water",
-        "isolated",
-        "waterfall",
-        "slap",
-        "burst",
-        "a"
+        "river flow"
       ],
-      "path": "/sounds/water/waterfall_slap_short/waterfall_slap_short_v03.wav",
-      "duration": 10,
+      "path": "/sounds/water/river_flow/taiwan/river_calm_taipei_v03.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3788,19 +1168,15 @@
       "cooldown": 15
     },
     {
-      "id": "waterfall_slap_short_v04",
+      "id": "river_calm_taipei_v04",
       "class": "water",
       "tags": [
-        "waterfall slap short",
+        "taiwan",
         "water",
-        "isolated",
-        "waterfall",
-        "slap",
-        "burst",
-        "a"
+        "river flow"
       ],
-      "path": "/sounds/water/waterfall_slap_short/waterfall_slap_short_v04.wav",
-      "duration": 10,
+      "path": "/sounds/water/river_flow/taiwan/river_calm_taipei_v04.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3813,19 +1189,15 @@
       "cooldown": 15
     },
     {
-      "id": "waterfall_slap_short_v05",
+      "id": "river_cicadas_evening_v02",
       "class": "water",
       "tags": [
-        "waterfall slap short",
+        "thailand",
         "water",
-        "isolated",
-        "waterfall",
-        "slap",
-        "burst",
-        "a"
+        "river flow"
       ],
-      "path": "/sounds/water/waterfall_slap_short/waterfall_slap_short_v05.wav",
-      "duration": 10,
+      "path": "/sounds/water/river_flow/thailand/river_cicadas_evening_v02.wav",
+      "duration": 5,
       "weight": 1,
       "baseGain": 0.5,
       "gainJitter": 0.1,
@@ -3838,13 +1210,93 @@
       "cooldown": 15
     },
     {
-      "id": "alpine_wind_gust_v01",
+      "id": "waterfall_forest_frogs_v03",
+      "class": "water",
+      "tags": [
+        "waterfall thailand",
+        "water"
+      ],
+      "path": "/sounds/water/waterfall_thailand/waterfall_forest_frogs_v03.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "waterfall_forest_frogs_v04",
+      "class": "water",
+      "tags": [
+        "waterfall thailand",
+        "water"
+      ],
+      "path": "/sounds/water/waterfall_thailand/waterfall_forest_frogs_v04.wav",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "waterfall_spray_birds_v01",
+      "class": "water",
+      "tags": [
+        "waterfall thailand",
+        "water"
+      ],
+      "path": "/sounds/water/waterfall_thailand/waterfall_spray_birds_v01.WAV",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "waterfall_strong_spray_v02",
+      "class": "water",
+      "tags": [
+        "waterfall thailand",
+        "water"
+      ],
+      "path": "/sounds/water/waterfall_thailand/waterfall_strong_spray_v02.WAV",
+      "duration": 5,
+      "weight": 1,
+      "baseGain": 0.5,
+      "gainJitter": 0.1,
+      "pitchJitter": [
+        0.98,
+        1.02
+      ],
+      "panPolicy": "random",
+      "reverbSend": 0.35,
+      "cooldown": 15
+    },
+    {
+      "id": "rain_leaves_cicadas_v01",
       "class": "weather",
       "tags": [
-        "alpine wind gust",
+        "rain forest thailand",
         "weather"
       ],
-      "path": "/sounds/weather/alpine_wind_gust/alpine_wind_gust_v01.wav",
+      "path": "/sounds/weather/rain_forest_thailand/rain_leaves_cicadas_v01.wav",
       "duration": 5,
       "weight": 1,
       "baseGain": 0.6,
@@ -3858,649 +1310,14 @@
       "cooldown": 20
     },
     {
-      "id": "alpine_wind_gust_v02",
+      "id": "rain_leaves_cicadas_v02",
       "class": "weather",
       "tags": [
-        "alpine wind gust",
+        "rain forest thailand",
         "weather"
       ],
-      "path": "/sounds/weather/alpine_wind_gust/alpine_wind_gust_v02.wav",
+      "path": "/sounds/weather/rain_forest_thailand/rain_leaves_cicadas_v02.wav",
       "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "alpine_wind_gust_v03",
-      "class": "weather",
-      "tags": [
-        "alpine wind gust",
-        "weather"
-      ],
-      "path": "/sounds/weather/alpine_wind_gust/alpine_wind_gust_v03.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "alpine_wind_gust_v04",
-      "class": "weather",
-      "tags": [
-        "alpine wind gust",
-        "weather"
-      ],
-      "path": "/sounds/weather/alpine_wind_gust/alpine_wind_gust_v04.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "alpine_wind_gust_v05",
-      "class": "weather",
-      "tags": [
-        "alpine wind gust",
-        "weather"
-      ],
-      "path": "/sounds/weather/alpine_wind_gust/alpine_wind_gust_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "blizzard_surge_v01",
-      "class": "weather",
-      "tags": [
-        "blizzard surge",
-        "weather"
-      ],
-      "path": "/sounds/weather/blizzard_surge/blizzard_surge_v01.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "blizzard_surge_v02",
-      "class": "weather",
-      "tags": [
-        "blizzard surge",
-        "weather"
-      ],
-      "path": "/sounds/weather/blizzard_surge/blizzard_surge_v02.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "blizzard_surge_v03",
-      "class": "weather",
-      "tags": [
-        "blizzard surge",
-        "weather"
-      ],
-      "path": "/sounds/weather/blizzard_surge/blizzard_surge_v03.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "blizzard_surge_v04",
-      "class": "weather",
-      "tags": [
-        "blizzard surge",
-        "weather"
-      ],
-      "path": "/sounds/weather/blizzard_surge/blizzard_surge_v04.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "blizzard_surge_v05",
-      "class": "weather",
-      "tags": [
-        "blizzard surge",
-        "weather"
-      ],
-      "path": "/sounds/weather/blizzard_surge/blizzard_surge_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "hail_hits_rock_v01",
-      "class": "weather",
-      "tags": [
-        "hail hits rock",
-        "weather",
-        "isolated",
-        "hail",
-        "hitting",
-        "rock",
-        "ground"
-      ],
-      "path": "/sounds/weather/hail_hits_rock/hail_hits_rock_v01.wav",
-      "duration": 7,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "hail_hits_rock_v02",
-      "class": "weather",
-      "tags": [
-        "hail hits rock",
-        "weather",
-        "isolated",
-        "hail",
-        "hitting",
-        "rock",
-        "ground"
-      ],
-      "path": "/sounds/weather/hail_hits_rock/hail_hits_rock_v02.wav",
-      "duration": 7,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "hail_hits_rock_v03",
-      "class": "weather",
-      "tags": [
-        "hail hits rock",
-        "weather",
-        "isolated",
-        "hail",
-        "hitting",
-        "rock",
-        "ground"
-      ],
-      "path": "/sounds/weather/hail_hits_rock/hail_hits_rock_v03.wav",
-      "duration": 7,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "hail_hits_rock_v04",
-      "class": "weather",
-      "tags": [
-        "hail hits rock",
-        "weather",
-        "isolated",
-        "hail",
-        "hitting",
-        "rock",
-        "ground"
-      ],
-      "path": "/sounds/weather/hail_hits_rock/hail_hits_rock_v04.wav",
-      "duration": 7,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "hail_hits_rock_v05",
-      "class": "weather",
-      "tags": [
-        "hail hits rock",
-        "weather",
-        "isolated",
-        "hail",
-        "hitting",
-        "rock",
-        "ground"
-      ],
-      "path": "/sounds/weather/hail_hits_rock/hail_hits_rock_v05.wav",
-      "duration": 7,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "rain_on_tent_few_drops_v01",
-      "class": "weather",
-      "tags": [
-        "rain on tent few drops",
-        "weather"
-      ],
-      "path": "/sounds/weather/rain_on_tent_few_drops/rain_on_tent_few_drops_v01.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "rain_on_tent_few_drops_v02",
-      "class": "weather",
-      "tags": [
-        "rain on tent few drops",
-        "weather"
-      ],
-      "path": "/sounds/weather/rain_on_tent_few_drops/rain_on_tent_few_drops_v02.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "rain_on_tent_few_drops_v03",
-      "class": "weather",
-      "tags": [
-        "rain on tent few drops",
-        "weather"
-      ],
-      "path": "/sounds/weather/rain_on_tent_few_drops/rain_on_tent_few_drops_v03.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "rain_on_tent_few_drops_v04",
-      "class": "weather",
-      "tags": [
-        "rain on tent few drops",
-        "weather"
-      ],
-      "path": "/sounds/weather/rain_on_tent_few_drops/rain_on_tent_few_drops_v04.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "rain_on_tent_few_drops_v05",
-      "class": "weather",
-      "tags": [
-        "rain on tent few drops",
-        "weather"
-      ],
-      "path": "/sounds/weather/rain_on_tent_few_drops/rain_on_tent_few_drops_v05.wav",
-      "duration": 5,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "snowfall_soft_puffs_v01",
-      "class": "weather",
-      "tags": [
-        "snowfall soft puffs",
-        "weather",
-        "isolated",
-        "soft",
-        "snowfall",
-        "hitting",
-        "jacket"
-      ],
-      "path": "/sounds/weather/snowfall_soft_puffs/snowfall_soft_puffs_v01.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "snowfall_soft_puffs_v02",
-      "class": "weather",
-      "tags": [
-        "snowfall soft puffs",
-        "weather",
-        "isolated",
-        "soft",
-        "snowfall",
-        "hitting",
-        "jacket"
-      ],
-      "path": "/sounds/weather/snowfall_soft_puffs/snowfall_soft_puffs_v02.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "snowfall_soft_puffs_v03",
-      "class": "weather",
-      "tags": [
-        "snowfall soft puffs",
-        "weather",
-        "isolated",
-        "soft",
-        "snowfall",
-        "hitting",
-        "jacket"
-      ],
-      "path": "/sounds/weather/snowfall_soft_puffs/snowfall_soft_puffs_v03.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "snowfall_soft_puffs_v04",
-      "class": "weather",
-      "tags": [
-        "snowfall soft puffs",
-        "weather",
-        "isolated",
-        "soft",
-        "snowfall",
-        "hitting",
-        "jacket"
-      ],
-      "path": "/sounds/weather/snowfall_soft_puffs/snowfall_soft_puffs_v04.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "snowfall_soft_puffs_v05",
-      "class": "weather",
-      "tags": [
-        "snowfall soft puffs",
-        "weather",
-        "isolated",
-        "soft",
-        "snowfall",
-        "hitting",
-        "jacket"
-      ],
-      "path": "/sounds/weather/snowfall_soft_puffs/snowfall_soft_puffs_v05.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "thunder_single_crack_v01",
-      "class": "weather",
-      "tags": [
-        "thunder single crack",
-        "weather",
-        "isolated",
-        "thunder",
-        "crack",
-        "one",
-        "strong"
-      ],
-      "path": "/sounds/weather/thunder_single_crack/thunder_single_crack_v01.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "thunder_single_crack_v02",
-      "class": "weather",
-      "tags": [
-        "thunder single crack",
-        "weather",
-        "isolated",
-        "thunder",
-        "crack",
-        "one",
-        "strong"
-      ],
-      "path": "/sounds/weather/thunder_single_crack/thunder_single_crack_v02.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "thunder_single_crack_v03",
-      "class": "weather",
-      "tags": [
-        "thunder single crack",
-        "weather",
-        "isolated",
-        "thunder",
-        "crack",
-        "one",
-        "strong"
-      ],
-      "path": "/sounds/weather/thunder_single_crack/thunder_single_crack_v03.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "thunder_single_crack_v04",
-      "class": "weather",
-      "tags": [
-        "thunder single crack",
-        "weather",
-        "isolated",
-        "thunder",
-        "crack",
-        "one",
-        "strong"
-      ],
-      "path": "/sounds/weather/thunder_single_crack/thunder_single_crack_v04.wav",
-      "duration": 10,
-      "weight": 1,
-      "baseGain": 0.6,
-      "gainJitter": 0.15,
-      "pitchJitter": [
-        0.95,
-        1.05
-      ],
-      "panPolicy": "random",
-      "reverbSend": 0.4,
-      "cooldown": 20
-    },
-    {
-      "id": "thunder_single_crack_v05",
-      "class": "weather",
-      "tags": [
-        "thunder single crack",
-        "weather",
-        "isolated",
-        "thunder",
-        "crack",
-        "one",
-        "strong"
-      ],
-      "path": "/sounds/weather/thunder_single_crack/thunder_single_crack_v05.wav",
-      "duration": 10,
       "weight": 1,
       "baseGain": 0.6,
       "gainJitter": 0.15,

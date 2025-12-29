@@ -1,8 +1,0 @@
-{
-  "prompt": "Isolated lake ice crack: one or two sharp cracks with resonant ice tone, minimal background, slight analog texture. Take 5: keep it isolated and event-like, avoid long ambience tails.",
-  "negative_prompt": "music, speech, crowd, long ambience, distortion",
-  "duration": 8,
-  "refinement": 40,
-  "creativity": 16,
-  "seed": 525481317
-}
