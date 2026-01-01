@@ -12,6 +12,7 @@ import {
   AudioConfig, 
   DojoWindowConfig,
   ScheduleConfig,
+  ScheduleBlock,
   SessionLog,
   ValidFlickerFrequency,
   RandomizerMode,
@@ -477,6 +478,43 @@ export const useAppStore = create<AppState>()(
         get().goToActivity(prevIndex)
       },
       
+      updateScheduleBlock: (blockId: string, updates: Partial<ScheduleBlock>) => {
+        set((state) => {
+          const updateBlock = (block: ScheduleBlock) => {
+            if (block.id === blockId) {
+              // Store original data on first edit
+              if (!block.isEdited) {
+                return {
+                  ...block,
+                  ...updates,
+                  isEdited: true,
+                  originalData: {
+                    title: block.title,
+                    youtubeUrl: block.youtubeUrl,
+                    brainwaveHz: block.metadata?.brainwaveHz,
+                    onColor: block.metadata?.onColor
+                  }
+                }
+              }
+              return { ...block, ...updates }
+            }
+            return block
+          }
+
+          return {
+            schedule: {
+              ...state.schedule,
+              todayRoutine: state.schedule.todayRoutine.map(updateBlock),
+              randomizedBlocks: state.schedule.randomizedBlocks.map(updateBlock),
+              parsedSchedule: state.schedule.parsedSchedule.map(day => ({
+                ...day,
+                blocks: day.blocks.map(updateBlock)
+              }))
+            }
+          }
+        })
+      },
+      
       goToActivity: (index) => {
         const state = get()
         const routine = state.schedule.todayRoutine
@@ -569,8 +607,8 @@ export const useAppStore = create<AppState>()(
       
       addEEGReading: (reading) => set((state) => {
         const newReadings = [...state.eegReadings, reading]
-        // Keep only last 5 minutes of data (300 seconds * typical 1Hz = ~300 readings)
-        const maxReadings = 300
+        // Keep only last 1 hour of data (3600 seconds * typical 1Hz = ~3600 readings)
+        const maxReadings = 3600
         return {
           eegReadings: newReadings.length > maxReadings 
             ? newReadings.slice(-maxReadings) 
@@ -672,7 +710,9 @@ export const useAppStore = create<AppState>()(
         },
         schedule: {
           rawContent: state.schedule.rawContent,
-          randomMode: state.schedule.randomMode
+          randomMode: state.schedule.randomMode,
+          todayRoutine: state.schedule.todayRoutine, // Persist edits
+          randomizedBlocks: state.schedule.randomizedBlocks // Persist edits
         },
         sessionHistory: state.sessionHistory.slice(-20) // Keep last 20 sessions
       })

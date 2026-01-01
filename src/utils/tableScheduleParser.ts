@@ -32,19 +32,32 @@ export function parseTableSchedule(markdown: string): DaySchedule[] {
 
     for (let i = 0; i < rows.length; i++) {
       const row = rows[i]
+      
+      // Skip separator rows (like EVENING)
+      if (row.activity.toUpperCase() === 'EVENING' || !row.brainwaveTarget || !row.onColor) {
+        continue
+      }
+      
       const content = row[dayKey]
       
-      if (content && content !== '-' && content.trim()) {
-        const youtubeUrl = extractMarkdownLink(content)
-        const title = extractMarkdownText(content) || row.activity
-
+      // Skip empty cells, dashes, or non-link content without proper structure
+      if (!content || content === '-' || content.trim() === '') {
+        continue
+      }
+      
+      const youtubeUrl = extractMarkdownLink(content)
+      const title = extractMarkdownText(content) || content.trim()
+      
+      // Only add blocks with valid content
+      if (title && title !== '-') {
         blocks.push({
           id: crypto.randomUUID(),
+          slotType: row.activity, // Store Activity as slotType (e.g., "Qigong", "Yoga")
           title,
           youtubeUrl,
           tags: [row.activity.toLowerCase().replace(/\s+/g, '-')],
-          order: i,
-          phase: i === 0 ? 'warmup' : 'main',
+          order: blocks.length, // Use blocks.length for proper ordering
+          phase: blocks.length === 0 ? 'warmup' : 'main',
           duration: undefined,
           description: `Target: ${row.brainwaveTarget} Hz`,
           // Store metadata for trainer mode
@@ -52,7 +65,7 @@ export function parseTableSchedule(markdown: string): DaySchedule[] {
             brainwaveHz: row.brainwaveTarget,
             onColor: row.onColor
           }
-        } as ScheduleBlock & { metadata: { brainwaveHz: number; onColor: string } })
+        })
       }
     }
 

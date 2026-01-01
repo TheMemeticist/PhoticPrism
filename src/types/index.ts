@@ -175,6 +175,7 @@ export type RandomizerMode = 'blocked' | 'random' | 'progressive'
 
 export interface ScheduleBlock {
   id: string
+  slotType: string // e.g., "Qigong", "Yoga", "Pranayama"
   title: string
   duration?: number // minutes
   youtubeUrl?: string
@@ -183,6 +184,14 @@ export interface ScheduleBlock {
   order?: number
   phase?: 'warmup' | 'main' | 'cooldown'
   metadata?: {
+    brainwaveHz?: number
+    onColor?: string
+  }
+  // Editing support
+  isEdited?: boolean
+  originalData?: {
+    title?: string
+    youtubeUrl?: string
     brainwaveHz?: number
     onColor?: string
   }
@@ -384,6 +393,7 @@ export interface AppState {
   nextActivity: () => void
   previousActivity: () => void
   goToActivity: (index: number) => void
+  updateScheduleBlock: (blockId: string, updates: Partial<ScheduleBlock>) => void
   startSession: () => void
   endSession: () => void
   exportSession: () => SessionLog | null
